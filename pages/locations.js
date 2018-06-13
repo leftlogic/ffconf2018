@@ -4,9 +4,11 @@ import PreviousYears from '../src/components/previous-years';
 import Sponsors from '../src/components/sponsors';
 import Locations from '../src/components/locations';
 import Thanks from '../src/components/thanks';
+import CodeOfConduct from '../src/components/code-of-conduct';
 
 const PageIndex = () => (
   <div id="root">
+    <CodeOfConduct />
     <Thanks />
     <Locations />
     <Sponsors />
