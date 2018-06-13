@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "next start",
+    "start": "node server-dev.js",
     "dev": "node server-dev.js",
     "build": "next build"
   },
