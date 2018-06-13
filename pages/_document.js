@@ -19,7 +19,7 @@ export default class MyDocument extends Document {
             rel="stylesheet"
           />
 
-          <link rel="stylesheet" href={`${assetPrefix}/static/style.css`} />
+          {/* <link rel="stylesheet" href={`${assetPrefix}/static/style.css`} /> */}
           {process.env.ANALYTICS && (
             <script>
               {`(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
