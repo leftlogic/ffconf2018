@@ -22,7 +22,7 @@ module.exports = {
       workshops: true,
       'css-layout': true,
       'angular-2': true,
-      next: true
+      next: false
     },
     mode: 'schedule',
     comments: {

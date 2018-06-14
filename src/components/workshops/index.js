@@ -1,46 +1,71 @@
-import { Fragment } from 'react';
 import Link from 'next/link';
+import Section from '../section';
 
 import data from './data';
 
-const Workshops = () => (
-  <Fragment>
-    {data.map(item => (
-      <section
-        key={item.slug}
-        id={item.slug}
-        className="workshop-wrapper workshop-summary"
+const WorkshopsDetails = ({ twitter, name }) => {
+  return (
+    <div className="workshops__details">
+      <a
+        className="workshops__speaker"
+        target="_blank"
+        rel="noopener"
+        href={`https://twitter.com/${twitter}`}
       >
-        <header className="workshop-header">
-          <div className="workshop-header-content">
-            <h3 className="workshop-title" role="heading" aria-level="3">
-              {item.title}
-            </h3>
-            <div className="workshop-details">
-              <a
-                className="workshop-speaker-name"
-                target="_blank"
-                href={`https://twitter.com/${item.speaker.twitter}`}
-              >
-                {item.speaker.name}
-              </a>
-            </div>
-            <div>
-              <Link
-                href={`/workshop?slug=${item.slug}`}
-                as={`/workshop/${item.slug}`}
-              >
-                <a className="button">More Info</a>
-              </Link>
-            </div>
+        {name}
+      </a>
+    </div>
+  );
+};
+
+const WorkshopsImage = ({ photo }) => {
+  return (
+    <div
+      className="workshops__image"
+      style={{
+        '--workshop-photo-1x': `url(/static/images/workshops/1x-${photo})`,
+        '--workshop-photo-2x': `url(/static/images/workshops/2x-${photo})`
+      }}
+    />
+  );
+};
+
+const WorkshopsItem = ({ title, speaker, slug }) => {
+  const { name, twitter, photo } = speaker;
+
+  return (
+    <section className="workshops__item">
+      <header className="workshops__header">
+        <div className="workshops__header-content">
+          <h3 className="workshop-title" role="heading" aria-level="3">
+            {title}
+          </h3>
+
+          <WorkshopsDetails twitter={twitter} name={name} />
+
+          <div>
+            <Link href={`/workshop?slug=${slug}`} as={`/workshop/${slug}`}>
+              <a className="button">More Info</a>
+            </Link>
           </div>
-          <div className="workshop-header-image-wrapper">
-            <div className="workshop-header-image" />
-          </div>
-        </header>
-      </section>
-    ))}
-  </Fragment>
+        </div>
+
+        <WorkshopsImage photo={photo} />
+      </header>
+    </section>
+  );
+};
+
+const Workshops = () => (
+  // TODO: ticket price
+  <Section id="workshops" title="Workshops">
+    <p>
+      All workshops are run on 7 November and include a conference pass for the
+      8 November for £449+VAT. You can request to change the conference pass
+      day, which will be granted based on availability.
+    </p>
+    {data.map(workshop => <WorkshopsItem key={workshop.slug} {...workshop} />)}
+  </Section>
 );
 
 export default Workshops;

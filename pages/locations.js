@@ -9,21 +9,36 @@ import Sessions from '../src/components/sessions';
 import Quote from '../src/components/quote';
 import QuotesTemplates from '../src/components/quotes-templates';
 import Wot from '../src/components/wot';
+import Workshop from '../src/components/workshops/workshop';
+import Workshops from '../src/components/workshops';
 
 const PageIndex = () => (
   <div id="root">
+    <hr />
+    <Workshops />
+    <hr />
+    <Workshop selectedSlug="next" />
+    <hr />
     <Wot />
     <QuotesTemplates />
     <Quote />
     <Quote />
     <script src="/static/js/script.js" />
+    <hr />
     <Sessions />
+    <hr />
     <CodeOfConduct />
+    <hr />
     <Thanks />
+    <hr />
     <Locations />
+    <hr />
     <Sponsors />
+    <hr />
     <NavPreviousYears />
+    <hr />
     <NavMain />
+    <hr />
     <NavFull />
   </div>
 );
