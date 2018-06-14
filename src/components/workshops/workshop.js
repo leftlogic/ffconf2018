@@ -1,3 +1,4 @@
+import moment from 'moment';
 import { Fragment } from 'react';
 
 import Markdown from '../markdown';
@@ -20,6 +21,8 @@ const WorkshopTopic = ({ title, description }) => {
 };
 
 const WorkshopDetails = ({ twitter, name, date, time }) => {
+  const formattedDate = moment(date).format('D MMMM YYYY');
+
   return (
     <div className="workshop__details">
       <a
@@ -30,7 +33,7 @@ const WorkshopDetails = ({ twitter, name, date, time }) => {
       >
         {name}
       </a>
-      <div className="workshop__date">{date}</div>
+      <div className="workshop__date">{formattedDate}</div>
       <div className="workshop__time">{time}</div>
     </div>
   );

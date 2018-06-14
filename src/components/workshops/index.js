@@ -1,7 +1,18 @@
+import moment from 'moment';
 import Link from 'next/link';
+
 import Section from '../section';
 
+import config from '../../config';
 import data from './data';
+
+const [date1] = config.dates;
+const [generalWorkshop] = data;
+const { price } = generalWorkshop.ticket;
+const { date } = generalWorkshop.details;
+
+const dateWorkshops = moment(date).format('D MMMM');
+const dateConference = moment(date1).format('D MMMM');
 
 const WorkshopsDetails = ({ twitter, name }) => {
   return (
@@ -57,12 +68,11 @@ const WorkshopsItem = ({ title, speaker, slug }) => {
 };
 
 const Workshops = () => (
-  // TODO: ticket price
   <Section id="workshops" title="Workshops">
     <p>
-      All workshops are run on 7 November and include a conference pass for the
-      8 November for £449+VAT. You can request to change the conference pass
-      day, which will be granted based on availability.
+      All workshops are run on {dateWorkshops} and include a conference pass for
+      the {dateConference} for £{price}+VAT. You can request to change the
+      conference pass day, which will be granted based on availability.
     </p>
     {data.map(workshop => <WorkshopsItem key={workshop.slug} {...workshop} />)}
   </Section>

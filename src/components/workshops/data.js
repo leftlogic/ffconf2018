@@ -9,7 +9,7 @@ module.exports = [
     },
 
     details: {
-      date: '8 November 2017',
+      date: '2017-11-07',
       time: '09:00 — 17:00',
       venue: 'Lighthouse, Brighton'
     },
@@ -71,7 +71,7 @@ module.exports = [
     },
 
     details: {
-      date: '8 November 2017',
+      date: '2017-11-07',
       time: '09:00 — 17:00',
       venue: 'Lighthouse, Brighton'
     },
