@@ -8,9 +8,11 @@ const Section = ({ id, title, children }) => {
 
   return (
     <section className={sectionClasses} role="region" aria-labelledby={id}>
-      <h2 id={id} className="section__title" role="heading" aria-level="2">
-        {title}
-      </h2>
+      {title && (
+        <h2 id={id} className="section__title" role="heading" aria-level="2">
+          {title}
+        </h2>
+      )}
       {children}
     </section>
   );

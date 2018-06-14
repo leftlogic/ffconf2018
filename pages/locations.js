@@ -5,9 +5,11 @@ import Sponsors from '../src/components/sponsors';
 import Locations from '../src/components/locations';
 import Thanks from '../src/components/thanks';
 import CodeOfConduct from '../src/components/code-of-conduct';
+import Sessions from '../src/components/sessions';
 
 const PageIndex = () => (
   <div id="root">
+    <Sessions />
     <CodeOfConduct />
     <Thanks />
     <Locations />

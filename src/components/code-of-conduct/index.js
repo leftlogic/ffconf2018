@@ -1,4 +1,4 @@
-import Marked from '../marked';
+import Markdown from '../markdown';
 import Section from '../section';
 
 import data from 'raw-loader!./data.md';
@@ -6,7 +6,7 @@ import data from 'raw-loader!./data.md';
 const CodeOfConduct = () => {
   return (
     <Section id="code-of-conduct" title="Conference Code of Conduct">
-      <Marked>{data}</Marked>
+      <Markdown>{data}</Markdown>
     </Section>
   );
 };

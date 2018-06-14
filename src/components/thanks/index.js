@@ -1,4 +1,4 @@
-import Marked from '../marked';
+import Markdown from '../markdown';
 import Section from '../section';
 
 import data from 'raw-loader!./data.md';
@@ -6,7 +6,7 @@ import data from 'raw-loader!./data.md';
 const Thanks = () => {
   return (
     <Section id="thanks" title="A Special Thanks">
-      <Marked>{data}</Marked>
+      <Markdown>{data}</Markdown>
     </Section>
   );
 };

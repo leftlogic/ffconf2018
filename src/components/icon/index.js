@@ -1,3 +1,5 @@
-const Icon = () => <div>svg icon</div>;
+const Icon = ({ icon }) => {
+  return <div>svg {icon}</div>;
+};
 
 export default Icon;

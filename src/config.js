@@ -14,7 +14,7 @@ module.exports = {
   sponsorUrl: 'https://media.ffconf.org/2017/sponsor-pack.pdf',
   sponsorAvailable: true,
   config: {
-    phase: 4,
+    phase: 3,
     soldout: {
       conference: true,
       day1: true,
