@@ -1,54 +1,11 @@
-import moment from 'moment';
-
 import Section from '../section';
 import Break from './break';
 import Talk from './talk';
 
-import config from '../../config';
+import { formatSessions } from '../../utils';
+
 import data from './data';
 import api from './api';
-
-const idify = s => {
-  return s
-    .replace(/&.*?;/g, '')
-    .replace(/\s+/g, '-')
-    .replace(/[^\w-]/g, '')
-    .toLowerCase();
-};
-
-const formatData = ({ data, api }) => {
-  const [date1, date2] = config.dates;
-  const startTime = moment(`${date1} ${config.startTime}`);
-
-  const talksById = api.reduce((acc, talk) => {
-    const { order } = talk;
-    acc[order] = { ...talk };
-
-    return acc;
-  }, {});
-
-  const properData = data.map(session => {
-    const { id, duration, isBreak, title } = session;
-
-    const start = startTime.format('HH:mm');
-    startTime.add(duration, 'minutes');
-    const end = startTime.format('HH:mm');
-
-    const newSession = {
-      ...session,
-      start,
-      end,
-      date1: `${date1} ${start}`,
-      date2: `${date2} ${start}`,
-      talk: id ? { ...talksById[id] } : undefined,
-      slug: isBreak ? idify(title) : undefined
-    };
-
-    return newSession;
-  });
-
-  return properData;
-};
 
 const WhichSession = ({ isBreak, ...session }) => {
   const Which = isBreak ? Break : Talk;
@@ -57,7 +14,7 @@ const WhichSession = ({ isBreak, ...session }) => {
 };
 
 const Sessions = () => {
-  const sessions = formatData({ data, api });
+  const sessions = formatSessions({ data, api });
 
   return (
     <Section id="sessions" title="Sessions">
