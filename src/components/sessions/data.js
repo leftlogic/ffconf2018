@@ -3,13 +3,13 @@ module.exports = [
     isBreak: true,
     title: 'Registration',
     duration: 40,
-    icon: 'high-five'
+    icon: 'badge'
   },
   {
     isBreak: true,
     title: 'Opening remarks',
     duration: 10,
-    icon: 'high-five'
+    icon: 'language'
   },
   {
     duration: 40,
@@ -25,7 +25,7 @@ module.exports = [
     isBreak: true,
     title: 'Coffee break (30 mins)',
     duration: 30,
-    icon: 'coffee'
+    icon: 'donut'
   },
 
   {
@@ -42,7 +42,7 @@ module.exports = [
     isBreak: true,
     duration: 90,
     title: 'Lunch break (90 mins)',
-    icon: 'lunch'
+    icon: 'donut'
   },
 
   {
@@ -58,7 +58,7 @@ module.exports = [
     isBreak: true,
     duration: 30,
     title: 'Cake break (30 mins)',
-    icon: 'coffee'
+    icon: 'donut'
   },
 
   {
@@ -74,7 +74,7 @@ module.exports = [
     isBreak: true,
     duration: 20,
     title: 'Closing remarks',
-    icon: 'high-five'
+    icon: 'language'
   },
   {
     isBreak: true,
@@ -83,6 +83,6 @@ module.exports = [
     duration: 90,
     afterparty: true,
     title: 'After Party',
-    icon: 'high-five'
+    icon: 'party'
   }
 ];
