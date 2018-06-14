@@ -20,13 +20,10 @@ module.exports = {
       day1: true,
       day2: true,
       workshops: true,
-      'css-layout': true,
       'angular-2': true,
       next: false
     },
-    mode: 'schedule',
     comments: {
-      'mode-options': 'titles|speakers|schedule',
       'phase-options': {
         '0': 'before selling any ticket',
         '0.5': 'release of topics before selling tickets',

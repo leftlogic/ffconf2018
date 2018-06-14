@@ -1,16 +1,9 @@
-import Link from 'next/link';
-
-import MainNav from '../main-nav';
+import NavMain from '../nav-main';
 
 const Header = () => {
   return (
     <header>
-      <nav>
-        <Link href="/">
-          <a>home</a>
-        </Link>
-        <MainNav />
-      </nav>
+      <NavMain />
     </header>
   );
 };
