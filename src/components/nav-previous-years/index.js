@@ -7,15 +7,15 @@ for (let i = start; i < config.year; i++) {
   data.push(i);
 }
 
-const PreviousYears = () => {
+const NavPreviousYears = () => {
   return (
-    <nav className="previous-years">
-      <h5 className="previous-years__title">Previous years:</h5>
-      <ul className="previous-years__list">
+    <nav className="nav-previous-years">
+      <h5 className="nav-previous-years__title">Previous years:</h5>
+      <ul className="nav-previous-years__list">
         {data.map(item => (
-          <li key={item} className="previous-years__item">
+          <li key={item} className="nav-previous-years__item">
             <a
-              className="previous-years__link"
+              className="nav-previous-years__link"
               href={`https://${item}.ffconf.org/`}
             >
               {item}
@@ -27,4 +27,4 @@ const PreviousYears = () => {
   );
 };
 
-export default PreviousYears;
+export default NavPreviousYears;

@@ -1,11 +1,22 @@
+import moment from 'moment';
 import { Fragment } from 'react';
 
 import config from '../../config';
-import test from './test';
+import script from 'raw-loader!./script.js';
 
-const FFHead = ({ assetPrefix }) => {
-  const { themeColor, ticketPrice, year, version, dates, analytics } = config;
-  const a = `(${test.toString()})(${dates});`;
+const { themeColor, ticketPrice, year, version, dates, analytics } = config;
+const [date1, date2] = dates;
+const momentDate1 = moment(date1);
+const momentDate2 = moment(date2);
+const formattedDate1 = momentDate1.format('Do');
+const formattedDate2 = momentDate2.format('Do MMMM YYYY');
+const twitterDates = `${momentDate1.format('D')} & ${momentDate2.format(
+  'D-MMM'
+)}`;
+// TODO: ticket sale date
+
+const FFHead = () => {
+  const inlineScript = `(${script})('${date1}', '${date2}');`;
 
   return (
     <Fragment>
@@ -19,14 +30,16 @@ const FFHead = ({ assetPrefix }) => {
       <meta name="mobile-web-app-capable" content="yes" />
       <meta
         name="description"
-        content="ffconf 2017 is a one day JavaScript Conference at the Duke of York’s Picturehouse in Brighton, UK run on 9th and 10th November 2017"
+        content={`ffconf ${year} is a one day JavaScript Conference at the Duke of York’s Picturehouse in Brighton, UK run on ${formattedDate1} and ${formattedDate2}`}
       />
       <meta name="format-detection" content="telephone=no" />
       <meta name="theme-color" content={themeColor} />
       <meta name="apple-mobile-web-app-title" content={`ffconf ${year}`} />
       <meta name="application-name" content={`ffconf ${year}`} />
 
-      <title>ffconf :: JavaScript Conference :: 9th & 10th November 2017</title>
+      <title>
+        ffconf :: JavaScript Conference :: {formattedDate1} & {formattedDate2}
+      </title>
 
       {/* facebook open graph tags */}
       <meta property="og:type" content="website" />
@@ -63,60 +76,43 @@ const FFHead = ({ assetPrefix }) => {
       />
       <meta name="twitter:data1" value="20-July 10am" />
       <meta name="twitter:label2" value="When? Twice!" />
-      <meta name="twitter:data2" value={`9 & 10-Nov @ £${ticketPrice}`} />
+      <meta name="twitter:data2" value={`${twitterDates} @ £${ticketPrice}`} />
 
-      <link
-        rel="stylesheet"
-        href={`${assetPrefix}/static/css/style.css?${version}`}
-      />
-      <link
-        rel="stylesheet"
-        href={`${assetPrefix}/static/css/adjustments.css?${version}`}
-      />
+      <link rel="stylesheet" href={`/static/css/style.css?${version}`} />
       <link
         rel="all-the-source"
         href={`https://github.com/leftlogic/ffconf${year}`}
       />
-      <link rel="author" href={`${assetPrefix}/static/humans.txt`} />
-      <link rel="manifest" href={`${assetPrefix}/static/manifest.json`} />
+      <link rel="author" href="/static/humans.txt" />
+      <link rel="manifest" href="/static/manifest.json" />
 
       <link
         rel="apple-touch-icon"
         sizes="180x180"
-        href={`${assetPrefix}/static/images/favicons/apple-touch-icon.png`}
+        href="/static/images/favicons/apple-touch-icon.png"
       />
       <link
         rel="icon"
         type="image/png"
-        href={`${assetPrefix}/static/images/favicons/favicon-32x32.png`}
+        href="/static/images/favicons/favicon-32x32.png"
         sizes="32x32"
       />
       <link
         rel="icon"
         type="image/png"
-        href={`${assetPrefix}/static/images/favicons/favicon-16x16.png`}
+        href="/static/images/favicons/favicon-16x16.png"
         sizes="16x16"
       />
       <link
         rel="mask-icon"
-        href={`${assetPrefix}/static/images/favicons/safari-pinned-tab.svg`}
+        href="/static/images/favicons/safari-pinned-tab.svg"
         color={themeColor}
       />
-      <link
-        rel="shortcut icon"
-        href={`${assetPrefix}/static/images/favicons/favicon.ico`}
-      />
+      <link rel="shortcut icon" href="/static/images/favicons/favicon.ico" />
       <meta
         name="msapplication-config"
-        content={`${assetPrefix}/static/images/favicons/browserconfig.xml`}
+        content="/static/images/favicons/browserconfig.xml"
       />
-
-      {/* <div
-        name="react-comment-hack"
-        dangerouslySetInnerHTML={{
-          __html: `<!--[if lt IE 9]><script src="${assetPrefix}/static/js/html5shiv.min.js" /><![endif]-->`
-        }}
-      /> */}
 
       <script
         dangerouslySetInnerHTML={{
@@ -129,7 +125,7 @@ const FFHead = ({ assetPrefix }) => {
         }}
       />
 
-      <script dangerouslySetInnerHTML={{ __html: `${a}` }} />
+      <script dangerouslySetInnerHTML={{ __html: `${inlineScript}` }} />
     </Fragment>
   );
 };

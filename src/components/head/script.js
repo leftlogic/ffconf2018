@@ -1,6 +1,6 @@
-const fx = function(dates) {
+function fx(dates) {
   window.confDays = [new Date(dates[0]), new Date(dates[1])];
-  document.documentElement.className += ' hellz-yes-js ♪~ ᕕ(ᐛ)ᕗ';
+  document.documentElement.className += ' 🦄';
   //=== SVG support
   function supportsSVG() {
     return (
@@ -45,6 +45,4 @@ const fx = function(dates) {
   } catch (e) {
     // Most likely LocalStorage disabled
   }
-};
-
-module.exports = fx;
+}

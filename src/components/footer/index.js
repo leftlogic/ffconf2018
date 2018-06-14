@@ -1,23 +1,27 @@
 import Link from 'next/link';
 import moment from 'moment';
 
-import FullNav from '../full-nav';
-import PreviousYears from '../previous-years';
+import NavFull from '../nav-full';
+import NavPreviousYears from '../nav-previous-years';
 
 import config from '../../config';
 
-const when = `${config.date1.format('D')} & ${config.date2.format('D-MMM')}`;
+const { dates, year } = config;
+const [date1, date2] = dates;
+const momentDate1 = moment(date1);
+const momentDate2 = moment(date2);
+const when = `${momentDate1.format('D')} & ${momentDate2.format('D-MMM')}`;
 
 const Footer = () => {
   return (
-    <footer>
-      <h4 className="footer-title">Additional Links</h4>
+    <footer className="footer">
+      <h4 className="footer__title">ffconf {year}</h4>
 
-      <FullNav />
+      <NavFull />
 
-      <h4 className="footer-title">Footnote</h4>
+      <hr className="footer__divider" />
 
-      <p className="blurb">
+      <p className="blurb footer__content">
         <Link href="/">
           <a>#ffconf</a>
         </Link>{' '}
@@ -26,7 +30,7 @@ const Footer = () => {
         based applications and bleeding edge front end technology.
       </p>
 
-      <p className="codeofconduct">
+      <p className="codeofconduct footer__content">
         By attending any of our events (workshops & conference & fringe events)
         you are agreeing to our{' '}
         <Link href="/code-of-conduct">
@@ -34,22 +38,22 @@ const Footer = () => {
         </Link>.
       </p>
 
-      <p className="curators">
+      <p className="curators footer__content">
         Curated and created with much love, tears and sweat by{' '}
-        <a href="https://twitter.com/rem" target="_blank">
+        <a href="https://twitter.com/rem" target="_blank" rel="noopener">
           Remy
         </a>{' '}
         &{' '}
-        <a href="https://twitter.com/Julieanne" target="_blank">
+        <a href="https://twitter.com/Julieanne" target="_blank" rel="noopener">
           Julie
         </a>{' '}
         of{' '}
-        <a href="http://leftlogic.com" target="_blank">
+        <a href="http://leftlogic.com" target="_blank" rel="noopener">
           Left&nbsp;Logic
         </a>
       </p>
 
-      <PreviousYears />
+      <NavPreviousYears />
     </footer>
   );
 };
