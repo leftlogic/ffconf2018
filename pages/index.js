@@ -6,7 +6,6 @@ import Locations from '../src/components/locations';
 const PageIndex = () => {
   return (
     <Layout>
-      Home
       <Sessions />
       <Workshops />
       <Locations />

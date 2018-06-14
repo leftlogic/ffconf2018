@@ -13,7 +13,7 @@ const SpeakerImage = ({ name, photo }) => {
 
   return (
     <div
-      className="speaker__img"
+      className="speaker__image"
       style={{ '--speaker-photo': `url(${url})` }}
       title={title}
     />
