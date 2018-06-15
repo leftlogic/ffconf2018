@@ -1,8 +1,8 @@
 import moment from 'moment';
 import { Fragment } from 'react';
 
-import config from '../../config';
-import script from 'raw-loader!./script.js';
+import config from '../src/config';
+import script from 'raw-loader!../static/js/head.js';
 
 const { themeColor, ticketPrice, year, version, dates, analytics } = config;
 const [date1, date2] = dates;
@@ -20,7 +20,6 @@ const FFHead = () => {
 
   return (
     <Fragment>
-      <meta charSet="utf-8" />
       <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
       <meta
         name="viewport"

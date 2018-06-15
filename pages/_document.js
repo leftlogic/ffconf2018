@@ -1,8 +1,11 @@
 /* global process */
-import Document, { Main, NextScript } from 'next/document';
+import Document, { NextScript } from 'next/document';
 
 import config from '../src/config';
-import FFHead from '../src/components/head';
+import FFHead from './_head';
+import FFMeta from './_meta';
+import FFMain from './_main';
+import FFNextScript from './_nextscript';
 
 class FFDocument extends Document {
   static async getInitialProps({ renderPage, query, pathname }) {
@@ -15,12 +18,12 @@ class FFDocument extends Document {
 
     return (
       <html lang="en" id={id} data-version={version}>
-        <head>
-          <FFHead />
-        </head>
+        <FFHead>
+          <FFMeta />
+        </FFHead>
         <body>
-          <Main />
-          <NextScript />
+          <FFMain />
+          <FFNextScript />
           <script src="/static/js/script.js" />
           <script
             dangerouslySetInnerHTML={{
