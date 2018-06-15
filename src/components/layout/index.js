@@ -4,7 +4,7 @@ import Header from '../header';
 import Footer from '../footer';
 import Sponsors from '../sponsors';
 import Quote from '../quote';
-import QuotesTemplates from '../quotes-templates';
+import QuotesTemplates from '../quote/quotes-templates';
 
 import './layout.scss';
 
@@ -13,10 +13,12 @@ const Layout = ({ children }) => (
     <div className="gradient">
       <Header />
 
-      {children}
+      <div className="wrapper">
+        {children}
 
-      <Quote />
-      <Sponsors />
+        <Quote />
+        <Sponsors />
+      </div>
     </div>
     <Footer />
     <QuotesTemplates />

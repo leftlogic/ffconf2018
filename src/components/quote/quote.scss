@@ -1,11 +1,66 @@
-.quote {
-  background: var(--c-purple);
+.quote__wrapper {
+  // background: #f90;
+  margin: 0;
+  padding: 32px;
+  position: relative;
+  text-align: center;
+  z-index: 0;
+
+  &:before {
+    background: var(--c-purple);
+    bottom: 10px;
+    content: "";
+    left: 0;
+    position: absolute;
+    right: 10px;
+    top: 0;
+    z-index: -1;
+  }
+
+  &:after {
+    border: 2px solid var(--c-pink);
+    bottom: 0;
+    content: "";
+    left: 8px;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    top: 8px;
+    z-index: 1;
+  }
+
+  @media (min-width: 768px) {
+    align-items: center;
+    display: flex;
+    flex-wrap: nowrap;
+    text-align: left;
+  }
+}
+
+.quote__image {
+  margin: 0 auto;
+  width: 56px;
+
+  @media (min-width: 768px) {
+    flex: 0 0 auto;
+    margin-right: 32px;
+    width: 108px;
+  }
 }
 
 .quote__text {
   color: var(--c-white);
+  font-family: var(--f-title);
+  font-size: 2.4rem;
+}
+
+.quote__author {
+  color: var(--c-pink);
+  font-family: var(--f-sub);
+  font-style: normal;
+  font-size: 1.5rem;
 }
 
 .quote__link {
-  color: var(--c-pink);
+  text-decoration: none;
 }

@@ -1,3 +1,4 @@
+/*eslint no-unused-vars: ["error", { "varsIgnorePattern": "Hack" }]*/
 import Hack from '../src/components/hack';
 import Layout from '../src/components/layout';
 import Sessions from '../src/components/sessions';

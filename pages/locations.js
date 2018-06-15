@@ -7,7 +7,7 @@ import Thanks from '../src/components/thanks';
 import CodeOfConduct from '../src/components/code-of-conduct';
 import Sessions from '../src/components/sessions';
 import Quote from '../src/components/quote';
-import QuotesTemplates from '../src/components/quotes-templates';
+import QuotesTemplates from '../src/components/quote/quotes-templates';
 import Wot from '../src/components/wot';
 import Workshop from '../src/components/workshops/workshop';
 import Workshops from '../src/components/workshops';

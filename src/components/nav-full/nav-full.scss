@@ -2,10 +2,8 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-}
 
-@media (min-width: 768px) {
-  .nav-full__list {
+  @media (min-width: 768px) {
     flex-direction: row;
     justify-content: space-between;
   }
