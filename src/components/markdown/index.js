@@ -7,7 +7,7 @@ const Markdown = ({ children, className }) => {
 
   return (
     <div
-      className={className ? className : false}
+      className={className ? className : undefined}
       dangerouslySetInnerHTML={{ __html: formatted }}
     />
   );

@@ -10,7 +10,7 @@ for (let i = start; i < config.year; i++) {
 const NavPreviousYears = () => {
   return (
     <nav className="nav-previous-years">
-      <h5 className="nav-previous-years__title">Previous years:</h5>
+      <div className="nav-previous-years__title">Previous years:</div>
       <ul className="nav-previous-years__list">
         {data.map(item => (
           <li key={item} className="nav-previous-years__item">

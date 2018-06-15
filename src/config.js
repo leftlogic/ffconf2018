@@ -1,5 +1,5 @@
 module.exports = {
-  themeColor: '#1800ff',
+  themeColor: '#1e81a0',
   version: require('../package.json').version,
   id: 'ffconf-2018',
   dates: ['2018-11-08', '2018-11-09'],

@@ -4,9 +4,9 @@ import data from './data';
 
 const QuotesTemplatesSingle = ({ text, author, url, photo }) => {
   return (
-    <template className="quote-template js-quote-template">
+    <template className="quote-template js-quote-template" type="text/template">
       <div
-        className="quote__image"
+        className="quote__image dynamic-image dynamic-image--square"
         style={{
           '--quote-photo': `url(/static/images/quotes/${photo})`
         }}

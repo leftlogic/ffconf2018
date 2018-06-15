@@ -1,0 +1,131 @@
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+:root {
+  --c-green: #1e81a0;
+  --c-yellow: #f7ff8f;
+  --c-cyan: #bbf8ff;
+  --c-white: #fff;
+  --c-purple: #57004b;
+  --c-gray-green: #27444a;
+  --c-pink: #ec65a5;
+  --c-gradient-end: #1e3c43;
+  --c-gradient-start: #9cfafb;
+}
+
+body {
+  color: var(--c-purple);
+  margin: 0;
+  padding: 0;
+}
+
+.gradient {
+  background: linear-gradient(var(--c-gradient-start), var(--c-gradient-end));
+}
+
+/* === Typography */
+h1,
+h2,
+h3,
+h4 {
+  font-weight: normal;
+  margin: 0;
+  text-transform: lowercase;
+}
+
+a {
+  color: inherit;
+}
+
+.header {
+  background: var(--c-green);
+  text-align: center;
+}
+
+.intro {
+  color: var(--c-yellow);
+}
+
+.footer {
+  background: var(--c-white);
+  text-align: center;
+}
+
+/* === Dynamic Image */
+.dynamic-image {
+  background: var(--quote-photo) no-repeat;
+  background-size: cover;
+}
+
+.dynamic-image:before {
+  display: block;
+  line-height: 0;
+}
+
+.dynamic-image--square:before {
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E");
+}
+
+/* === Quotes */
+.quote {
+  background: var(--c-purple);
+}
+
+.quote__text {
+  color: var(--c-white);
+}
+
+.quote__link {
+  color: var(--c-pink);
+}
+
+/* === Nav */
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* === Nav Main */
+.nav-main__list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+@media (min-width: 768px) {
+  .nav-main__list {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+/* === Nav Full */
+.nav-full__list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+@media (min-width: 768px) {
+  .nav-full__list {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+/* === Nav Previous Years */
+.nav-previous-years,
+.nav-previous-years__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.nav-previous-years__title,
+.nav-previous-years__item {
+  padding: 0 0.4em;
+}

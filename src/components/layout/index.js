@@ -3,15 +3,21 @@ import { Fragment } from 'react';
 import Header from '../header';
 import Footer from '../footer';
 import Sponsors from '../sponsors';
+import Quote from '../quote';
+import QuotesTemplates from '../quotes-templates';
 
 const Layout = ({ children }) => (
   <Fragment>
-    <Header />
+    <div className="gradient">
+      <Header />
 
-    {children}
+      {children}
 
-    <Sponsors />
+      <Quote />
+      <Sponsors />
+    </div>
     <Footer />
+    <QuotesTemplates />
   </Fragment>
 );
 
