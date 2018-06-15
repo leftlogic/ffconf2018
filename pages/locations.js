@@ -15,7 +15,7 @@ import Footer from '../src/components/footer';
 import Diversity from '../src/components/diversity';
 import Scholarship from '../src/components/scholarship';
 
-const PageIndex = () => (
+const PageLocations = () => (
   <div id="root">
     <hr />
     <Scholarship />
@@ -52,4 +52,4 @@ const PageIndex = () => (
   </div>
 );
 
-export default PageIndex;
+export default PageLocations;

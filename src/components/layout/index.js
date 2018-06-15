@@ -6,6 +6,8 @@ import Sponsors from '../sponsors';
 import Quote from '../quote';
 import QuotesTemplates from '../quotes-templates';
 
+import './layout.scss';
+
 const Layout = ({ children }) => (
   <Fragment>
     <div className="gradient">

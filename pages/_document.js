@@ -1,5 +1,5 @@
 /* global process */
-import Document, { NextScript } from 'next/document';
+import Document from 'next/document';
 
 import config from '../src/config';
 import FFHead from './_head';

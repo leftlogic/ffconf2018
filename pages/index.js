@@ -1,3 +1,4 @@
+import Hack from '../src/components/hack';
 import Layout from '../src/components/layout';
 import Sessions from '../src/components/sessions';
 import Workshops from '../src/components/workshops';
@@ -20,6 +21,10 @@ const PageIndex = () => {
       <Quote />
     </Layout>
   );
+};
+
+PageIndex.getInitialProps = () => {
+  return {};
 };
 
 export default PageIndex;

@@ -7,6 +7,8 @@ import { formatSessions } from '../../utils';
 import data from './data';
 import api from './api';
 
+import './sessions.scss';
+
 const WhichSession = ({ isBreak, ...session }) => {
   const Which = isBreak ? Break : Talk;
 

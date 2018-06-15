@@ -5,6 +5,8 @@ import NavMain from '../nav-main';
 
 import config from '../../config';
 
+import './header.scss';
+
 const { dates, year, ticketUrl, videos } = config;
 const [date1, date2] = dates;
 const momentDate1 = moment(date1);

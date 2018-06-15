@@ -2,6 +2,8 @@ import Section from '../section';
 
 import data from './data';
 
+import './locations.scss';
+
 const Location = ({ location }) => {
   const { url, name, detail, extra } = location;
 

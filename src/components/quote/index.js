@@ -1,3 +1,5 @@
+import './quote.scss';
+
 const Quote = () => {
   return (
     <div className="quote">

@@ -6,6 +6,8 @@ import Section from '../section';
 import config from '../../config';
 import data from './data';
 
+import './workshops.scss';
+
 const [date1] = config.dates;
 const [generalWorkshop] = data;
 const { price } = generalWorkshop.ticket;

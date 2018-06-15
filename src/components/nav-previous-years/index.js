@@ -1,5 +1,7 @@
 import config from '../../config';
 
+import './nav-previous-years.scss';
+
 const start = 2009;
 
 let data = [];

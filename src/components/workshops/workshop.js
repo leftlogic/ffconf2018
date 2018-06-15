@@ -7,6 +7,8 @@ import Section from '../section';
 import config from '../../config';
 import data from './data';
 
+import './workshop.scss';
+
 const { phase } = config.config;
 
 const WorkshopTopic = ({ title, description }) => {

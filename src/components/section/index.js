@@ -1,5 +1,7 @@
 import classnames from 'classnames';
 
+import './section.scss';
+
 const Section = ({ id, title, children }) => {
   const sectionClasses = classnames({
     section: true,

@@ -1,9 +1,9 @@
-import { Fragment } from 'react';
-
 import Section from '../section';
 
 import config from '../../config';
 import data from './data';
+
+import './sponsors.scss';
 
 const { sponsorUrl, sponsorAvailable } = config;
 

@@ -6,6 +6,8 @@ import NavPreviousYears from '../nav-previous-years';
 
 import config from '../../config';
 
+import './footer.scss';
+
 const { dates, year } = config;
 const [date1, date2] = dates;
 const momentDate1 = moment(date1);

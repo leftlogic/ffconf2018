@@ -2,6 +2,8 @@ import { Fragment } from 'react';
 
 import data from './data';
 
+import './quotes-templates.scss';
+
 const QuotesTemplatesSingle = ({ text, author, url, photo }) => {
   return (
     <template className="quote-template js-quote-template" type="text/template">

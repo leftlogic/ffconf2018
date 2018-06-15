@@ -1,10 +1,12 @@
 import classnames from 'classnames';
 
-import badge from 'raw-loader!./badge.svg';
-import language from 'raw-loader!./language.svg';
-import donut from 'raw-loader!./donut.svg';
-import party from 'raw-loader!./party.svg';
-import quotes from 'raw-loader!./quotes.svg';
+import './icon.scss';
+
+import badge from 'raw-loader!./assets/badge.svg';
+import language from 'raw-loader!./assets/language.svg';
+import donut from 'raw-loader!./assets/donut.svg';
+import party from 'raw-loader!./assets/party.svg';
+import quotes from 'raw-loader!./assets/quotes.svg';
 
 const data = { badge, language, donut, party, quotes };
 

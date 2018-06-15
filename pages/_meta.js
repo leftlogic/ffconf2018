@@ -77,7 +77,8 @@ const FFHead = () => {
       <meta name="twitter:label2" value="When? Twice!" />
       <meta name="twitter:data2" value={`${twitterDates} @ £${ticketPrice}`} />
 
-      <link rel="stylesheet" href={`/static/css/style.css?${version}`} />
+      {/* <link rel="stylesheet" href={`/static/css/style.css?${version}`} /> */}
+      <link rel="stylesheet" href="/_next/static/style.css" />
       <link
         rel="all-the-source"
         href={`https://github.com/leftlogic/ffconf${year}`}
