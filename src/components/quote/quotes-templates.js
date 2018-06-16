@@ -10,7 +10,7 @@ const QuotesTemplatesSingle = ({ text, author, url, photo }) => {
       <div
         className="quote__image dynamic-image dynamic-image--square"
         style={{
-          '--quote-photo': `url(/static/images/quotes/${photo})`
+          '--bg-photo': `url(/static/images/quotes/${photo})`
         }}
       />
       <div className="quote__content">

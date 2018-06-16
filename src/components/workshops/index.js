@@ -34,10 +34,9 @@ const WorkshopsDetails = ({ twitter, name }) => {
 const WorkshopsImage = ({ photo }) => {
   return (
     <div
-      className="workshops__image"
+      className="workshops__image dynamic-image dynamic-image--square special-image-border"
       style={{
-        '--workshop-photo-1x': `url(/static/images/workshops/1x-${photo})`,
-        '--workshop-photo-2x': `url(/static/images/workshops/2x-${photo})`
+        '--bg-photo': `url(/static/images/workshops/2x-${photo})`
       }}
     />
   );
