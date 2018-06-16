@@ -102,16 +102,21 @@ nav ul {
   --sb-padding: 4px;
   --sb-border-width: 2px;
 
+  padding-bottom: calc(var(--sb-border-width) + var(--sb-padding));
   position: relative;
+
+  &:before {
+    width: calc(100% - var(--sb-border-width) - var(--sb-padding));
+  }
 
   &:after {
     border: var(--sb-border-width) solid var(--sb-border-color, transparent);
-    bottom: calc(-1 * var(--sb-padding) - var(--sb-border-width));
+    bottom: 0;
     content: "";
     left: var(--sb-padding);
     pointer-events: none;
     position: absolute;
-    right: calc(-1 * var(--sb-padding) - var(--sb-border-width));
+    right: 0;
     top: var(--sb-padding);
   }
 }
