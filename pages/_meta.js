@@ -106,7 +106,7 @@ const FFHead = () => {
       <link
         rel="mask-icon"
         href="/static/images/favicons/safari-pinned-tab.svg"
-        color={themeColor}
+        color="#ec65a5"
       />
       <link rel="shortcut icon" href="/static/images/favicons/favicon.ico" />
       <meta
