@@ -63,13 +63,15 @@ const VideoButton = () => {
 const Header = () => {
   return (
     <header className="header" role="banner">
-      <Logo />
-      <Intro />
-      <Tickets
-        namespace="button-buy"
-        className="dynamic-image dynamic-image--square"
-      />
-      <VideoButton />
+      <div className="header__top">
+        <Logo />
+        <Intro />
+        <Tickets
+          namespace="button-buy"
+          className="dynamic-image dynamic-image--square"
+        />
+        <VideoButton />
+      </div>
       <NavMain />
     </header>
   );

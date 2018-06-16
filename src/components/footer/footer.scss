@@ -2,4 +2,8 @@
   background: var(--c-white);
   font-family: var(--f-sub);
   text-align: center;
+
+  @media (min-width: 768px) {
+    font-size: 1.4rem;
+  }
 }

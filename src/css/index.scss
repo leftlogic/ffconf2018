@@ -10,7 +10,7 @@
   --c-cyan: #bbf8ff;
   --c-white: #fff;
   --c-purple: #57004b;
-  --c-gray: #27444a;
+  --c-grey: #27444a;
   --c-pink: #ec65a5;
   --c-gradient-end: #1e3c43;
   --c-gradient-start: #9cfafb;
@@ -25,8 +25,13 @@
 body {
   color: var(--c-purple);
   font-family: var(--f-main);
+  font-size: 1.4rem;
   margin: 0;
   padding: 0;
+
+  @media (min-width: 768px) {
+    font-size: 1.8rem;
+  }
 }
 
 h1,
