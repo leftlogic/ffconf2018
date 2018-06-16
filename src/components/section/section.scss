@@ -1,0 +1,26 @@
+.section {
+  position: relative;
+}
+
+.section__wrapper {
+  --sb-border-color: var(--c-white);
+  --sb-bg-color: rgba(255, 255, 255, 0.2);
+
+  padding: 32px;
+}
+
+.section__title {
+  color: var(--c-white);
+  text-transform: uppercase;
+
+  @media (min-width: 768px) {
+    font-size: 1.6rem;
+
+    transform: rotate(-90deg) translate(-100%, -150%);
+    transform-origin: 0 0;
+    display: inline-block;
+    position: absolute;
+    // top: 0;
+    // left: 2rem;
+  }
+}

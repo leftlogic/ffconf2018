@@ -75,7 +75,7 @@ a {
   z-index: 0;
 
   &::before {
-    background: var(--sb-bg, transparent);
+    background: var(--sb-bg-color, transparent);
     bottom: calc(var(--sb-border-width) + var(--sb-padding));
     content: "";
     left: 0;

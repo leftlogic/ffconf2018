@@ -1,3 +1,5 @@
+### Play nice
+
 ffconf takes diversity seriously. We know that a diverse line-up is important for the inclusion of marginalised people in the tech community.
 
 We want people to attend because of the content we provide, not who's presenting it. As such, we only reveal our speakers at the day of the conference.

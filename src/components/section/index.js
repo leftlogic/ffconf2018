@@ -8,6 +8,11 @@ const Section = ({ id, title, children }) => {
     [`section--${id}`]: !!id
   });
 
+  const wrapperClasses = classnames({
+    section__wrapper: true,
+    'special-box-border': true
+  });
+
   return (
     <section className={sectionClasses} role="region" aria-labelledby={id}>
       {title && (
@@ -15,7 +20,7 @@ const Section = ({ id, title, children }) => {
           {title}
         </h2>
       )}
-      {children}
+      <div className={wrapperClasses}>{children}</div>
     </section>
   );
 };

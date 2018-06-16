@@ -11,17 +11,17 @@ import './layout.scss';
 const Layout = ({ children }) => (
   <Fragment>
     <div className="gradient">
-      <Header />
-
       <div className="wrapper">
+        <Header />
+
         {children}
 
         <Quote />
         <Sponsors />
+        <Footer />
+        <QuotesTemplates />
       </div>
     </div>
-    <Footer />
-    <QuotesTemplates />
   </Fragment>
 );
 

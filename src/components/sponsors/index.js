@@ -1,7 +1,5 @@
 import classnames from 'classnames';
 
-import Section from '../section';
-
 import config from '../../config';
 import data from './data';
 
@@ -33,7 +31,7 @@ const SponsorsAvailable = () => {
 
 const Sponsors = () => {
   return (
-    <Section id="sponsors" title="Sponsors">
+    <>
       {data.map(cat => (
         <section key={cat.slug} className="sponsors__category">
           <h3 className="sponsors__title" role="heading" aria-level="3">
@@ -68,7 +66,7 @@ const Sponsors = () => {
       ))}
 
       <SponsorsAvailable />
-    </Section>
+    </>
   );
 };
 
