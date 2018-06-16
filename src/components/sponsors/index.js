@@ -1,3 +1,5 @@
+import classnames from 'classnames';
+
 import Section from '../section';
 
 import config from '../../config';
@@ -39,9 +41,15 @@ const Sponsors = () => {
           </h3>
           <div className="sponsors__list">
             {cat.list.map(sponsor => (
-              <figure key={sponsor.name} className="sponsors__item">
+              <figure
+                key={sponsor.name}
+                className={classnames({
+                  sponsors__item: true,
+                  [`sponsors__item--${cat.slug}`]: !!cat.slug
+                })}
+              >
                 <a
-                  className="sponsors__link"
+                  className="sponsors__link sponsors__link--image"
                   href={sponsor.url}
                   target="_blank"
                   rel="noopener"

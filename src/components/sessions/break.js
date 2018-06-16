@@ -12,9 +12,11 @@ const Break = ({ title, icon, start, end, date1, date2, slug }) => {
 
   return (
     <Session date1={date1} date2={date2} slug={slug}>
+      {icon && (
+        <Icon icon={icon} className="break__icon special-image-border" />
+      )}
       <header className="break">
         <h3 className="break__title" role="heading" aria-level="3">
-          {icon && <Icon icon={icon} />}
           {title}
         </h3>
         <div className="break__time">

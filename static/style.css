@@ -1,10 +1,11 @@
-@import url('https://fonts.googleapis.com/css?family=Ubuntu:400,700');
+@import url("https://fonts.googleapis.com/css?family=Ubuntu:400,700");
 
 * {
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   height: 100%;
   padding: 0;
   margin: 0;
@@ -17,8 +18,8 @@ html {
   justify-content: flex-start;
 }
 
-html:after {
-  content: '';
+html::after {
+  content: "";
   z-index: 0;
   background: url(/static/ffconf.svg) no-repeat;
   background-size: 50vw;
@@ -26,14 +27,13 @@ html:after {
   width: 100%;
   height: 100%;
   position: fixed;
-
 }
 
 body {
   flex-grow: 1;
   z-index: 1;
   align-conent: center;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: "Ubuntu", sans-serif;
   border-radius: 2px;
   width: 100%;
   height: auto;
@@ -57,7 +57,11 @@ small {
 }
 
 header {
-  background-image: linear-gradient(to top, rgb(196, 113, 245) 0%, rgb(250, 113, 205) 200%);
+  background-image: linear-gradient(
+    to top,
+    rgb(196, 113, 245) 0%,
+    rgb(250, 113, 205) 200%
+  );
   color: white;
   text-align: center;
   padding: 2vw;
@@ -101,7 +105,6 @@ p:first-child {
   small {
     font-size: 70%;
   }
-
 }
 
 @media screen and (min-width: 720px) {
@@ -119,7 +122,6 @@ p:first-child {
     padding: 6vw;
   }
 }
-
 
 .ethos {
   white-space: nowrap;

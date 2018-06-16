@@ -4,3 +4,18 @@
 
   width: 150px;
 }
+
+@media (min-width: 768px) {
+  .workshops__header {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  .workshops__header-content {
+    flex: 1;
+  }
+
+  .workshops__image {
+    flex: 0 0 auto;
+  }
+}
