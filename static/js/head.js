@@ -1,17 +1,6 @@
 function fx(dates) {
   window.confDays = [new Date(dates[0]), new Date(dates[1])];
   document.documentElement.className += ' 🦄';
-  //=== SVG support
-  function supportsSVG() {
-    return (
-      !!document.createElementNS &&
-      !!document.createElementNS('http://www.w3.org/2000/svg', 'svg')
-        .createSVGRect
-    );
-  }
-  if (!supportsSVG()) {
-    document.documentElement.className += ' no-svg';
-  }
   //=== Safari 8
   if (
     /constructor/i.test(window.HTMLElement) &&

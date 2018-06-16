@@ -4,7 +4,7 @@ import classnames from 'classnames';
 
 import './nav.scss';
 
-const Nav = ({ router, data, className }) => {
+const Nav = ({ router, data, className, children }) => {
   return (
     <nav className={className}>
       <ul className={`${className}__list`}>
@@ -25,6 +25,7 @@ const Nav = ({ router, data, className }) => {
           </li>
         ))}
       </ul>
+      {children}
     </nav>
   );
 };

@@ -2,17 +2,18 @@ import Link from 'next/link';
 import moment from 'moment';
 
 import NavMain from '../nav-main';
+import Tickets from '../tickets';
 
 import config from '../../config';
 
 import './header.scss';
 
-const { dates, year, ticketUrl, videos } = config;
+const { dates, year, videos } = config;
 const [date1, date2] = dates;
 const momentDate1 = moment(date1);
 const momentDate2 = moment(date2);
 const when = `${momentDate1.format('Do')} & ${momentDate2.format('Do MMMM')}`;
-const { phase, soldout } = config.config;
+const { phase } = config.config;
 
 const Logo = () => {
   return (
@@ -43,37 +44,6 @@ const Intro = () => {
   );
 };
 
-const BuyButton = () => {
-  let buy = false;
-  let buttonText = '';
-
-  if (phase < 1) {
-    // TODO: on sale text
-    buttonText = 'On sale 20 July';
-  } else if (phase >= 1 && phase <= 3) {
-    if (soldout.conference) {
-      buttonText = 'Sold Out';
-    } else {
-      buy = true;
-      buttonText = 'Buy Tickets';
-    }
-  }
-
-  if (!buttonText) {
-    return null;
-  }
-
-  if (buy) {
-    return (
-      <a href={ticketUrl} target="_blank" rel="noopener" className="">
-        {buttonText}
-      </a>
-    );
-  }
-
-  return <span className="">{buttonText}</span>;
-};
-
 const VideoButton = () => {
   if (phase < 4) {
     return null;
@@ -95,7 +65,10 @@ const Header = () => {
     <header className="header" role="banner">
       <Logo />
       <Intro />
-      <BuyButton />
+      <Tickets
+        namespace="button-buy"
+        className="dynamic-image dynamic-image--square"
+      />
       <VideoButton />
       <NavMain />
     </header>

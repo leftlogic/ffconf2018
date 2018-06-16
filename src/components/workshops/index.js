@@ -57,7 +57,7 @@ const WorkshopsItem = ({ title, speaker, slug }) => {
 
           <div>
             <Link href={`/workshop?slug=${slug}`} as={`/workshop/${slug}`}>
-              <a className="button">More Info</a>
+              <a className="button">Details</a>
             </Link>
           </div>
         </div>

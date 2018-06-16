@@ -3,7 +3,82 @@
   text-align: center;
 }
 
+.logo {
+  margin: 0 auto;
+  width: 98px;
+}
+
+.logo__link {
+  display: block;
+}
+
+.logo__image {
+  display: block;
+  width: 100%;
+}
+
 .intro {
   color: var(--c-yellow);
   font-family: var(--f-title);
+}
+
+.intro__title {
+  text-transform: lowercase;
+}
+
+.button-buy {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .header {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .logo {
+    margin-left: 0;
+    margin-right: auto;
+    width: 300px;
+  }
+
+  .intro {
+    text-align: left;
+  }
+
+  .intro__title {
+    text-transform: none;
+  }
+
+  .button-buy {
+    display: block;
+    margin-left: auto;
+    margin-right: 0;
+    width: 181px;
+
+    &--enabled {
+      --bg-photo: url("/static/images/button-buy.png");
+    }
+
+    &--disabled {
+      --bg-photo: url("/static/images/button-buy-disabled.png");
+    }
+  }
+
+  /* Hide only visually, but have it available for screen readers
+   * https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css
+   */
+  .button-buy__text {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap;
+  }
 }

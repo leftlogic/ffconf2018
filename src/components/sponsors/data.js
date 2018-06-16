@@ -41,21 +41,6 @@ module.exports = [
         img: 'twilio.svg'
       },
       {
-        name: 'Twilio',
-        url: 'https://www.twilio.com/',
-        img: 'twilio.svg'
-      },
-      {
-        name: 'Twilio',
-        url: 'https://www.twilio.com/',
-        img: 'twilio.svg'
-      },
-      {
-        name: 'Twilio',
-        url: 'https://www.twilio.com/',
-        img: 'twilio.svg'
-      },
-      {
         name: 'Fastly',
         url: 'https://www.fastly.com/',
         img: 'fastly.svg'

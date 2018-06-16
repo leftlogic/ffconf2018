@@ -3,6 +3,7 @@
 ## Todo
 
 - [ ] Activate service worker
+- [ ] Better quote template, maybe not full html but just json?
 
 ## Questions
 

@@ -1,12 +1,24 @@
+.nav-main {
+  width: 100%;
+}
+
 .nav-main__list {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
 }
 
+.nav-main-buy__text {
+  font-weight: normal;
+}
+
 @media (min-width: 768px) {
   .nav-main__list {
     flex-direction: row;
     justify-content: space-between;
+  }
+
+  .nav-main-buy {
+    display: none;
   }
 }

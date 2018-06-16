@@ -90,7 +90,7 @@ const WorkshopBuy = ({ slug, url }) => {
   }
 
   if (phase < 1) {
-    // TODO: proper text
+    // TODO: on sale text
     return <span className="button">On sale 20 July</span>;
   }
 
