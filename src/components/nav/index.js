@@ -2,8 +2,6 @@ import Link from 'next/link';
 import { withRouter } from 'next/router';
 import classnames from 'classnames';
 
-import './nav.scss';
-
 const Nav = ({ router, data, className, children }) => {
   return (
     <nav className={className}>

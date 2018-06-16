@@ -10,7 +10,7 @@
   --c-cyan: #bbf8ff;
   --c-white: #fff;
   --c-purple: #57004b;
-  --c-gray-green: #27444a;
+  --c-gray: #27444a;
   --c-pink: #ec65a5;
   --c-gradient-end: #1e3c43;
   --c-gradient-start: #9cfafb;
@@ -47,6 +47,7 @@ a {
   background: linear-gradient(var(--c-gradient-start), var(--c-gradient-end));
 }
 
+/* === Show dynamic background image as if it was a proper photo */
 .dynamic-image::before {
   background: var(--bg-photo) no-repeat;
   background-size: cover;
@@ -60,40 +61,39 @@ a {
   content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E");
 }
 
-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
+/* === Draw the offset border and background */
 .special-box-border {
+  --sb-padding: 8px;
+  --sb-border-width: 2px;
+
   position: relative;
   z-index: 0;
 
   &::before {
     background: var(--sb-bg, transparent);
-    bottom: 10px;
+    bottom: calc(var(--sb-border-width) + var(--sb-padding));
     content: "";
     left: 0;
     position: absolute;
-    right: 10px;
+    right: calc(var(--sb-border-width) + var(--sb-padding));
     top: 0;
     z-index: -1;
   }
 
   &::after {
-    border: 2px solid var(--sb-border-color, transparent);
+    border: var(--sb-border-width) solid var(--sb-border-color, transparent);
     bottom: 0;
     content: "";
-    left: 8px;
+    left: var(--sb-padding);
     pointer-events: none;
     position: absolute;
     right: 0;
-    top: 8px;
+    top: var(--sb-padding);
     z-index: var(--sb-pos, 0);
   }
 }
 
+/* === Draw the offset border behind the image */
 .special-image-border {
   --sb-padding: 4px;
   --sb-border-width: 2px;
@@ -114,5 +114,55 @@ nav ul {
     position: absolute;
     right: 0;
     top: var(--sb-padding);
+  }
+}
+
+/* === Button */
+.button {
+  --sb-padding: 4px;
+  --sb-border-width: 2px;
+  --sb-border-color: var(--c-purple);
+
+  color: var(--c-white);
+  display: inline-block;
+  font-family: var(--f-title);
+  font-size: 1.8rem;
+  padding: 10px 20px;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  z-index: 0;
+
+  &::before {
+    background: url("/static/images/button-bg.png");
+    bottom: var(--sb-padding);
+    content: "";
+    left: var(--sb-padding);
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+  }
+
+  &::after {
+    border: var(--sb-border-width) solid var(--sb-border-color);
+    bottom: 0;
+    content: "";
+    left: 0;
+    pointer-events: none;
+    position: absolute;
+    right: calc(var(--sb-padding) - var(--sb-border-width));
+    top: calc(var(--sb-padding) - var(--sb-border-width));
+  }
+
+  &:hover,
+  &:focus {
+    color: var(--c-purple);
+  }
+
+  @media (min-width: 768px) {
+    font-size: 2.4rem;
+    padding-bottom: 6px;
+    padding-top: 6px;
   }
 }
