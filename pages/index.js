@@ -17,7 +17,6 @@ const PageIndex = () => {
       <Locations />
       <Quote />
       <Diversity />
-      <Quote />
     </Layout>
   );
 };
