@@ -3,10 +3,12 @@
   "version": "1.0.3",
   "description": "",
   "main": "index.js",
+  "outputFolder": "out",
   "scripts": {
-    "start": "node server-dev.js",
+    "start": "npm run export && node server-static.js",
     "dev": "node server-dev.js",
-    "build": "next build"
+    "build": "next build",
+    "export": "rm -rf $npm_package_outputFolder && NODE_ENV=production next build && next export -o $npm_package_outputFolder && cp static/js/sw.js $npm_package_outputFolder/ && sed -i -e 's/@VERSION@/'$npm_package_version'/g' $npm_package_outputFolder/sw.js && rm -rf $npm_package_outputFolder/sw.js-e && cp $npm_package_outputFolder/_next/static/style.css $npm_package_outputFolder/static/  && rm -rf $npm_package_outputFolder/_next"
   },
   "keywords": [],
   "author": "",

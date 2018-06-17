@@ -3,11 +3,10 @@
 import { Fragment } from 'react';
 import { Main } from 'next/document';
 
-// TODO: use NODE_ENV
 class FFMain extends Main {
   render() {
     const { html, errorHtml } = this.context._documentProps;
-    const id = process.env.GIULIA !== 'production' ? '__next' : false;
+    const id = process.env.NODE_ENV !== 'production' ? '__next' : false;
 
     return (
       <Fragment>
@@ -16,7 +15,7 @@ class FFMain extends Main {
           className="ffconf-wrapper"
           dangerouslySetInnerHTML={{ __html: html }}
         />
-        {process.env.GIULIA !== 'production' && (
+        {process.env.NODE_ENV !== 'production' && (
           <div
             id="__next-error"
             dangerouslySetInnerHTML={{ __html: errorHtml }}

@@ -7,8 +7,8 @@ class StaticNextScript extends NextScript {
     return null;
   }
 }
-// TODO: use NODE_ENV
+
 const FFNextScript =
-  process.env.GIULIA === 'production' ? StaticNextScript : NextScript;
+  process.env.NODE_ENV === 'production' ? StaticNextScript : NextScript;
 
 export default FFNextScript;

@@ -4,7 +4,7 @@ import { Fragment } from 'react';
 import config from '../src/config';
 import script from 'raw-loader!../static/js/head.js';
 
-const { themeColor, ticketPrice, year, dates, analytics } = config;
+const { themeColor, ticketPrice, year, dates, analytics, version } = config;
 const [date1, date2] = dates;
 const momentDate1 = moment(date1);
 const momentDate2 = moment(date2);
@@ -77,8 +77,12 @@ const FFHead = () => {
       <meta name="twitter:label2" value="When? Twice!" />
       <meta name="twitter:data2" value={`${twitterDates} @ £${ticketPrice}`} />
 
-      {/* <link rel="stylesheet" href={`/static/css/style.css?${version}`} /> */}
-      <link rel="stylesheet" href="/_next/static/style.css" />
+      {process.env.NODE_ENV !== 'production' && (
+        <link rel="stylesheet" href="/_next/static/style.css" />
+      )}
+      {process.env.NODE_ENV === 'production' && (
+        <link rel="stylesheet" href={`/static/style.css?${version}`} />
+      )}
       <link
         rel="all-the-source"
         href={`https://github.com/leftlogic/ffconf${year}`}

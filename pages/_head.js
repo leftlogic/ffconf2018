@@ -16,7 +16,7 @@ class StaticHead extends Head {
     );
   }
 }
-// TODO: use NODE_ENV
-const FFHead = process.env.GIULIA === 'production' ? StaticHead : Head;
+
+const FFHead = process.env.NODE_ENV === 'production' ? StaticHead : Head;
 
 export default FFHead;
