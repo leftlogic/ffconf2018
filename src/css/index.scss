@@ -12,8 +12,9 @@
   --c-purple: #57004b;
   --c-grey: #27444a;
   --c-pink: #ec65a5;
-  --c-gradient-end: #1e3c43;
   --c-gradient-start: #9cfafb;
+  --c-gradient-middle: #22a5cc;
+  --c-gradient-end: #1e3c43;
 
   --f-title: "MrsLollipop-Regular";
   --f-main: "Rubik";
@@ -46,10 +47,6 @@ h4 {
 
 a {
   color: inherit;
-}
-
-.gradient {
-  background: linear-gradient(var(--c-gradient-start), var(--c-gradient-end));
 }
 
 /* === Show dynamic background image as if it was a proper photo */
@@ -139,7 +136,7 @@ a {
   z-index: 0;
 
   &::before {
-    background: url("/static/images/button-bg.png");
+    background: url("/static/images/style/button-bg.png");
     bottom: var(--sb-padding);
     content: "";
     left: var(--sb-padding);

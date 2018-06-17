@@ -14,10 +14,11 @@ const Layout = ({ children }) => (
       <div className="wrapper">
         <Header />
 
-        {children}
+        <main className="main">{children}</main>
 
         <Quote />
         <Sponsors />
+        <div className="duke-of-yorks" />
         <Footer />
         <QuotesTemplates />
       </div>

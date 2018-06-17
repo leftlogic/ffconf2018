@@ -76,11 +76,11 @@
     width: 181px;
 
     &--enabled {
-      --bg-photo: url("/static/images/button-buy.png");
+      --bg-photo: url("/static/images/style/button-buy.png");
     }
 
     &--disabled {
-      --bg-photo: url("/static/images/button-buy-disabled.png");
+      --bg-photo: url("/static/images/style/button-buy-disabled.png");
     }
   }
 
