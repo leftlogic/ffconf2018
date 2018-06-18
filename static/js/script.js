@@ -1,4 +1,3 @@
-/* global confDays, fontCache, fontInsert, fontKey, fontUrl */
 (function() {
   var $ = function(s) {
     try {
@@ -7,13 +6,13 @@
       return [];
     }
   };
-  var $$ = function(s) {
-    try {
-      return document.querySelector(s);
-    } catch (e) {
-      return [];
-    }
-  };
+  // var $$ = function(s) {
+  //   try {
+  //     return document.querySelector(s);
+  //   } catch (e) {
+  //     return [];
+  //   }
+  // };
 
   //=== Fonts
   // http://crocodillon.com/blog/non-blocking-web-fonts-using-localstorage
@@ -23,9 +22,9 @@
     window.addEventListener('load', function() {
       var request = new XMLHttpRequest(),
         response;
-      request.open('GET', fontUrl, true);
+      request.open('GET', window.fontUrl, true);
       request.onload = function() {
-        if (this.status == 200) {
+        if (this.status === 200) {
           try {
             response = JSON.parse(this.response);
             window.fontInsert(response.value);
