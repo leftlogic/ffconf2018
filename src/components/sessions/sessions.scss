@@ -12,6 +12,8 @@
 
 .break__icon {
   --sb-border-color: var(--c-pink);
+
+  display: none;
   width: 62px;
 
   svg {
@@ -20,8 +22,33 @@
   }
 }
 
+.talk__header,
+.break__header {
+  font-family: var(--f-title);
+  font-size: 2.2rem;
+  line-height: 4rem;
+}
+
+.speaker__name,
+.talk__time,
+.break__time {
+  color: var(--c-grey);
+  display: inline-block;
+  opacity: 0.4;
+}
+
+.talk__time,
+.break__time {
+  padding-right: 1em;
+}
+
+.speaker__twitter {
+  text-decoration: none;
+}
+
 @media (min-width: 768px) {
   .sessions__item {
+    align-items: flex-start;
     display: flex;
     flex-wrap: wrap;
   }
@@ -30,6 +57,15 @@
   .break__icon {
     flex: 0 0 auto;
     width: 94px;
+  }
+  .break__icon {
+    display: block;
+  }
+
+  .talk__header,
+  .break__header {
+    font-size: 3.2rem;
+    width: calc(100% - 94px);
   }
 
   .talk__content {

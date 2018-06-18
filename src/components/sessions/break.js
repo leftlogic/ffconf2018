@@ -15,7 +15,7 @@ const Break = ({ title, icon, start, end, date1, date2, slug }) => {
       {icon && (
         <Icon icon={icon} className="break__icon special-image-border" />
       )}
-      <header className="break">
+      <header className="break__header">
         <h3 className="break__title" role="heading" aria-level="3">
           {title}
         </h3>
