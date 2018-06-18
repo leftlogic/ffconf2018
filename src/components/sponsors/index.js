@@ -18,7 +18,7 @@ const SponsorsAvailable = () => {
         Become a sponsor
       </h3>
       <a
-        className="sponsors__link sponsors__link--available"
+        className="sponsors__link sponsors__link--available button"
         href={sponsorUrl}
         target="_blank"
         rel="noopener"
@@ -31,9 +31,15 @@ const SponsorsAvailable = () => {
 
 const Sponsors = () => {
   return (
-    <>
+    <div className="sponsors">
       {data.map(cat => (
-        <section key={cat.slug} className="sponsors__category">
+        <section
+          key={cat.slug}
+          className={classnames({
+            sponsors__category: true,
+            [`sponsors__category--${cat.slug}`]: !!cat.slug
+          })}
+        >
           <h3 className="sponsors__title" role="heading" aria-level="3">
             {cat.title} sponsors
           </h3>
@@ -66,7 +72,7 @@ const Sponsors = () => {
       ))}
 
       <SponsorsAvailable />
-    </>
+    </div>
   );
 };
 

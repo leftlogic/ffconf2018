@@ -1,7 +1,7 @@
 .speaker__image {
   --sb-border-color: var(--c-white);
 
-  width: 88px;
+  width: 62px;
 }
 
 .sessions {
@@ -12,7 +12,7 @@
 
 .break__icon {
   --sb-border-color: var(--c-pink);
-  width: 88px;
+  width: 62px;
 
   svg {
     background: var(--c-pink);
@@ -29,6 +29,7 @@
   .speaker__image,
   .break__icon {
     flex: 0 0 auto;
+    width: 94px;
   }
 
   .talk__content {

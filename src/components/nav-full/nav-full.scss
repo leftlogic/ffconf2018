@@ -8,7 +8,18 @@
 
   @media (min-width: 768px) {
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
+  }
+
+  // @media (min-width: 1024px) {
+  //   flex-direction: row;
+  //   justify-content: space-between;
+  // }
+}
+
+.nav-full__item {
+  @media (min-width: 768px) {
+    padding: 0 16px 16px;
   }
 }
 

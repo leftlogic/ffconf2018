@@ -7,9 +7,9 @@ import config from '../../config';
 
 const { phase } = config.config;
 
-const SpeakerImage = ({ name, photo }) => {
+const SpeakerImage = ({ name, photo, index }) => {
   const title = phase >= 3 ? name : 'Speaker revealed soon!';
-  const url = phase >= 3 ? photo : '/static/images/speakers/blurred.gif';
+  const url = phase >= 3 ? photo : `/static/images/speakers/mod/${index}.gif`;
 
   return (
     <div
@@ -106,12 +106,21 @@ const TalkMaterial = ({ slides, audio, video }) => {
 };
 
 const Talk = ({ talk, start, end, date1, date2 }) => {
-  const { slug, title, speaker, description, slides, audio, video } = talk;
+  const {
+    slug,
+    title,
+    speaker,
+    description,
+    slides,
+    audio,
+    video,
+    order
+  } = talk;
   const { name, photo, twitter, bio } = speaker;
 
   return (
     <Session date1={date1} date2={date2} slug={slug}>
-      <SpeakerImage name={name} photo={photo} />
+      <SpeakerImage name={name} photo={photo} index={order} />
       <header className="talk__header">
         <h3 className="talk__title" role="heading" aria-level="3">
           {title}
