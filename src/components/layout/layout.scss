@@ -1,21 +1,24 @@
 .gradient {
-  background-image: url("/static/images/style/lightrays-original.svg"),
-    url("/static/images/style/back-clouds.png"),
-    linear-gradient(
-      var(--c-gradient-start) 0,
-      var(--c-gradient-middle) 50%,
-      var(--c-gradient-end) 100%
-    );
-  background-attachment: scroll, fixed, scroll;
-  background-position: 50% 0;
-  background-size: 100% auto, 90% auto, auto auto;
-  background-repeat: no-repeat;
+  background-image: linear-gradient(
+    var(--c-gradient-start) 0,
+    var(--c-gradient-middle) 50%,
+    var(--c-gradient-end) 100%
+  );
+}
+
+.clouds {
+  background: url("/static/images/style/back-clouds.png") no-repeat;
+  background-size: 90% auto;
+  height: 100vh;
+  position: fixed;
+  width: 100vw;
+  will-change: transform;
 }
 
 .duke-of-yorks {
   align-items: flex-end;
   display: flex;
-  height: 100vh;
+  min-height: 100vh;
   left: 50%;
   margin-left: -50vw;
   margin-right: -50vw;
@@ -42,6 +45,7 @@
 
 .main {
   position: relative;
+  z-index: 0;
 
   &::before {
     background: url("/static/images/style/clouds-top.png") repeat-x;
@@ -49,14 +53,36 @@
     background-size: auto 100%;
     display: block;
     height: 79px;
+    left: 0;
     position: -webkit-sticky;
     position: sticky;
-    top: 0;
-    left: 0;
-
-    margin-right: -50vw;
     margin-left: -50vw;
+    margin-right: -50vw;
+    margin-top: -1px;
+    top: 0;
     width: 100vw;
+    z-index: 1;
+  }
+
+  &::after {
+    background-image: url("/static/images/style/lightrays-original.svg");
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    content: "";
+    bottom: calc(100vh + 96px);
+    display: block;
+    left: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    position: absolute;
+    right: 50%;
+    top: 0;
+    width: 100vw;
+    z-index: -1;
+
+    -webkit-mask-image: linear-gradient(to top, transparent 0, #000 10%);
+    mask-image: linear-gradient(to top, transparent 0, #000 10%);
   }
 }
 

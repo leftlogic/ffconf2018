@@ -11,6 +11,7 @@ import './layout.scss';
 const Layout = ({ children }) => (
   <Fragment>
     <div className="gradient">
+      <div className="clouds" />
       <div className="wrapper">
         <Header />
 
@@ -18,11 +19,14 @@ const Layout = ({ children }) => (
           {children}
 
           <Quote />
+
           <Sponsors />
+
           <div className="duke-of-yorks" />
         </main>
 
         <Footer />
+
         <QuotesTemplates />
       </div>
     </div>
