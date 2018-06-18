@@ -9,8 +9,9 @@ function fx(dates) {
     document.documentElement.className += ' i-hate-safari (╯°□°)╯︵ ┻━┻';
   }
   //=== Fonts
-  window.fontUrl = '/css/fonts.47d3adddc08644ab52c7badaef40c832.woff.json';
-  var fontMd5 = '47d3adddc08644ab52c7badaef40c832';
+  var md5 = '1080c766a1f8701d72dfa56e3daa9a2a';
+  var fontUrl = `/static/js/ff-fonts.${md5}.json`;
+  var fontMd5 = md5;
   var fontKey = 'fonts';
   var fontCache = null;
   function fontInsert(value) {
@@ -31,6 +32,10 @@ function fx(dates) {
         fontCache = null;
       }
     }
+    window.fontUrl = fontUrl;
+    window.fontCache = fontCache;
+    window.fontKey = fontKey;
+    window.fontInsert = fontInsert;
   } catch (e) {
     // Most likely LocalStorage disabled
   }

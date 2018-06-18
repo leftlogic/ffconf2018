@@ -18,26 +18,26 @@
   //=== Fonts
   // http://crocodillon.com/blog/non-blocking-web-fonts-using-localstorage
   // POST-RENDER
-  // if (!fontCache) {
-  //   // Fonts not in LocalStorage or md5 did not match
-  //   window.addEventListener('load', function() {
-  //     var request = new XMLHttpRequest(),
-  //       response;
-  //     request.open('GET', fontUrl, true);
-  //     request.onload = function() {
-  //       if (this.status == 200) {
-  //         try {
-  //           response = JSON.parse(this.response);
-  //           fontInsert(response.value);
-  //           window.localStorage.setItem(fontKey, this.response);
-  //         } catch (e) {
-  //           // LocalStorage is probably full
-  //         }
-  //       }
-  //     };
-  //     request.send();
-  //   });
-  // }
+  if (!window.fontCache) {
+    // Fonts not in LocalStorage or md5 did not match
+    window.addEventListener('load', function() {
+      var request = new XMLHttpRequest(),
+        response;
+      request.open('GET', fontUrl, true);
+      request.onload = function() {
+        if (this.status == 200) {
+          try {
+            response = JSON.parse(this.response);
+            window.fontInsert(response.value);
+            window.localStorage.setItem(window.fontKey, this.response);
+          } catch (e) {
+            // LocalStorage is probably full
+          }
+        }
+      };
+      request.send();
+    });
+  }
 
   //=== Quotes
   // convert NodeList to Array https://davidwalsh.name/nodelist-array
