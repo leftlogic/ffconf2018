@@ -66,9 +66,9 @@
 
   &::after {
     background-image: url("/static/images/style/lightrays-original.svg");
-    background-position: 50% 0;
+    background-position: 0 0;
     background-repeat: no-repeat;
-    background-size: 100% auto;
+    background-size: 100% 100%;
     content: "";
     bottom: calc(100vh + 96px);
     display: block;
@@ -81,8 +81,8 @@
     width: 100vw;
     z-index: -1;
 
-    -webkit-mask-image: linear-gradient(to top, transparent 0, #000 10%);
-    mask-image: linear-gradient(to top, transparent 0, #000 10%);
+    // -webkit-mask-image: linear-gradient(to top, transparent 0, #000 10%);
+    // mask-image: linear-gradient(to top, transparent 0, #000 10%);
   }
 }
 
