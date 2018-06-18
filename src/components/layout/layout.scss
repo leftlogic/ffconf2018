@@ -13,6 +13,9 @@
 }
 
 .duke-of-yorks {
+  align-items: flex-end;
+  display: flex;
+  height: 100vh;
   left: 50%;
   margin-left: -50vw;
   margin-right: -50vw;
@@ -26,6 +29,7 @@
     background-size: auto 100%;
     content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1586 1234'%3E%3C/svg%3E");
     display: block;
+    flex: 0 0 auto;
     width: 100%;
   }
 }
