@@ -44,10 +44,9 @@ const WorkshopDetails = ({ twitter, name, date, time }) => {
 const WorkshopImage = ({ photo }) => {
   return (
     <div
-      className="workshop__image"
+      className="workshop__image dynamic-image dynamic-image--square special-image-border"
       style={{
-        '--workshop-photo-1x': `url(/static/images/workshops/1x-${photo})`,
-        '--workshop-photo-2x': `url(/static/images/workshops/2x-${photo})`
+        '--bg-photo': `url(/static/images/workshops/2x-${photo})`
       }}
     />
   );
@@ -73,7 +72,7 @@ const WorkshopTopics = ({ topics = [] }) => {
 const WorkshopDescription = ({ description, extendedDescription }) => {
   return (
     <Fragment>
-      <h2>Detailed description</h2>
+      <h2 className="workshop__description-title">Detailed description</h2>
       <Markdown className="workshop__description">{description}</Markdown>
       <Markdown className="workshop__extended-description">
         {extendedDescription}
@@ -91,17 +90,27 @@ const WorkshopBuy = ({ slug, url, children }) => {
 
   if (phase < 1) {
     // TODO: on sale text
-    return <span className="button">On sale 20 July</span>;
+    return (
+      <div className="workshop__buy-wrapper">
+        <span className="button">On sale 20 July</span>
+      </div>
+    );
   }
 
   if (soldout) {
-    return <span className="button">Sold Out</span>;
+    return (
+      <div className="workshop__buy-wrapper">
+        <span className="button">Sold Out</span>
+      </div>
+    );
   }
 
   return (
-    <a href={url} target="_blank" rel="noopener" className="button">
-      {children}
-    </a>
+    <div className="workshop__buy-wrapper">
+      <a href={url} target="_blank" rel="noopener" className="button">
+        {children}
+      </a>
+    </div>
   );
 };
 

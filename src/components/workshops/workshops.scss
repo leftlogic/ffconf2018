@@ -45,10 +45,18 @@
     --sb-padding: 8px;
 
     display: block;
-    width: 206px;
+    margin-right: 32px;
+    width: 144px;
   }
 
   .workshops__intro {
     margin-bottom: 48px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .workshops__image {
+    margin-right: 48px;
+    width: 200px;
   }
 }
