@@ -5,6 +5,7 @@ const workshops = require('./src/components/workshops/data');
 const routes = {
   '/': { page: '/' },
   '/scholarship': { page: '/scholarship' },
+  '/terms': { page: '/terms' },
   '/code-of-conduct': { page: '/code-of-conduct' }
 };
 
