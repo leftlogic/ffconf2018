@@ -31,7 +31,7 @@ const SponsorsAvailable = () => {
 
 const Sponsors = () => {
   return (
-    <div className="sponsors">
+    <div className="sponsors" id="sponsors">
       {data.map(cat => (
         <section
           key={cat.slug}
