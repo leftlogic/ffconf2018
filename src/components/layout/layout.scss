@@ -39,8 +39,8 @@
 
 .wrapper {
   margin: 0 auto;
-  max-width: 80rem;
-  width: calc(100% - 16px);
+  max-width: 1110px;
+  width: calc(100% - 32px);
 }
 
 .main {
@@ -88,7 +88,7 @@
 
 @media (min-width: 768px) {
   .wrapper {
-    width: calc(100% - 64px);
+    width: calc(100% - 96px);
   }
 
   .main {

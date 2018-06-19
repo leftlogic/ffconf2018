@@ -39,7 +39,7 @@ const SpeakerName = ({ name, twitter }) => {
 
   return (
     <div className="speaker__name">
-      <span>{name}</span>{' '}
+      {!twitter && <span>{name}</span>}
       {twitter && (
         <a
           href={`https://twitter.com/${twitter}`}
@@ -47,7 +47,7 @@ const SpeakerName = ({ name, twitter }) => {
           target="_blank"
           rel="noopener"
         >
-          @{twitter}
+          {name}
         </a>
       )}
     </div>
@@ -80,6 +80,7 @@ const TalkLink = ({ type, link }) => {
   }
 
   const linkClasses = classnames({
+    button: true,
     talk__link: true,
     [`talk__link--${type}`]: !!type
   });

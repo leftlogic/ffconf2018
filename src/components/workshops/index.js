@@ -73,7 +73,7 @@ const WorkshopsItem = ({ title, speaker, slug }) => {
 
 const Workshops = () => (
   <Section id="workshops" title="Workshops">
-    <p>
+    <p className="workshops__intro">
       All workshops are run on {dateWorkshops} and include a conference pass for
       the {dateConference} for £{price}+VAT. You can request to change the
       conference pass day, which will be granted based on availability.

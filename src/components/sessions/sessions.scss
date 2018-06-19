@@ -1,6 +1,15 @@
+.sessions__item {
+  margin-bottom: 8px;
+}
+
+.sessions__item--talk + .sessions__item--talk {
+  padding-top: 16px;
+}
+
 .speaker__image {
   --sb-border-color: var(--c-white);
 
+  margin-bottom: 8px;
   width: 62px;
 }
 
@@ -29,12 +38,15 @@
   line-height: 4rem;
 }
 
+.talk__header {
+  margin-bottom: 8px;
+}
+
 .speaker__name,
 .talk__time,
 .break__time {
   color: var(--c-grey);
   display: inline-block;
-  opacity: 0.4;
 }
 
 .talk__time,
@@ -46,16 +58,35 @@
   text-decoration: none;
 }
 
+.talk__link {
+  margin-right: 8px;
+}
+
+.talk__content {
+  padding-bottom: 16px;
+
+  p {
+    margin: 0;
+  }
+}
+
+.talk__material {
+  margin-top: 16px;
+  padding-bottom: 24px;
+}
+
 @media (min-width: 768px) {
   .sessions__item {
     align-items: flex-start;
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: 32px;
   }
 
   .speaker__image,
   .break__icon {
     flex: 0 0 auto;
+    margin-right: 32px;
     width: 94px;
   }
   .break__icon {
@@ -64,11 +95,20 @@
 
   .talk__header,
   .break__header {
-    font-size: 3.2rem;
-    width: calc(100% - 94px);
+    margin-bottom: 0;
+    width: calc(100% - 126px);
   }
 
   .talk__content {
     flex: 0 0 100%;
+    padding-bottom: 16px;
+    padding-top: 24px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .talk__header,
+  .break__header {
+    font-size: 3.2rem;
   }
 }

@@ -16,7 +16,11 @@
 /* === Sessions */
 .divider--sessions {
   color: var(--c-pink);
-  padding: 0 0 32px;
+  padding: 24px 0;
+
+  @media (min-width: 768px) {
+    padding: 48px 0 24px;
+  }
 }
 
 .sessions--schedule {
@@ -43,11 +47,23 @@
 /* === Workshops */
 .divider--workshops {
   color: var(--c-pink);
-  padding: 32px 0;
+  padding: 48px 0;
+
+  .workshops__item:last-child & {
+    display: none;
+  }
 }
 
 /* === Locations */
 .divider--locations {
   color: var(--c-white);
-  padding: 32px 0;
+  padding: 24px 0 32px;
+
+  .locations__category:last-child & {
+    display: none;
+  }
+
+  @media (min-width: 768px) {
+    display: none;
+  }
 }

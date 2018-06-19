@@ -35,7 +35,9 @@
   .nav-main-buy {
     display: none;
   }
+}
 
+@media (min-width: 1024px) {
   .nav-main__link {
     font-size: 2.8rem;
   }

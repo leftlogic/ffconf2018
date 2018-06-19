@@ -63,12 +63,15 @@
   }
 
   .logo {
+    flex: 0 0 auto;
+    margin-bottom: 0;
     margin-left: 0;
     margin-right: auto;
-    width: 300px;
+    width: 160px;
   }
 
   .intro {
+    padding: 0 32px;
     text-align: left;
   }
 
@@ -78,9 +81,10 @@
 
   .button-buy {
     display: block;
+    flex: 0 0 auto;
     margin-left: auto;
     margin-right: 0;
-    width: 181px;
+    width: 128px;
 
     &--enabled {
       --bg-photo: url("/static/images/style/button-buy.png");
@@ -104,5 +108,19 @@
     position: absolute;
     width: 1px;
     white-space: nowrap;
+  }
+}
+
+@media (min-width: 1024px) {
+  .logo {
+    width: 300px;
+  }
+
+  .intro__title {
+    font-size: 6rem;
+  }
+
+  .button-buy {
+    width: 181px;
   }
 }

@@ -5,6 +5,16 @@ import data from './data';
 
 import './locations.scss';
 
+const { map, locations } = data;
+
+const Map = () => {
+  return (
+    <a href={map} target="_blank" rel="noopener" className="locations__map">
+      <img src="/static/images/map.png" className="locations__map-image" />
+    </a>
+  );
+};
+
 const Location = ({ location }) => {
   const { url, name, detail, extra } = location;
 
@@ -28,8 +38,9 @@ const Location = ({ location }) => {
 
 const Locations = () => (
   <Section id="locations" title="Locations">
+    <Map />
     <ul className="locations">
-      {data.map(item => (
+      {locations.map(item => (
         <li key={item.type} className="locations__category">
           <h3 className="locations__title" role="heading" aria-level="3">
             {item.type}

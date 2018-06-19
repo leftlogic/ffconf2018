@@ -1,3 +1,9 @@
+.locations {
+  font-family: var(--f-title);
+  font-size: 2rem;
+  text-transform: lowercase;
+}
+
 .locations,
 .locations__list {
   list-style: none;
@@ -5,20 +11,54 @@
   padding: 0;
 }
 
+.locations__title {
+  font-size: 2.4rem;
+  margin-bottom: 32px;
+}
+
+.locations__item {
+  margin-bottom: 16px;
+}
+
 .location__link {
   text-decoration: none;
+}
+
+.location__description {
+  opacity: 0.4;
+}
+
+.location__detail,
+.location__extra {
+  margin: 0;
+}
+
+.locations__map {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+  margin-left: -32px;
+  margin-top: -40px;
+  overflow: hidden;
+  position: relative;
+  width: calc(100% + 54px);
+}
+
+.locations__map-image {
+  display: block;
 }
 
 @media (min-width: 768px) {
   .locations {
     align-items: flex-start;
     display: flex;
+    font-size: 2.4rem;
     justify-content: space-between;
   }
 
   .locations__category {
     flex: 0 0 auto;
-    width: calc((100% - 16px * 2) / 3);
+    width: calc((100% - 32px * 2) / 3);
   }
 
   .locations__category:nth-child(2) {
@@ -27,5 +67,14 @@
 
   .locations__category:nth-child(3) {
     text-align: right;
+  }
+
+  .locations__title {
+    font-size: 3.2rem;
+    margin-bottom: 48px;
+  }
+
+  .locations__item {
+    margin-bottom: 32px;
   }
 }

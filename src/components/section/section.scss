@@ -36,19 +36,25 @@
   --sb-border-color: var(--c-white);
   --sb-bg-color: rgba(255, 255, 255, 0.2);
 
-  padding: 32px;
+  padding: 40px 32px 48px;
 }
 
 .section__title {
   color: var(--c-white);
+  font-size: 1.6rem;
+  margin-bottom: 1em;
   text-transform: uppercase;
 
   @media (min-width: 768px) {
+    display: inline-block;
     font-size: 1.6rem;
-
+    margin-bottom: 0;
+    position: absolute;
     transform: rotate(-90deg) translate(-100%, -150%);
     transform-origin: 0 0;
-    display: inline-block;
-    position: absolute;
+  }
+
+  @media (min-width: 1024px) {
+    transform: rotate(-90deg) translate(-100%, -200%);
   }
 }

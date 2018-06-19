@@ -10,13 +10,14 @@
   --c-cyan: #bbf8ff;
   --c-white: #fff;
   --c-purple: #57004b;
-  --c-grey: #27444a;
+  --c-grey: rgba(39, 68, 74, 0.4);
   --c-pink: #ec65a5;
   --c-gradient-start: #9cfafb;
   --c-gradient-middle: #22a5cc;
   --c-gradient-end: #1e3c43;
 
   --f-title: "FF Lollipop";
+  // --f-title: "MrsLollipop-Fill";
   --f-main: "FF Rubik";
   --f-sub: "FF Lato";
 
@@ -135,7 +136,8 @@ a {
   display: inline-block;
   font-family: var(--f-title);
   font-size: 1.8rem;
-  padding: 10px 20px;
+  line-height: 1.6;
+  padding: 8px 24px 4px;
   position: relative;
   text-decoration: none;
   text-transform: uppercase;
@@ -170,7 +172,5 @@ a {
 
   @media (min-width: 768px) {
     font-size: 2.4rem;
-    padding-bottom: 6px;
-    padding-top: 6px;
   }
 }
