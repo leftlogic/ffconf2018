@@ -46,3 +46,15 @@
 .footer__content {
   margin: 0 0 40px;
 }
+
+@media (min-width: 768px) {
+  .footer {
+    padding: 40px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .footer {
+    padding: 80px;
+  }
+}

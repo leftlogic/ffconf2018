@@ -36,7 +36,11 @@
   --sb-border-color: var(--c-white);
   --sb-bg-color: rgba(255, 255, 255, 0.2);
 
-  padding: 40px 32px 48px;
+  padding: 40px 40px 48px;
+
+  @media (min-width: 1024px) {
+    padding: 80px 80px 48px;
+  }
 }
 
 .section__title {

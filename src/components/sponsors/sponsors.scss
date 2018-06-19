@@ -76,6 +76,10 @@
 }
 
 @media (min-width: 768px) {
+  .sponsors {
+    padding: 0 40px;
+  }
+
   .sponsors__title {
     font-size: 3.2rem;
     margin-bottom: 40px;
@@ -107,5 +111,11 @@
 
   .sponsors__category--available {
     text-align: left;
+  }
+}
+
+@media (min-width: 1024px) {
+  .sponsors {
+    padding: 0 80px;
   }
 }

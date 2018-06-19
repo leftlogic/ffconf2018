@@ -37,11 +37,11 @@
   display: flex;
   justify-content: center;
   margin-bottom: 40px;
-  margin-left: -32px;
+  margin-left: -40px;
   margin-top: -40px;
   overflow: hidden;
   position: relative;
-  width: calc(100% + 54px);
+  width: calc(100% + 70px);
 }
 
 .locations__map-image {
@@ -76,5 +76,14 @@
 
   .locations__item {
     margin-bottom: 32px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .locations__map {
+    margin-bottom: 48px;
+    margin-left: -80px;
+    margin-top: -80px;
+    width: calc(100% + 150px);
   }
 }

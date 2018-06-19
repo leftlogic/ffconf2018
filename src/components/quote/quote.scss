@@ -36,6 +36,8 @@
     align-items: flex-start;
     display: flex;
     flex-wrap: nowrap;
+    padding-left: 40px;
+    padding-right: 40px;
     text-align: left;
   }
 
@@ -48,5 +50,12 @@
 
   .quote__text {
     margin: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .quote__wrapper {
+    padding-left: 80px;
+    padding-right: 80px;
   }
 }
