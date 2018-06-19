@@ -13,12 +13,12 @@ const SponsorsAvailable = () => {
   }
 
   return (
-    <section className="sponsors__category sponsors__category--available">
-      <h3 className="sponsors__title" role="heading" aria-level="3">
+    <section className="sponsors-category sponsors-category--available">
+      <h3 className="sponsors-category__title" role="heading" aria-level="3">
         Become a sponsor
       </h3>
       <a
-        className="sponsors__link sponsors__link--available button"
+        className="sponsor__link sponsor__link--available button"
         href={sponsorUrl}
         target="_blank"
         rel="noopener"
@@ -29,47 +29,59 @@ const SponsorsAvailable = () => {
   );
 };
 
+const Sponsor = ({ name, url, img, slug, total }) => {
+  const wrapperClasses = classnames({
+    sponsor: true,
+    [`sponsor--${slug}`]: !!slug
+  });
+
+  return (
+    <figure className={wrapperClasses} style={{ '--total': total }}>
+      <a
+        className="sponsor__link sponsor__link--image"
+        href={url}
+        target="_blank"
+        rel="noopener"
+        title={name}
+      >
+        <img
+          className="sponsor__image"
+          src={`/static/images/sponsors/${img}`}
+          alt={name}
+        />
+      </a>
+    </figure>
+  );
+};
+
+const SponsorsCategory = ({ slug, title, list, total }) => {
+  if (!list.length) {
+    return null;
+  }
+
+  const wrapperClasses = classnames({
+    'sponsors-category': true,
+    [`sponsors-category--${slug}`]: !!slug
+  });
+
+  return (
+    <section className={wrapperClasses}>
+      <h3 className="sponsors-category__title" role="heading" aria-level="3">
+        {title} sponsors
+      </h3>
+      <div className="sponsors-category__list">
+        {list.map(sponsor => (
+          <Sponsor key={sponsor.name} slug={slug} total={total} {...sponsor} />
+        ))}
+      </div>
+    </section>
+  );
+};
+
 const Sponsors = () => {
   return (
     <div className="sponsors" id="sponsors">
-      {data.map(cat => (
-        <section
-          key={cat.slug}
-          className={classnames({
-            sponsors__category: true,
-            [`sponsors__category--${cat.slug}`]: !!cat.slug
-          })}
-        >
-          <h3 className="sponsors__title" role="heading" aria-level="3">
-            {cat.title} sponsors
-          </h3>
-          <div className="sponsors__list">
-            {cat.list.map(sponsor => (
-              <figure
-                key={sponsor.name}
-                className={classnames({
-                  sponsors__item: true,
-                  [`sponsors__item--${cat.slug}`]: !!cat.slug
-                })}
-              >
-                <a
-                  className="sponsors__link sponsors__link--image"
-                  href={sponsor.url}
-                  target="_blank"
-                  rel="noopener"
-                  title={sponsor.name}
-                >
-                  <img
-                    className="sponsors__image"
-                    src={`/static/images/sponsors/${sponsor.img}`}
-                    alt={sponsor.name}
-                  />
-                </a>
-              </figure>
-            ))}
-          </div>
-        </section>
-      ))}
+      {data.map(cat => <SponsorsCategory key={cat.slug} {...cat} />)}
 
       <SponsorsAvailable />
     </div>
