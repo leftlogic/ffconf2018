@@ -40,17 +40,14 @@
 
   //=== Quotes
   // convert NodeList to Array https://davidwalsh.name/nodelist-array
-  // TODO: remove setTimeout
-  setTimeout(function() {
-    var quotesWrapper = [].slice.call($('.js-quote'));
-    var quotesTemplate = [].slice.call($('.js-quote-template'));
-    quotesWrapper.forEach(function(item) {
-      var len = quotesTemplate.length;
-      var rnd = Math.floor(Math.random() * len);
-      var q = quotesTemplate.splice(rnd, 1);
-      item.innerHTML = q[0].innerHTML;
-    });
-  }, 100);
+  var quotesWrapper = [].slice.call($('.js-quote'));
+  var quotesTemplate = [].slice.call($('.js-quote-template'));
+  quotesWrapper.forEach(function(item) {
+    var len = quotesTemplate.length;
+    var rnd = Math.floor(Math.random() * len);
+    var q = quotesTemplate.splice(rnd, 1);
+    item.innerHTML = q[0].innerHTML;
+  });
 
   //=== Scroll to session
   // var skipNav = false; // if we want to scroll down without showing the menu
