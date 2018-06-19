@@ -14,9 +14,14 @@ const Section = ({ id, title, children }) => {
   });
 
   return (
-    <section className={sectionClasses} role="region" aria-labelledby={id}>
+    <section
+      id={id}
+      className={sectionClasses}
+      role="region"
+      aria-labelledby={id}
+    >
       {title && (
-        <h2 id={id} className="section__title" role="heading" aria-level="2">
+        <h2 className="section__title" role="heading" aria-level="2">
           {title}
         </h2>
       )}
