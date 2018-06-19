@@ -1,4 +1,5 @@
 import Section from '../section';
+import Divider from '../divider';
 
 import data from './data';
 
@@ -40,6 +41,7 @@ const Locations = () => (
               </li>
             ))}
           </ul>
+          <Divider cssModifier="locations" />
         </li>
       ))}
     </ul>

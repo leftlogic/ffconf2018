@@ -119,7 +119,7 @@ const Talk = ({ talk, start, end, date1, date2 }) => {
   const { name, photo, twitter, bio } = speaker;
 
   return (
-    <Session date1={date1} date2={date2} slug={slug}>
+    <Session date1={date1} date2={date2} slug={slug} type="talk">
       <SpeakerImage name={name} photo={photo} index={order} />
       <header className="talk__header">
         <h3 className="talk__title" role="heading" aria-level="3">

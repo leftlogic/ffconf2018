@@ -3,6 +3,7 @@ import moment from 'moment';
 
 import NavMain from '../nav-main';
 import Tickets from '../tickets';
+import Divider from '../divider';
 
 import config from '../../config';
 
@@ -72,6 +73,7 @@ const Header = () => {
         />
         <VideoButton />
       </div>
+      <Divider cssModifier="header" />
       <NavMain />
     </header>
   );

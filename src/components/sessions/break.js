@@ -11,7 +11,7 @@ const Break = ({ title, icon, start, end, date1, date2, slug }) => {
   }
 
   return (
-    <Session date1={date1} date2={date2} slug={slug}>
+    <Session date1={date1} date2={date2} slug={slug} type="break">
       {icon && (
         <Icon icon={icon} className="break__icon special-image-border" />
       )}

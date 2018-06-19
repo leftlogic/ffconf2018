@@ -1,0 +1,53 @@
+.divider {
+  overflow: hidden;
+
+  svg {
+    display: block;
+    height: 2px;
+  }
+}
+
+/* === Header */
+.divider--header {
+  color: var(--c-white);
+  padding: 32px 0;
+}
+
+/* === Sessions */
+.divider--sessions {
+  color: var(--c-pink);
+  padding: 0 0 32px;
+}
+
+.sessions--schedule {
+  .sessions__item--break .divider--sessions,
+  .sessions__item--talk .divider--sessions {
+    display: none;
+  }
+
+  .sessions__item--break + .sessions__item--break .divider--sessions,
+  .sessions__item--talk + .sessions__item--break .divider--sessions,
+  .sessions__item--talk + .sessions__item--talk .divider--sessions {
+    display: block;
+  }
+
+  .sessions__item--break:nth-last-child(2) .divider--sessions {
+    display: none;
+  }
+}
+
+.sessions__item:last-child .divider.divider--sessions {
+  display: none;
+}
+
+/* === Workshops */
+.divider--workshops {
+  color: var(--c-pink);
+  padding: 32px 0;
+}
+
+/* === Locations */
+.divider--locations {
+  color: var(--c-white);
+  padding: 32px 0;
+}

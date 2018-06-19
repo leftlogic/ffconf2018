@@ -48,6 +48,11 @@ h4 {
 
 a {
   color: inherit;
+
+  &:hover,
+  &:focus {
+    color: var(--c-pink);
+  }
 }
 
 /* === Show dynamic background image as if it was a proper photo */
