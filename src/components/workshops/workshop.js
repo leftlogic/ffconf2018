@@ -82,7 +82,7 @@ const WorkshopDescription = ({ description, extendedDescription }) => {
   );
 };
 
-const WorkshopBuy = ({ slug, url }) => {
+const WorkshopBuy = ({ slug, url, children }) => {
   const soldout = config.config.soldout[slug];
 
   if (phase > 3) {
@@ -100,7 +100,7 @@ const WorkshopBuy = ({ slug, url }) => {
 
   return (
     <a href={url} target="_blank" rel="noopener" className="button">
-      Buy tickets
+      {children}
     </a>
   );
 };
@@ -133,7 +133,7 @@ const Workshop = ({ selectedSlug }) => {
   const { url } = ticket;
 
   return (
-    <Section id="workshop">
+    <Section id="workshop" title="workshop">
       <header className="workshop__header">
         <div className="workshop__header-content">
           <h3 className="workshop__title" role="heading" aria-level="3">
@@ -146,6 +146,10 @@ const Workshop = ({ selectedSlug }) => {
             date={date}
             time={time}
           />
+
+          <WorkshopBuy slug={slug} url={url}>
+            Buy tickets
+          </WorkshopBuy>
         </div>
 
         <WorkshopImage photo={photo} />
@@ -159,7 +163,9 @@ const Workshop = ({ selectedSlug }) => {
         />
       </div>
 
-      <WorkshopBuy slug={slug} url={url} />
+      <WorkshopBuy slug={slug} url={url}>
+        Get your ticket today
+      </WorkshopBuy>
     </Section>
   );
 };
