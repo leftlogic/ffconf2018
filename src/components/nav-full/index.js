@@ -5,7 +5,11 @@ import data from './data';
 import './nav-full.scss';
 
 const NavFull = () => {
-  return <Nav data={data} className="nav-full" />;
+  return (
+    <nav className="nav-full">
+      <Nav data={data} className="nav-full" />
+    </nav>
+  );
 };
 
 export default NavFull;

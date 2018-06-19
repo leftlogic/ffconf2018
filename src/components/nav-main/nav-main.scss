@@ -26,6 +26,30 @@
   font-weight: normal;
 }
 
+.nav-main__link--button {
+  background: transparent;
+  border: 0 none;
+  cursor: pointer;
+  display: none;
+  padding: 0;
+  text-transform: uppercase;
+
+  &:hover,
+  &:focus {
+    color: var(--c-pink);
+  }
+}
+
+.🦄 {
+  .nav-main__link--button {
+    display: inline;
+  }
+
+  .nav-main__link--button[aria-expanded="false"] + .nav-main__content {
+    display: none;
+  }
+}
+
 @media (min-width: 768px) {
   .nav-main__list {
     flex-direction: row;
@@ -34,6 +58,16 @@
 
   .nav-main-buy {
     display: none;
+  }
+
+  .🦄 {
+    .nav-main__link--button {
+      display: none;
+    }
+
+    .nav-main__content.nav-main__content.nav-main__content {
+      display: block;
+    }
   }
 }
 

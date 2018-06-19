@@ -7,11 +7,21 @@ import './nav-main.scss';
 
 const NavMain = () => {
   return (
-    <Nav data={data} className="nav-main">
-      <div>
-        <Tickets namespace="nav-main-buy" />
+    <nav className="nav-main">
+      <button
+        id="nav-main-open"
+        aria-expanded="false"
+        className="nav-main__link nav-main__link--button"
+      >
+        Open Menu
+      </button>
+      <div className="nav-main__content">
+        <Nav data={data} className="nav-main" />
+        <div>
+          <Tickets namespace="nav-main-buy" />
+        </div>
       </div>
-    </Nav>
+    </nav>
   );
 };
 
