@@ -9,8 +9,18 @@
 - [ ] Image for video header button (whatch now & watch soon)?
 - [ ] Optimize image lightrays
 - [ ] Optimize image bg cloud
-- [ ] Layout for sponsors
-- [ ] Layout for workshop page
+- [x] Layout for sponsors
+- [x] Layout for workshop page
+- [ ] Finish the stars
+- [x] Expand collapse top menu on mobile
+- [x] Expand collapse locations on mobile
+- [ ] Scroll to section script
+- [x] Remove timeout from quote script
+- [ ] Use real api
+
+## Sponsors
+
+platinum (2 available), Gold (4 in total including American Express, Google, Financial Times confirmed) Day sponsors 2 including brandwatch), micro (JS Bin)
 
 ## Howto
 

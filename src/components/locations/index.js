@@ -36,25 +36,35 @@ const Location = ({ location }) => {
   );
 };
 
+const LocationsCategory = ({ type, location }) => {
+  return (
+    <li className="locations__category">
+      <h3 className="locations-category__title" role="heading" aria-level="3">
+        {type}
+      </h3>
+      <button
+        aria-expanded="false"
+        className="locations-category__button js-button-expand"
+      >
+        <span>Show list</span>
+      </button>
+      <ul className="locations-category__list">
+        {location.map(location => (
+          <li key={location.name} className="vcard locations-category__item">
+            <Location location={location} />
+          </li>
+        ))}
+      </ul>
+      <Divider cssModifier="locations" />
+    </li>
+  );
+};
+
 const Locations = () => (
   <Section id="locations" title="Locations">
     <Map />
     <ul className="locations">
-      {locations.map(item => (
-        <li key={item.type} className="locations__category">
-          <h3 className="locations__title" role="heading" aria-level="3">
-            {item.type}
-          </h3>
-          <ul className="locations__list">
-            {item.location.map(location => (
-              <li key={location.name} className="vcard locations__item">
-                <Location location={location} />
-              </li>
-            ))}
-          </ul>
-          <Divider cssModifier="locations" />
-        </li>
-      ))}
+      {locations.map(item => <LocationsCategory key={item.type} {...item} />)}
     </ul>
   </Section>
 );

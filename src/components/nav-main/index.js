@@ -11,7 +11,7 @@ const NavMain = () => {
       <button
         id="nav-main-open"
         aria-expanded="false"
-        className="nav-main__link nav-main__link--button"
+        className="nav-main__link nav-main__link--button js-button-expand"
       >
         Open Menu
       </button>

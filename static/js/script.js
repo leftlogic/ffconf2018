@@ -56,18 +56,20 @@
   //=== Open menu
   (function() {
     // from http://www.a11ymatters.com/pattern/mobile-nav/
-    var button = $$('#nav-main-open');
+    var buttons = [].slice.call($('.js-button-expand'));
 
-    button.addEventListener('click', function() {
-      var isExpanded = button.getAttribute('aria-expanded');
+    buttons.forEach(function(button) {
+      button.addEventListener('click', function() {
+        var isExpanded = button.getAttribute('aria-expanded');
 
-      if (isExpanded !== 'false') {
-        isExpanded = 'false';
-      } else {
-        isExpanded = 'true';
-      }
+        if (isExpanded !== 'false') {
+          isExpanded = 'false';
+        } else {
+          isExpanded = 'true';
+        }
 
-      button.setAttribute('aria-expanded', isExpanded);
+        button.setAttribute('aria-expanded', isExpanded);
+      });
     });
   })();
 
