@@ -16,11 +16,11 @@
   --c-gradient-middle: #22a5cc;
   --c-gradient-end: #1e3c43;
 
-  --f-title: "FF Lollipop";
+  --f-title: 'FF Lollipop';
   // --f-title: "MrsLollipop-Fill";
   // --f-main: "FF Rubik";
-  --f-main: "FF Lato";
-  --f-sub: "FF Lato";
+  --f-main: 'FF Lato';
+  --f-sub: 'FF Lato';
 
   font-size: 10px;
 }
@@ -83,7 +83,7 @@ a {
   &::before {
     background: var(--sb-bg-color, transparent);
     bottom: calc(var(--sb-border-width) + var(--sb-padding));
-    content: "";
+    content: '';
     left: 0;
     position: absolute;
     right: calc(var(--sb-border-width) + var(--sb-padding));
@@ -93,12 +93,17 @@ a {
 
   &::after {
     border: var(--sb-border-width) solid var(--sb-border-color, transparent);
-    bottom: 0;
-    content: "";
+    border-image-slice: 91 91 91 91;
+    border-image-width: 20px 20px 20px 20px;
+    border-image-outset: 8px 0px 0px 8px;
+    border-image-repeat: stretch stretch;
+    border-image-source: url(/static/images/style/border-1-light-@2x.png);
+    bottom: 4px;
+    content: '';
     left: var(--sb-padding);
     pointer-events: none;
     position: absolute;
-    right: 0;
+    right: 5px;
     top: var(--sb-padding);
     z-index: var(--sb-pos, 0);
   }
@@ -119,7 +124,7 @@ a {
   &::after {
     border: var(--sb-border-width) solid var(--sb-border-color, transparent);
     bottom: 0;
-    content: "";
+    content: '';
     left: var(--sb-padding);
     pointer-events: none;
     position: absolute;
@@ -146,9 +151,9 @@ a {
   z-index: 0;
 
   &::before {
-    background: url("/static/images/style/button-bg.png");
+    background: url('/static/images/style/button-bg.png');
     bottom: var(--sb-padding);
-    content: "";
+    content: '';
     left: var(--sb-padding);
     position: absolute;
     right: 0;
@@ -159,7 +164,7 @@ a {
   &::after {
     border: var(--sb-border-width) solid var(--sb-border-color);
     bottom: 0;
-    content: "";
+    content: '';
     left: 0;
     pointer-events: none;
     position: absolute;
