@@ -10,16 +10,25 @@ const idify = s => {
     .toLowerCase();
 };
 
+const formatTalksById = api => {
+  const [first] = api;
+  const { order } = first;
+  const isItOrdered = order !== 0 ? true : false;
+
+  return api.reduce((acc, talk, index) => {
+    const { order } = talk;
+    const key = isItOrdered ? order : index + 1;
+    acc[key] = { ...talk };
+
+    return acc;
+  }, {});
+};
+
 const formatSessions = ({ data, api }) => {
   const [date1, date2] = config.dates;
   const startTime = moment(`${date1} ${config.startTime}`);
 
-  const talksById = api.reduce((acc, talk) => {
-    const { order } = talk;
-    acc[order] = { ...talk };
-
-    return acc;
-  }, {});
+  const talksById = formatTalksById(api);
 
   const properData = data.map(session => {
     const { id, duration, isBreak, title } = session;

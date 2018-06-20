@@ -117,7 +117,7 @@ const Talk = ({ talk, start, end, date1, date2 }) => {
     video,
     order
   } = talk;
-  const { name, photo, twitter, bio } = speaker;
+  const { name, photo, twitter, bio } = speaker || {};
 
   return (
     <Session date1={date1} date2={date2} slug={slug} type="talk">

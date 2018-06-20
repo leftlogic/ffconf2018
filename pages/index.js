@@ -1,4 +1,6 @@
 /*eslint no-unused-vars: ["error", { "varsIgnorePattern": "Hack" }]*/
+import fetch from 'isomorphic-fetch';
+
 import Hack from '../src/components/hack';
 import Layout from '../src/components/layout';
 import Sessions from '../src/components/sessions';
@@ -7,10 +9,14 @@ import Locations from '../src/components/locations';
 import Diversity from '../src/components/diversity';
 import Quote from '../src/components/quote';
 
-const PageIndex = () => {
+import config from '../src/config';
+
+const { year } = config;
+
+const PageIndex = ({ schedule }) => {
   return (
     <Layout>
-      <Sessions />
+      <Sessions schedule={schedule} />
       <Quote />
       <Workshops />
       <Quote />
@@ -21,8 +27,12 @@ const PageIndex = () => {
   );
 };
 
-PageIndex.getInitialProps = () => {
-  return {};
+PageIndex.getInitialProps = async () => {
+  const res = await fetch(
+    `https://gist.githubusercontent.com/electricg/da1505d48e3aef90655f5536bae8399c/raw/fd7533dfaaefb8b758d9c832ad6dcf8ab286cdd1/${year}.json`
+  );
+  const data = await res.json();
+  return { schedule: data };
 };
 
 export default PageIndex;

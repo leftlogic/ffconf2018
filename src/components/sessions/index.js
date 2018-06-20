@@ -20,8 +20,8 @@ const WhichSession = ({ isBreak, ...session }) => {
   return <Which {...session} />;
 };
 
-const Sessions = () => {
-  const sessions = formatSessions({ data, api });
+const Sessions = ({ schedule }) => {
+  const sessions = formatSessions({ data, api: schedule });
 
   const wrapperClasses = classnames({
     sessions: true,

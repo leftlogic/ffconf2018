@@ -16,7 +16,10 @@
 - [x] Expand collapse locations on mobile
 - [x] Scroll to section script
 - [x] Remove timeout from quote script
-- [ ] Use real api
+- [x] Use real api
+- [ ] Do better data parsing for sessions
+- [ ] Check on mobiles the sticky header
+- [ ] Try to fix next-sass module
 
 ## Sponsors
 
