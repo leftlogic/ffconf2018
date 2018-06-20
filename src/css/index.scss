@@ -96,7 +96,7 @@ a {
     border-image-slice: 91 91 91 91;
     border-image-width: 20px 20px 20px 20px;
     border-image-outset: 8px 0px 0px 8px;
-    border-image-repeat: stretch stretch;
+    border-image-repeat: repeat repeat;
     border-image-source: url(/static/images/style/border-1-light-@2x.png);
     bottom: 4px;
     content: '';
@@ -122,7 +122,14 @@ a {
   }
 
   &::after {
+    // border: var(--sb-border-width) solid var(--sb-border-color, transparent);
     border: var(--sb-border-width) solid var(--sb-border-color, transparent);
+    border-image-slice: 91 91 91 91;
+    border-image-width: 20px 20px 20px 20px;
+    border-image-outset: 0;
+    border-image-repeat: repeat repeat;
+    border-image-source: url(/static/images/style/border-1-light-@2x.png);
+
     bottom: 0;
     content: '';
     left: var(--sb-padding);
@@ -163,6 +170,15 @@ a {
 
   &::after {
     border: var(--sb-border-width) solid var(--sb-border-color);
+
+    // border: var(--sb-border-width) solid var(--sb-border-color, transparent);
+    border-image-slice: 15 17 19 17 fill;
+    border-image-width: 8px 8px 8px 8px;
+    border-image-outset: 0px 3px 3px 3px;
+    border-image-repeat: repeat repeat;
+
+    border-image-source: url(/static/images/style/border-1-dark-@2x.png);
+
     bottom: 0;
     content: '';
     left: 0;
