@@ -2,38 +2,6 @@
   padding-top: 96px;
   position: relative;
   z-index: 0;
-
-  @media (min-width: 768px) {
-    &::before {
-      background-image: url("/static/images/style/stars-left.png");
-      background-repeat: no-repeat;
-      background-position: 0 0;
-      background-size: 100% auto;
-      content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 261 193'%3E%3C/svg%3E");
-      display: block;
-      width: 100px;
-      position: absolute;
-      right: calc(100% - 45px);
-      bottom: 50%;
-    }
-
-    &::after {
-      background-image: url("/static/images/style/stars-right.png");
-      background-repeat: no-repeat;
-      background-position: 0 0;
-      background-size: 100% auto;
-      content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 261 193'%3E%3C/svg%3E");
-      display: block;
-      width: 100px;
-      position: absolute;
-      right: -75px;
-      top: 135px;
-      z-index: -1;
-    }
-  }
-
-  @media (min-width: 1024px) {
-  }
 }
 
 .section__wrapper {
@@ -65,4 +33,54 @@
   @media (min-width: 1024px) {
     transform: rotate(-90deg) translate(-100%, -200%);
   }
+}
+
+.stars {
+  --stars-bottom: auto;
+  --stars-left: auto;
+  --stars-right: auto;
+  --stars-top: auto;
+
+  &::before,
+  &::after {
+    background-image: var(--stars-bg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 100% auto;
+    bottom: var(--stars-bottom);
+    content: var(--stars-content);
+    display: none;
+    left: var(--stars-left);
+    position: absolute;
+    right: var(--stars-right);
+    top: var(--stars-top);
+    width: 100px;
+
+    @media (min-width: 768px) {
+      display: block;
+    }
+  }
+}
+
+.stars--left {
+  --stars-bg: url("/static/images/style/stars-left.png");
+  --stars-content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 261 193'%3E%3C/svg%3E");
+  --stars-right: calc(100% - 45px);
+  --stars-bottom: 50%;
+}
+
+.stars--right {
+  --stars-bg: url("/static/images/style/stars-right.png");
+  --stars-content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 233 184'%3E%3C/svg%3E");
+  --stars-right: -75px;
+  --stars-top: 135px;
+}
+
+.stars--left::before {
+  --stars-bottom: 20%;
+}
+
+.stars--right::before {
+  --stars-bottom: 20%;
+  --stars-top: auto;
 }

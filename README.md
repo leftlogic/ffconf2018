@@ -2,23 +2,16 @@
 
 ## Todo
 
-- [ ] Activate service worker
-- [ ] Better quote template, maybe not full html but just json?
 - [ ] Text for "on sale text"
-- [ ] Image for sold out header button
-- [ ] Image for video header button (whatch now & watch soon)?
 - [ ] Optimize image lightrays
 - [ ] Optimize image bg cloud
-- [x] Layout for sponsors
-- [x] Layout for workshop page
 - [ ] Finish the stars
-- [x] Expand collapse top menu on mobile
-- [x] Expand collapse locations on mobile
-- [x] Scroll to section script
-- [x] Remove timeout from quote script
-- [x] Use real api
 - [ ] Do better data parsing for sessions
 - [ ] Check on mobiles the sticky header
+- [ ] Image for sold out header button
+- [ ] Activate service worker
+- [ ] Image for video header button (whatch now & watch soon)?
+- [ ] Better quote template, maybe not full html but just json?
 - [ ] Try to fix next-sass module
 
 ## Sponsors
