@@ -13,18 +13,16 @@ const Layout = ({ children }) => (
     <div className="gradient">
       <div className="clouds" />
       <div className="wrapper">
-        <Header />
-
         <main className="main">
+          <Header />
           {children}
 
           <Quote />
 
           <Sponsors />
-
-          <div className="duke-of-yorks" />
         </main>
 
+        <div className="duke-of-yorks" />
         <Footer />
 
         <QuotesTemplates />

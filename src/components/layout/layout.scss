@@ -39,7 +39,7 @@
 
 .wrapper {
   margin: 0 auto;
-  max-width: 1110px;
+  max-width: 980px;
   width: calc(100% - 32px);
 }
 
@@ -47,29 +47,13 @@
   position: relative;
   z-index: 0;
 
-  &::before {
-    background: url("/static/images/style/clouds-top.png") repeat-x;
-    content: "";
-    background-size: auto 100%;
-    display: block;
-    height: 79px;
-    left: 0;
-    position: -webkit-sticky;
-    position: sticky;
-    margin-left: -50vw;
-    margin-right: -50vw;
-    margin-top: -1px;
-    top: 0;
-    width: 100vw;
-    z-index: 1;
-  }
 
   &::after {
     // background-image: url("/static/images/style/lightrays-original.svg");
     background-image: url("/static/images/style/lightrays-optimized.svg");
     background-position: 50% 0;
     background-repeat: no-repeat;
-    background-size: 70% 100%;
+    background-size: 280% 100%;
     content: "";
     bottom: calc(100vh + 96px);
     display: block;
@@ -94,7 +78,11 @@
 
   .main {
     &::before {
-      height: 118px;
+      // height: 118px;
+    }
+
+    &::after {
+      background-size: 140% 100%;
     }
   }
 
@@ -124,7 +112,7 @@
 
   .main {
     &::before {
-      height: 158px;
+      // height: 158px;
     }
   }
 }

@@ -8,7 +8,7 @@ const Diversity = () => {
   return (
     <Section id="diversity" title="Diversity">
       <Markdown>{data}</Markdown>
-      <Thanks />
+      {/* <Thanks /> */}
     </Section>
   );
 };

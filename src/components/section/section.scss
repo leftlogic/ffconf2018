@@ -18,19 +18,28 @@
 .section__title {
   color: var(--c-white);
   font-size: 1.6rem;
-  margin-bottom: 1em;
+  font-size: 15vw;
+  text-align: center;
+  margin-bottom: 0.4em;
+  line-height: 6vw;
   text-transform: uppercase;
+  text-shadow: 1px 1px var(--c-purple), -1px -1px var(--c-purple);
 
   @media (min-width: 768px) {
-    display: inline-block;
-    font-size: 1.6rem;
-    margin-bottom: 0;
-    position: absolute;
-    transform: rotate(-90deg) translate(-100%, -150%);
-    transform-origin: 0 0;
+    font-size: 10vw;
   }
 
-  @media (min-width: 1024px) {
-    transform: rotate(-90deg) translate(-100%, -200%);
-  }
+  // @media (min-width: 768px) {
+  //   text-shadow: unset;
+  //   display: inline-block;
+  //   font-size: 1.6rem;
+  //   margin-bottom: 0;
+  //   position: absolute;
+  //   transform: rotate(-90deg) translate(-100%, -150%);
+  //   transform-origin: 0 0;
+  // }
+
+  // @media (min-width: 1024px) {
+  //   transform: rotate(-90deg) translate(-100%, -200%);
+  // }
 }

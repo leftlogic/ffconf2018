@@ -35,13 +35,11 @@ const Logo = () => {
 const Intro = () => {
   return (
     <div className="intro">
-      <p className="intro__text">
-        <strong className="intro__title">#FFConf</strong>
-      </p>
+      <p className="intro__text intro__title">#ffconf</p>
       <p className="intro__text">Repeated Twice</p>
       <p className="intro__text">{when}</p>
       <p className="intro__text">
-        Duke of York’s Picturehouse, Brighton,&nbsp;UK
+        Duke of York’s Picturehouse, <br />Brighton,&nbsp;UK
       </p>
     </div>
   );
