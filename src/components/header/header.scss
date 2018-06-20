@@ -1,10 +1,9 @@
 .header {
-  // background: var(--c-green);
   background: url("/static/images/style/front-cloud-tile-@2x.png") repeat-x;
   background-size: 450px;
   background-position: bottom;
   padding-top: 40px;
-  padding-bottom: 60px;
+  padding-bottom: 64px;
   position: sticky;
   text-align: center;
   z-index: 1;
@@ -54,7 +53,6 @@
 }
 
 .intro__title {
-  text-transform: lowercase;
   margin: 0 0 0.4em 0;
   font-size: 5rem;
   line-height: 5rem;
@@ -86,10 +84,6 @@
   .intro {
     padding: 0 32px;
     text-align: left;
-  }
-
-  .intro__title {
-    text-transform: none;
   }
 
   .button-buy {

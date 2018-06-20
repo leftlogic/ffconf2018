@@ -2,6 +2,9 @@
 
 ## Todo
 
+- [ ] Use other bg stars
+- [ ] Optimize new images
+- [ ] Remove Rubik from font file
 - [ ] Text for "on sale text"
 - [ ] Do better data parsing for sessions
 - [ ] Check on mobiles the sticky header

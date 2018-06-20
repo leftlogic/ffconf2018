@@ -1,6 +1,5 @@
 .footer {
   background: var(--c-white);
-  font-family: var(--f-sub);
   padding: 40px 32px;
   position: relative;
   text-align: center;
@@ -44,7 +43,7 @@
 }
 
 .footer__content {
-  margin: 0 0 10px;
+  margin: 0 0 8px;
 }
 
 @media (min-width: 768px) {
