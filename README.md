@@ -5,7 +5,7 @@
 - [ ] Text for "on sale text"
 - [ ] Optimize image lightrays
 - [ ] Optimize image bg cloud
-- [ ] Finish the stars
+- [x] Finish the stars
 - [ ] Do better data parsing for sessions
 - [ ] Check on mobiles the sticky header
 - [ ] Image for sold out header button
