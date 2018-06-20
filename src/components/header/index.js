@@ -39,7 +39,7 @@ const Intro = () => {
       <p className="intro__text">Repeated Twice</p>
       <p className="intro__text">{when}</p>
       <p className="intro__text">
-        Duke of York’s Picturehouse, Brighton,&nbsp;UK
+        Duke of York’s Picturehouse, <br />Brighton,&nbsp;UK
       </p>
     </div>
   );

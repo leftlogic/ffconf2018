@@ -8,7 +8,7 @@
   position: sticky;
   text-align: center;
   z-index: 1;
-  top: -50%;
+  top: -415px;
   left: 0;
 
   &::before {
@@ -71,6 +71,10 @@
     justify-content: space-between;
   }
 
+  .header {
+    top: -280px;
+  }
+
   .logo {
     flex: 0 0 auto;
     margin-bottom: 0;
@@ -130,6 +134,10 @@
 @media (min-width: 1024px) {
   .logo {
     width: 300px;
+  }
+
+  .header {
+    top: -360px;
   }
 
   .intro__title {
