@@ -3,12 +3,11 @@
 ## Todo
 
 - [ ] Text for "on sale text"
-- [x] Optimize image lightrays
-- [x] Optimize image bg cloud
-- [x] Optimize image duke of york
-- [x] Finish the stars
 - [ ] Do better data parsing for sessions
 - [ ] Check on mobiles the sticky header
+- [ ] Test on iOS
+- [ ] Test on MS Edge
+- [ ] Test on Firefox
 - [ ] Image for sold out header button
 - [ ] Activate service worker
 - [ ] Image for video header button (whatch now & watch soon)?
