@@ -7,7 +7,6 @@ import Talk from './talk';
 import { formatSessions } from '../../utils';
 
 import data from './data';
-import api from './api';
 import config from '../../config';
 
 const { phase } = config.config;
