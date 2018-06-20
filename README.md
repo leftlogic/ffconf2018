@@ -4,7 +4,7 @@
 
 - [ ] Text for "on sale text"
 - [ ] Optimize image lightrays
-- [ ] Optimize image bg cloud
+- [x] Optimize image bg cloud
 - [x] Optimize image duke of york
 - [x] Finish the stars
 - [ ] Do better data parsing for sessions

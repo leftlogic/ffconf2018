@@ -7,7 +7,7 @@
 }
 
 .clouds {
-  background: url("/static/images/style/back-clouds.png") no-repeat;
+  background: url("/static/images/style/back-clouds-small.png") no-repeat 50% 0;
   background-size: 90% auto;
   height: 100vh;
   position: fixed;
@@ -95,6 +95,10 @@
     &::before {
       height: 118px;
     }
+  }
+
+  .clouds {
+    background-image: url("/static/images/style/back-clouds-big.png");
   }
 
   .duke-of-yorks {
