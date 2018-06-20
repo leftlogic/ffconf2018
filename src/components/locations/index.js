@@ -62,7 +62,7 @@ const LocationsCategory = ({ type, location }) => {
 
 const Locations = () => (
   <Section id="locations" title="Locations">
-    <Map />
+    {/* <Map /> */}
     <ul className="locations">
       {locations.map(item => <LocationsCategory key={item.type} {...item} />)}
     </ul>

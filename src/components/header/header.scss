@@ -1,9 +1,15 @@
 .header {
-  background: var(--c-green);
+  // background: var(--c-green);
+  background: url("/static/images/style/front-cloud-tile-@2x.png") repeat-x;
+  background-size: 450px;
+  background-position: bottom;
   padding-top: 40px;
-  position: relative;
+  padding-bottom: 60px;
+  position: sticky;
   text-align: center;
   z-index: 1;
+  top: -50%;
+  left: 0;
 
   &::before {
     background: inherit;
@@ -43,12 +49,15 @@
   line-height: 3.2rem;
 }
 
-.intro__title {
-  text-transform: lowercase;
-}
-
 .intro__text {
   margin: 0;
+}
+
+.intro__title {
+  text-transform: lowercase;
+  margin: 0 0 0.4em 0;
+  font-size: 5rem;
+  line-height: 5rem;
 }
 
 .button-buy {
@@ -85,6 +94,13 @@
     margin-left: auto;
     margin-right: 0;
     width: 128px;
+    transition: transform 200ms ease-out;
+
+    &:hover {
+      transform: scale(1.2) rotate(1070deg);
+      filter: saturate(120%);
+      // transform-origin: 0 0;
+    }
 
     &--enabled {
       --bg-photo: url("/static/images/style/button-buy.png");
@@ -117,7 +133,7 @@
   }
 
   .intro__title {
-    font-size: 6rem;
+    font-size: 8rem;
   }
 
   .button-buy {
