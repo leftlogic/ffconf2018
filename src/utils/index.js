@@ -32,8 +32,8 @@ const formatSessions = ({ data, api }) => {
       ...session,
       start,
       end,
-      date1: `${date1} ${start}`,
-      date2: `${date2} ${start}`,
+      date1: `${date1}T${start}Z`,
+      date2: `${date2}T${start}Z`,
       talk: id ? { ...talksById[id] } : undefined,
       slug: isBreak ? idify(title) : undefined
     };

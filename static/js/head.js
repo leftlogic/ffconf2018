@@ -1,6 +1,9 @@
 /* eslint no-unused-vars: ["error", { "varsIgnorePattern": "fx" }] */
 function fx(dates) {
-  window.confDays = [new Date(dates[0]), new Date(dates[1])];
+  window.confDays = [
+    new Date(`${dates[0]}T12:00Z`),
+    new Date(`${dates[1]}T12:00Z`)
+  ];
   document.documentElement.className += ' 🦄';
   //=== Safari 8
   if (

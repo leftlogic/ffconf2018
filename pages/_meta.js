@@ -15,7 +15,7 @@ const twitterDates = `${momentDate1.format('D')} & ${momentDate2.format(
 )}`;
 
 const FFHead = () => {
-  const inlineScript = `(${script})('${date1}', '${date2}');`;
+  const inlineScript = `(${script})(['${date1}', '${date2}']);`;
 
   return (
     <Fragment>

@@ -14,7 +14,7 @@
 - [ ] Finish the stars
 - [x] Expand collapse top menu on mobile
 - [x] Expand collapse locations on mobile
-- [ ] Scroll to section script
+- [x] Scroll to section script
 - [x] Remove timeout from quote script
 - [ ] Use real api
 

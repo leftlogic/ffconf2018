@@ -1,12 +1,12 @@
 (function() {
-  var $ = function(s) {
+  const $ = s => {
     try {
       return document.querySelectorAll(s);
     } catch (e) {
       return [];
     }
   };
-  var $$ = function(s) {
+  const $$ = s => {
     try {
       return document.querySelector(s);
     } catch (e) {
@@ -20,112 +20,156 @@
   (function() {
     if (!window.fontCache) {
       // Fonts not in LocalStorage or md5 did not match
-      window.addEventListener('load', function() {
-        var request = new XMLHttpRequest(),
-          response;
-        request.open('GET', window.fontUrl, true);
-        request.onload = function() {
-          if (this.status === 200) {
+      window.addEventListener('load', () => {
+        const xhr = new XMLHttpRequest();
+        xhr.open('GET', window.fontUrl, true);
+        xhr.onload = () => {
+          if (xhr.status === 200) {
             try {
-              response = JSON.parse(this.response);
+              const response = JSON.parse(xhr.response);
               window.fontInsert(response.value);
-              window.localStorage.setItem(window.fontKey, this.response);
+              window.localStorage.setItem(window.fontKey, xhr.response);
             } catch (e) {
               // LocalStorage is probably full
             }
           }
         };
-        request.send();
+        xhr.send();
       });
     }
   })();
 
   //=== Quotes
   (function() {
-    // convert NodeList to Array https://davidwalsh.name/nodelist-array
-    var quotesWrapper = [].slice.call($('.js-quote'));
-    var quotesTemplate = [].slice.call($('.js-quote-template'));
-    quotesWrapper.forEach(function(item) {
-      var len = quotesTemplate.length;
-      var rnd = Math.floor(Math.random() * len);
-      var q = quotesTemplate.splice(rnd, 1);
+    const quotesWrapper = [...$('.js-quote')];
+    const quotesTemplate = [...$('.js-quote-template')];
+
+    quotesWrapper.forEach(item => {
+      const len = quotesTemplate.length;
+      const rnd = Math.floor(Math.random() * len);
+      const q = quotesTemplate.splice(rnd, 1);
+
       item.innerHTML = q[0].innerHTML;
     });
   })();
 
-  //=== Open menu
+  //=== Expand collapse content
   (function() {
-    // from http://www.a11ymatters.com/pattern/mobile-nav/
-    var buttons = [].slice.call($('.js-button-expand'));
+    const buttons = [...$('.js-button-expand')];
 
-    buttons.forEach(function(button) {
-      button.addEventListener('click', function() {
-        var isExpanded = button.getAttribute('aria-expanded');
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        const isExpanded = button.getAttribute('aria-expanded');
+        const newExpanded = isExpanded !== 'false' ? 'false' : 'true';
 
-        if (isExpanded !== 'false') {
-          isExpanded = 'false';
-        } else {
-          isExpanded = 'true';
-        }
-
-        button.setAttribute('aria-expanded', isExpanded);
+        button.setAttribute('aria-expanded', newExpanded);
       });
     });
   })();
 
   //=== Scroll to session
-  // (function() {
-  //   var skipNav = false; // if we want to scroll down without showing the menu
-  //   var $nav = $('.nav-main');
-  //   var today = new Date();
-  //   var best;
-  //   var isConfDay = false;
-  //   var whichConfDay = 0;
+  (function() {
+    /**
+     * Find current slot in relation to a given date
+     * @param {string|Date} date Current day or today
+     * @param {Date[]} confDates Conference dates
+     * @returns {HTMLElement}
+     */
+    const getCurrentSlot = (date, confDates = []) => {
+      const today = typeof date === 'string' ? new Date(date) : date;
+      const todayYear = today.getFullYear();
+      const todayMonth = today.getMonth();
+      const todayDay = today.getDate();
 
-  //   confDays.forEach(function(confDay, index) {
-  //     if (
-  //       today.getDate() === confDay.getDate() &&
-  //       today.getMonth() === confDay.getMonth() &&
-  //       today.getFullYear() === confDay.getFullYear()
-  //     ) {
-  //       isConfDay = true;
-  //       whichConfDay = index + 1;
-  //     }
-  //   });
+      let isConfDay = false;
+      let whichConfDay = 0;
 
-  //   if (isConfDay) {
-  //     // find the current session
-  //     var sessions = $('.js-session');
-  //     var length = sessions.length;
-  //     best = sessions[0];
+      confDates.forEach(function(confDate, index) {
+        if (
+          confDate.getFullYear() === todayYear &&
+          confDate.getMonth() === todayMonth &&
+          confDate.getDate() === todayDay
+        ) {
+          isConfDay = true;
+          whichConfDay = index + 1;
+        }
+      });
 
-  //     for (var i = 0; i < length; i++) {
-  //       if (
-  //         Date.parse(sessions[i].getAttribute(`data-date${whichConfDay}`)) -
-  //           5 * 1000 * 60 <
-  //         today
-  //       ) {
-  //         best = sessions[i];
-  //       }
-  //     }
-  //   }
+      if (!isConfDay) {
+        return false;
+      }
 
-  //   // if today is conference day, then scroll the current session into view
-  //   if (isConfDay && best && !window.location.hash) {
-  //     setTimeout(function() {
-  //       best.scrollIntoView(true);
-  //     }, 750);
-  //   } else if (skipNav) {
-  //     // only scroll the front page
-  //     // && /mobi/i.test(navigator.userAgent)
-  //     $nav.length > 0 &&
-  //       location.pathname === '/' &&
-  //       !location.hash &&
-  //       setTimeout(function() {
-  //         if (!pageYOffset) {
-  //           window.scrollTo(0, $nav[0].offsetHeight);
-  //         }
-  //       }, 750);
-  //   }
-  // })();
+      const fiveMinutes = 5 * 1000 * 60;
+      const slots = [...$('.js-session')];
+
+      // Loop through the slots, the first with a starting time earlier
+      // than now is the current one.
+      // Set the starting time 5 minutes earlier to consider the break
+      // between each slot
+      const next = slots.reduce((acc, slot) => {
+        const slotAttr = slot.getAttribute(`data-date${whichConfDay}`);
+        const slotDate = new Date(`${slotAttr}`);
+        const slotTimestamp = slotDate.getTime();
+        const todayTimestamp = today.getTime();
+
+        if (slotTimestamp - fiveMinutes < todayTimestamp) {
+          acc = slot;
+        }
+
+        return acc;
+      }, false);
+
+      return next;
+    };
+
+    /**
+     * Scroll to given element
+     * @param {HTMLElement} el Element to scroll to
+     */
+    const scrollToElement = el => {
+      if (el) {
+        el.scrollIntoView(true);
+      }
+    };
+
+    /**
+     * Scroll to slot
+     */
+    const scrollToSlot = () => {
+      // const date = '2018-11-08T10:26Z';
+      const date = new Date();
+
+      // sticky element height
+      const header = $$('main.main');
+      // https://davidwalsh.name/pseudo-element
+      const height = window
+        .getComputedStyle(header, ':before')
+        .getPropertyValue('height');
+      const headerHeight = header ? parseInt(height, 10) : 0;
+
+      const slot = getCurrentSlot(date, window.confDays);
+
+      if (slot && !window.location.hash) {
+        scrollToElement(slot);
+
+        // now account for sticky element
+        const scrolledY = window.scrollY;
+
+        if (scrolledY) {
+          window.scroll(0, scrolledY - headerHeight);
+        }
+      }
+    };
+
+    /**
+     * To run when the page is loaded first time
+     */
+    const onPageLoad = () => {
+      setTimeout(() => {
+        scrollToSlot();
+      }, 0);
+    };
+
+    window.addEventListener('load', onPageLoad);
+  })();
 })();

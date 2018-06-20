@@ -5,7 +5,8 @@ import Divider from '../divider';
 const Session = ({ date1, date2, slug, type, children }) => {
   const wrapperClasses = classnames({
     sessions__item: true,
-    [`sessions__item--${type}`]: type
+    [`sessions__item--${type}`]: type,
+    'js-session': true
   });
 
   return (
