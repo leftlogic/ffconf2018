@@ -1,5 +1,7 @@
 import classnames from 'classnames';
 
+import Stars from '../stars';
+
 import './section.scss';
 
 const Section = ({ id, title, children }) => {
@@ -20,8 +22,7 @@ const Section = ({ id, title, children }) => {
       role="region"
       aria-labelledby={id}
     >
-      <div className="stars stars--left" />
-      <div className="stars stars--right" />
+      <Stars cssModifier={id} />
       {title && (
         <h2 className="section__title" role="heading" aria-level="2">
           {title}
