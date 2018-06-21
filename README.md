@@ -2,7 +2,7 @@
 
 ## Todo
 
-- [ ] Add border to quote image
+- [x] Add border to quote image
 - [ ] Clean locations css
 - [ ] Optimize new images
 - [ ] Remove Rubik from font file
