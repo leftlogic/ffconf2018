@@ -86,8 +86,8 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: var(--content-general-padding);
+    padding-right: var(--content-general-padding);
   }
 
   .sponsors-category__title {
@@ -143,12 +143,5 @@
 
   .sponsors-category--available {
     text-align: left;
-  }
-}
-
-@media (min-width: 1024px) {
-  .sponsors {
-    padding-left: 80px;
-    padding-right: 80px;
   }
 }

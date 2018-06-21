@@ -1,6 +1,7 @@
 .footer {
   background: var(--c-white);
-  padding: 40px 32px;
+  padding: var(--content-general-padding)
+    calc(var(--content-general-padding) - 8px);
   position: relative;
   text-align: center;
   z-index: 0;
@@ -48,12 +49,6 @@
 
 @media (min-width: 768px) {
   .footer {
-    padding: 40px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .footer {
-    padding: 80px;
+    padding: var(--content-general-padding);
   }
 }

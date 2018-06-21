@@ -37,11 +37,11 @@
   display: flex;
   justify-content: center;
   margin-bottom: 40px;
-  margin-left: -40px;
-  margin-top: -40px;
+  margin-left: calc(-1 * var(--content-general-padding));
+  margin-top: calc(-1 * var(--content-general-padding));
   overflow: hidden;
   position: relative;
-  width: calc(100% + 70px);
+  width: calc(100% + var(--content-general-padding) * 2);
 }
 
 .locations__map-image {
@@ -144,8 +144,5 @@
 @media (min-width: 1024px) {
   .locations__map {
     margin-bottom: 48px;
-    margin-left: -80px;
-    margin-top: -80px;
-    width: calc(100% + 150px);
   }
 }
