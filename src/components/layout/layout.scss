@@ -24,7 +24,7 @@
   margin-right: -50vw;
   margin-top: 48px;
   right: 50%;
-  position: relative;
+  // position: relative;
   width: 100vw;
 
   &::before {
@@ -53,6 +53,10 @@
 }
 
 .curtains {
+  position: absolute;
+  width: 100%;
+  left: 0;
+
   &::before,
   &::after {
     background-size: auto 100%;
