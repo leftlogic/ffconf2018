@@ -28,7 +28,7 @@
 
 .stars--left {
   --stars-bg: url("/static/images/style/stars-left.png");
-  --stars-content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 261 193'%3E%3C/svg%3E");
+  --stars-content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 372 231'%3E%3C/svg%3E");
   --stars-right: calc(100% - 36px);
 
   &::before {
@@ -44,7 +44,7 @@
 
 .stars--right {
   --stars-bg: url("/static/images/style/stars-right.png");
-  --stars-content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 233 184'%3E%3C/svg%3E");
+  --stars-content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 351'%3E%3C/svg%3E");
   --stars-right: -83px;
 
   &::before {
