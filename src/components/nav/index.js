@@ -1,26 +1,21 @@
-import { Fragment } from 'react';
-import Link from 'next/link';
 import { withRouter } from 'next/router';
 import classnames from 'classnames';
 
 const NavItem = ({ className, title, url, pathname }) => {
   const abs = url.startsWith('http');
-  const L = abs ? Link : Fragment;
   return (
     <li className={`${className}__item`}>
-      <L href={url}>
-        <a
-          href={url}
-          className={classnames({
-            [`${className}__link`]: true,
-            [`${className}__link--selected`]: pathname === url,
-          })}
-          target={abs ? '_blank' : null}
-          rel={abs ? 'noopener' : null}
-        >
-          {title}
-        </a>
-      </L>
+      <a
+        href={url}
+        className={classnames({
+          [`${className}__link`]: true,
+          [`${className}__link--selected`]: pathname === url,
+        })}
+        target={abs ? '_blank' : null}
+        rel={abs ? 'noopener' : null}
+      >
+        {title}
+      </a>
     </li>
   );
 };
