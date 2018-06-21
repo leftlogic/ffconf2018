@@ -1,6 +1,7 @@
 import { Fragment } from 'react';
 
 import Header from '../header';
+import NavMain from '../nav-main';
 import Footer from '../footer';
 import Sponsors from '../sponsors';
 import Quote from '../quote';
@@ -13,18 +14,24 @@ const Layout = ({ children }) => (
     <div className="gradient">
       <div className="clouds" />
       <div className="wrapper">
-        <main className="main">
-          <Header />
-          {children}
+        <Header />
 
-          <Quote />
+        <div className="lighrays">
+          <NavMain />
+          <main className="main">
+            {children}
 
-          <Sponsors />
-        </main>
+            <Quote />
+
+            <Sponsors />
+          </main>
+        </div>
+        <div className="duke-of-yorks" />
 
         <div className="duke-of-yorks">
           <div className="curtains" />
         </div>
+
         <Footer />
 
         <QuotesTemplates />

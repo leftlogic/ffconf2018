@@ -1,6 +1,27 @@
 .nav-main {
+  padding-bottom: 64px;
+  padding-top: 24px;
+  position: sticky;
+  text-align: center;
   text-transform: uppercase;
+  top: 0;
+  z-index: 1;
   width: 100%;
+
+  &::before {
+    background: url("/static/images/style/front-cloud-tile-@2x.png") repeat-x;
+    background-position: bottom;
+    background-size: 450px;
+    bottom: 0;
+    content: "";
+    left: 50%;
+    margin: 0 -50vw 0;
+    position: absolute;
+    right: 50%;
+    top: -100vh;
+    width: 100vw;
+    z-index: -1;
+  }
 }
 
 .nav-main__list {
