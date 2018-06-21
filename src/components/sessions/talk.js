@@ -27,7 +27,7 @@ const SpeakerBio = ({ bio }) => {
 
   return (
     <p className="speaker__bio">
-      <strong>Speaker origin story:</strong> {bio || 'To be revealed!'}
+      <strong>Speaker origin story:</strong> {bio || 'Coming soon…'}
     </p>
   );
 };
@@ -66,7 +66,9 @@ const TalkTime = ({ start, end }) => {
   );
 };
 
-const TalkDescription = ({ description }) => {
+const TalkDescription = ({
+  description = `We're still searching for that perfect talk!`,
+}) => {
   if (!description) {
     return null;
   }
@@ -82,7 +84,7 @@ const TalkLink = ({ type, link }) => {
   const linkClasses = classnames({
     button: true,
     talk__link: true,
-    [`talk__link--${type}`]: !!type
+    [`talk__link--${type}`]: !!type,
   });
 
   return (
@@ -109,13 +111,13 @@ const TalkMaterial = ({ slides, audio, video }) => {
 const Talk = ({ talk, start, end, date1, date2 }) => {
   const {
     slug,
-    title,
+    title = 'To be announced soon!',
     speaker,
     description,
     slides,
     audio,
     video,
-    order
+    order,
   } = talk;
   const { name, photo, twitter, bio } = speaker || {};
 

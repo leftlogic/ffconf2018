@@ -14,14 +14,14 @@ module.exports = {
   sponsorUrl: 'https://media.ffconf.org/2017/sponsor-pack.pdf',
   sponsorAvailable: true,
   config: {
-    phase: 3,
+    phase: 0,
     soldout: {
       conference: false,
       day1: true,
       day2: true,
       workshops: true,
       'angular-2': true,
-      next: false
+      next: false,
     },
     comments: {
       'phase-options': {
@@ -30,8 +30,8 @@ module.exports = {
         '1': 'first batch of tickets',
         '2': 'second batch of tickets',
         '3': 'release of the full sessions',
-        '4': 'after the conference'
-      }
-    }
-  }
+        '4': 'after the conference',
+      },
+    },
+  },
 };
