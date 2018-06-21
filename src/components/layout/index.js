@@ -26,7 +26,6 @@ const Layout = ({ children }) => (
             <Sponsors />
           </main>
         </div>
-        <div className="duke-of-yorks" />
 
         <div className="duke-of-yorks">
           <div className="curtains" />
