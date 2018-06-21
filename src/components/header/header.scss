@@ -1,14 +1,8 @@
 .header {
-  background: url("/static/images/style/front-cloud-tile-@2x.png") repeat-x;
-  background-size: 450px;
-  background-position: bottom;
   padding-top: 40px;
-  padding-bottom: 64px;
   position: sticky;
   text-align: center;
-  z-index: 1;
-  top: -415px;
-  left: 0;
+  z-index: 2;
 
   &::before {
     background: inherit;
@@ -69,10 +63,6 @@
     justify-content: space-between;
   }
 
-  .header {
-    top: -280px;
-  }
-
   .logo {
     flex: 0 0 auto;
     margin-bottom: 0;
@@ -128,10 +118,6 @@
 @media (min-width: 1024px) {
   .logo {
     width: 300px;
-  }
-
-  .header {
-    top: -360px;
   }
 
   .intro__title {
