@@ -42,12 +42,6 @@ const LocationsCategory = ({ type, location }) => {
       <h3 className="locations-category__title" role="heading" aria-level="3">
         {type}
       </h3>
-      <button
-        aria-expanded="false"
-        className="locations-category__button js-button-expand"
-      >
-        <span>Show list</span>
-      </button>
       <ul className="locations-category__list">
         {location.map(location => (
           <li key={location.name} className="vcard locations-category__item">

@@ -1,22 +1,21 @@
-import Link from 'next/link';
 import { withRouter } from 'next/router';
 import classnames from 'classnames';
 
 const NavItem = ({ className, title, url, pathname }) => {
+  const abs = url.startsWith('http');
   return (
     <li className={`${className}__item`}>
-      <Link href={url}>
-        <a
-          className={classnames({
-            [`${className}__link`]: true,
-            [`${className}__link--selected`]: pathname === url
-          })}
-          target={url.indexOf('http') === 0 ? '_blank' : null}
-          rel={url.indexOf('http') === 0 ? 'noopener' : null}
-        >
-          {title}
-        </a>
-      </Link>
+      <a
+        href={url}
+        className={classnames({
+          [`${className}__link`]: true,
+          [`${className}__link--selected`]: pathname === url,
+        })}
+        target={abs ? '_blank' : null}
+        rel={abs ? 'noopener' : null}
+      >
+        {title}
+      </a>
     </li>
   );
 };
