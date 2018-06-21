@@ -22,7 +22,9 @@ const Layout = ({ children }) => (
           <Sponsors />
         </main>
 
-        <div className="duke-of-yorks" />
+        <div className="duke-of-yorks">
+          <div className="curtains" />
+        </div>
         <Footer />
 
         <QuotesTemplates />
