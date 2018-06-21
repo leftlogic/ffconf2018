@@ -2,7 +2,7 @@
 
 ## Todo
 
-- [ ] Use other bg stars
+- [ ] Clean locations css
 - [ ] Optimize new images
 - [ ] Remove Rubik from font file
 - [ ] Text for "on sale text"

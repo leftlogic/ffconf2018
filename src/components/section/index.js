@@ -1,6 +1,6 @@
 import classnames from 'classnames';
 
-import Stars from '../stars';
+import Stars from '../decorations/stars';
 
 import './section.scss';
 

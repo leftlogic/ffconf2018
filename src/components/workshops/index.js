@@ -2,7 +2,7 @@ import moment from 'moment';
 import Link from 'next/link';
 
 import Section from '../section';
-import Divider from '../divider';
+import Divider from '../decorations/divider';
 
 import config from '../../config';
 import data from './data';

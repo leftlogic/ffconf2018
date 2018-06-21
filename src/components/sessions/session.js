@@ -1,6 +1,6 @@
 import classnames from 'classnames';
 
-import Divider from '../divider';
+import Divider from '../decorations/divider';
 
 const Session = ({ date1, date2, slug, type, children }) => {
   const wrapperClasses = classnames({
