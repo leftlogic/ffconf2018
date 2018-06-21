@@ -3,18 +3,18 @@
 ## Todo
 
 - [x] Add border to quote image
-- [ ] Clean locations css
-- [ ] Optimize new images
 - [x] Remove Rubik from font file
+- [x] Image for sold out header button
+- [ ] Clean locations css
+- [ ] Optimize images
 - [ ] Text for "on sale text"
-- [ ] Do better data parsing for sessions
-- [ ] Check on mobiles the sticky header
 - [ ] Test on iOS
 - [ ] Test on MS Edge
 - [ ] Test on Firefox
-- [ ] Image for sold out header button
+- [ ] Test on mobile
 - [ ] Activate service worker
 - [ ] Image for video header button (whatch now & watch soon)?
+- [ ] Do better data parsing for sessions
 - [ ] Better quote template, maybe not full html but just json?
 - [ ] Try to fix next-sass module
 
