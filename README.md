@@ -5,7 +5,7 @@
 - [x] Add border to quote image
 - [ ] Clean locations css
 - [ ] Optimize new images
-- [ ] Remove Rubik from font file
+- [x] Remove Rubik from font file
 - [ ] Text for "on sale text"
 - [ ] Do better data parsing for sessions
 - [ ] Check on mobiles the sticky header
@@ -28,17 +28,30 @@ platinum (2 available), Gold (4 in total including American Express, Google, Fin
 
 Source: http://crocodillon.com/blog/non-blocking-web-fonts-using-localstorage
 
-Install npm module [font-store](https://github.com/CrocoDillon/font-store), locally it's fine:
+Use this repo https://github.com/electricg/localstorage-font, locally in a different folder it's fine, with this `config.json` and the related font files in the same folder:
 
-```bash
-$ mkdir fontstore && cd $_
-$ npm install font-store
+```json
+{
+  "google": [
+    {
+      "name": "Lato",
+      "formats": ["400"]
+    }
+  ],
+  "local": [
+    {
+      "name": "Lollipop",
+      "file": "hipopotam_studio_-_mrslollipop-regular-webfont.woff"
+    }
+  ]
+}
 ```
 
-Now generate the Google Fonts link and run:
+and then run
 
 ```bash
-$ ./node_modules/font-store/bin/font-store "https://fonts.googleapis.com/css?family=Anonymous+Pro|Rubik:700"
+npm install
+npm start
 ```
 
 ### Create favicons
