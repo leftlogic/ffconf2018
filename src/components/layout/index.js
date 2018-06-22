@@ -6,18 +6,22 @@ import Footer from '../footer';
 import Sponsors from '../sponsors';
 import Quote from '../quote';
 import QuotesTemplates from '../quote/quotes-templates';
+import Clouds from '../decorations/clouds';
+import DukeOfYorks from '../decorations/duke-of-yorks';
 
 import './layout.scss';
 
 const Layout = ({ children }) => (
   <Fragment>
     <div className="gradient">
-      <div className="clouds" />
+      <Clouds />
+
       <div className="wrapper">
         <Header />
 
         <div className="lighrays">
           <NavMain />
+
           <main className="main">
             {children}
 
@@ -27,9 +31,7 @@ const Layout = ({ children }) => (
           </main>
         </div>
 
-        <div className="duke-of-yorks">
-          <div className="curtains" />
-        </div>
+        <DukeOfYorks />
 
         <Footer />
 

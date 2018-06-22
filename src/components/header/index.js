@@ -2,7 +2,7 @@ import Link from 'next/link';
 import moment from 'moment';
 
 import Tickets from '../tickets';
-import Divider from '../divider';
+import Divider from '../decorations/divider';
 
 import config from '../../config';
 

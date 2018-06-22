@@ -6,7 +6,7 @@ const QuotesTemplatesSingle = ({ text, author, url, photo }) => {
   return (
     <template className="quote-template js-quote-template" type="text/template">
       <div
-        className="quote__image dynamic-image dynamic-image--square"
+        className="quote__image dynamic-image dynamic-image--square special-image-border"
         style={{
           '--bg-photo': `url(/static/images/quotes/${photo})`
         }}

@@ -1,5 +1,5 @@
 import Section from '../section';
-import Divider from '../divider';
+import Divider from '../decorations/divider';
 
 import data from './data';
 

@@ -22,10 +22,7 @@ app
     });
 
     server.get('/sw.js', (req, res) => {
-      const content = fs.readFileSync(
-        `${__dirname}/src/static/js/sw.js`,
-        'utf8'
-      );
+      const content = fs.readFileSync(`${__dirname}/static/js/sw.js`, 'utf8');
       const js = content.replace('@VERSION@', version);
       res.set('Content-Type', 'application/javascript');
       res.send(js);

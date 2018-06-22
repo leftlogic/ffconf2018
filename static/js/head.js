@@ -13,7 +13,7 @@ function fx(dates) {
     document.documentElement.className += ' i-hate-safari (╯°□°)╯︵ ┻━┻';
   }
   //=== Fonts
-  var md5 = '1080c766a1f8701d72dfa56e3daa9a2a';
+  var md5 = 'afbf80d105e6955b97641003d03a917c';
   var fontUrl = `/static/js/ff-fonts.${md5}.json`;
   var fontMd5 = md5;
   var fontKey = 'fonts';
