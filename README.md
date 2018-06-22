@@ -5,7 +5,7 @@
 - [x] Add border to quote image
 - [x] Remove Rubik from font file
 - [x] Image for sold out header button
-- [ ] Clean locations css
+- [ ] Add white border to the favicons
 - [ ] Optimize images
 - [ ] Text for "on sale text"
 - [ ] Test on iOS
