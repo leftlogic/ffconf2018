@@ -5,7 +5,7 @@
 - [x] Add border to quote image
 - [x] Remove Rubik from font file
 - [x] Image for sold out header button
-- [ ] Add white border to the favicons
+- [x] Add white border to the favicons
 - [ ] Optimize images
 - [ ] Text for "on sale text"
 - [ ] Test on iOS
@@ -58,13 +58,14 @@ npm start
 
 Use https://realfavicongenerator.net
 
-- Favicon for iOS - Web Clip: add a solid background, color `#ffffff`, size as default
+- Favicon for iOS - Web Clip: add a solid background, color `#1e81a0`, size as default
 - Favicon for Android Chrome: no background color, theme color #1e81a0
-- Windows Metro: use the original, color is `teal`
+- Windows Metro: color is `#1e81a0`
 - Safari Pinned Tab: turn your picture into a monochrom icon, threshold as default
 - Touch Bar: theme color #ec65a5
 - Favicon Generator Options:
   - path: `/static/images/favicons`
   - app name: `ffconf 2018`
 
-Delete the generated `manifest.json`, we already have our own, just check to reference the images correctly.
+Delete the generated `manifest.json`, we already have our own, just check to reference the images correctly.  
+Do not use the generated `safari-pinned-tab.svg` but keep the one in the repo.
