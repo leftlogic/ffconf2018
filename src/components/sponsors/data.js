@@ -3,18 +3,7 @@ module.exports = [
     slug: '1st',
     title: 'platinum',
     total: 2,
-    list: [
-      {
-        name: 'Placeholder 1',
-        url: 'https://ffconf.org/',
-        img: '_placeholder.png'
-      },
-      {
-        name: 'Placeholder 2',
-        url: 'https://ffconf.org/',
-        img: '_placeholder.png'
-      }
-    ]
+    list: []
   },
   {
     slug: '2nd',
@@ -22,24 +11,19 @@ module.exports = [
     total: 4,
     list: [
       {
-        name: 'Placeholder 1',
-        url: 'https://ffconf.org/',
-        img: '_placeholder.png'
+        name: 'American Express',
+        url: 'https://jobs.americanexpress.com/technology',
+        img: 'american-express.svg'
       },
       {
-        name: 'Placeholder 2',
-        url: 'https://ffconf.org/',
-        img: '_placeholder.png'
+        name: 'Google Chrome',
+        url: 'https://developers.google.com/live/chrome/',
+        img: 'google.svg'
       },
       {
-        name: 'Placeholder 3',
-        url: 'https://ffconf.org/',
-        img: '_placeholder.png'
-      },
-      {
-        name: 'Placeholder 4',
-        url: 'https://ffconf.org/',
-        img: '_placeholder.png'
+        name: 'Financial Times',
+        url: 'https://github.com/Financial-Times/careers',
+        img: 'financial-times.jpg'
       }
     ]
   },
@@ -49,14 +33,9 @@ module.exports = [
     total: 2,
     list: [
       {
-        name: 'Placeholder 1',
-        url: 'https://ffconf.org/',
-        img: '_placeholder.png'
-      },
-      {
-        name: 'Placeholder 2',
-        url: 'https://ffconf.org/',
-        img: '_placeholder.png'
+        name: 'Brandwatch',
+        url: 'https://www.brandwatch.com/careers',
+        img: 'brandwatch.png'
       }
     ]
   },
@@ -66,14 +45,9 @@ module.exports = [
     total: 2,
     list: [
       {
-        name: 'Placeholder 1',
-        url: 'https://ffconf.org/',
-        img: '_placeholder.png'
-      },
-      {
-        name: 'Placeholder 2',
-        url: 'https://ffconf.org/',
-        img: '_placeholder.png'
+        name: 'JS Bin',
+        url: 'http://jsbin.com/',
+        img: 'jsbin.png'
       }
     ]
   }
