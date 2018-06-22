@@ -118,7 +118,7 @@ a {
   }
 
   &::after {
-    border: var(--sb-border-width) solid var(--sb-border-color, transparent);
+    border: 1px solid #fff; // this is just to activate the border image on all the browsers
     border-image-slice: 91 91 91 91;
     border-image-width: 20px 20px 20px 20px;
     border-image-outset: 0;
@@ -148,8 +148,7 @@ a {
   }
 
   &::after {
-    // border: var(--sb-border-width) solid var(--sb-border-color, transparent);
-    border: var(--sb-border-width) solid var(--sb-border-color, transparent);
+    border: 1px solid #fff; // this is just to activate the border image on all the browsers
     border-image-slice: 91 91 91 91;
     border-image-width: 20px 20px 20px 20px;
     border-image-outset: 0;
@@ -196,9 +195,7 @@ a {
   }
 
   &::after {
-    border: var(--sb-border-width) solid var(--sb-border-color);
-
-    // border: var(--sb-border-width) solid var(--sb-border-color, transparent);
+    border: 1px solid #fff; // this is just to activate the border image on all the browsers
     border-image-slice: 15 17 19 17 fill;
     border-image-width: 8px 8px 8px 8px;
     border-image-outset: 0px 3px 3px 3px;
