@@ -9,15 +9,9 @@ const Divider = ({ className, cssModifier }) => {
   const wrapperClasses = classnames({
     divider: true,
     [`divider--${cssModifier}`]: cssModifier,
-    [className]: className
+    [className]: className,
   });
-  return (
-    <div
-      className={wrapperClasses}
-      aria-hidden="true"
-      dangerouslySetInnerHTML={{ __html: svg }}
-    />
-  );
+  return <div className={wrapperClasses} aria-hidden="true" />;
 };
 
 export default Divider;

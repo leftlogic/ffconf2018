@@ -1,5 +1,7 @@
 .divider {
   overflow: hidden;
+  background: url(/static/images/style/tiny-stars-white-@2x.png) repeat-x;
+  background-size: contain;
 
   svg {
     display: block;
@@ -10,7 +12,8 @@
 /* === Header */
 .divider--header {
   color: var(--c-white);
-  padding: 32px 0 8px;
+  padding: 4px 0 0 0;
+  margin: 32px 0;
 }
 
 /* === Sessions */
