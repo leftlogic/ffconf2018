@@ -15,13 +15,18 @@ module.exports = {
           url: 'http://goo.gl/maps/GTYX'
         },
         {
-          name: 'The Fountainhead',
-          detail: 'Pre Party',
-          url: 'http://goo.gl/maps/6FH8'
+          name: "Moe's at the Circus",
+          detail: 'Early morning networking from 7:30am',
+          url: 'https://m.facebook.com/MoesatTheCircus/'
+        },
+        {
+          name: 'Al Campo',
+          detail: "'Lunch with Strangers' and social on Thursday",
+          url: 'https://thelounges.co.uk/alcampo/'
         },
         {
           name: 'OhSo Social',
-          detail: 'After Party',
+          detail: 'Social on Friday',
           url: 'https://goo.gl/maps/qzmhKyku9CD2'
         }
       ]
@@ -54,8 +59,7 @@ module.exports = {
         },
         {
           name: 'Old Ship Hotel',
-          url:
-            'http://www.thehotelcollection.co.uk/hotels/old-ship-brighton-hotel/',
+          url: 'https://www.thecairncollection.co.uk/hotels/the-old-ship',
           detail: 'from £82',
           extra: 'close to after party venue'
         }
@@ -72,7 +76,7 @@ module.exports = {
         {
           name: 'The Joker',
           detail: 'wings & salt beef',
-          url: 'http://goo.gl/VNUwb'
+          url: 'http://www.thejokerbrighton.com/'
         },
         {
           name: 'Green Kitchen',
@@ -86,7 +90,7 @@ module.exports = {
         },
         {
           name: 'Cafe Plenty',
-          detail: 'very near to venue',
+          detail: 'great breakfast, lunch is sandwiches plus daily specials',
           url: 'http://www.cafeplentybrighton.co.uk/'
         }
       ]
