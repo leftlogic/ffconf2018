@@ -1,5 +1,5 @@
-/* global self, caches, fetch, URL */
-const version = '@VERSION@';
+/* eslint no-console: off */
+const version = '@VERSION@'; // ☠️ DO NOT TOUCH THIS LINE!! - the dev server and the build script automatically replace it with the package version
 const staticCacheName = `v${version}::static`;
 
 /*

@@ -2,8 +2,9 @@
 
 ## Todo
 
-- [ ] Date for on sale, in `config.js` param `onSaleDate`
-- [ ] Activate service worker
+- [ ] Date for on sale in `/src/config.js` param `onSaleDate`
+- [ ] Update list of file in `/static/sw.js`
+- [ ] Activate service worker in `/pages/_document.js`
 - [ ] Image for video header button (whatch now & watch soon)?
 
 ## Howto
