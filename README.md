@@ -2,25 +2,9 @@
 
 ## Todo
 
-- [x] Add border to quote image
-- [x] Remove Rubik from font file
-- [x] Image for sold out header button
-- [x] Add white border to the favicons
-- [ ] Optimize images
-- [ ] Text for "on sale text"
-- [ ] Test on iOS
-- [ ] Test on MS Edge
-- [ ] Test on Firefox
-- [ ] Test on mobile
+- [ ] Date for on sale, in `config.js` param `onSaleDate`
 - [ ] Activate service worker
 - [ ] Image for video header button (whatch now & watch soon)?
-- [ ] Do better data parsing for sessions
-- [ ] Better quote template, maybe not full html but just json?
-- [ ] Try to fix next-sass module
-
-## Sponsors
-
-platinum (2 available), Gold (4 in total including American Express, Google, Financial Times confirmed) Day sponsors 2 including brandwatch), micro (JS Bin)
 
 ## Howto
 

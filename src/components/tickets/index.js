@@ -1,17 +1,18 @@
 import classnames from 'classnames';
+import moment from 'moment';
 
 import config from '../../config';
 
-const { ticketUrl } = config;
+const { ticketUrl, onSaleDate } = config;
 const { phase, soldout } = config.config;
 
 const Tickets = ({ className, namespace }) => {
+  const formattedDate = moment(onSaleDate).format('D MMMM');
   let buy = false;
   let buttonText = '';
 
   if (phase < 1) {
-    // TODO: on sale text
-    buttonText = 'On sale 20 July';
+    buttonText = `On sale ${formattedDate}`;
   } else if (phase >= 1 && phase <= 3) {
     if (soldout.conference) {
       buttonText = 'Sold Out';

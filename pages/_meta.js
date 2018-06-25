@@ -4,7 +4,15 @@ import { Fragment } from 'react';
 import config from '../src/config';
 import script from 'raw-loader!../static/js/head.js';
 
-const { themeColor, ticketPrice, year, dates, analytics, version } = config;
+const {
+  themeColor,
+  ticketPrice,
+  year,
+  dates,
+  analytics,
+  version,
+  onSaleDate
+} = config;
 const [date1, date2] = dates;
 const momentDate1 = moment(date1);
 const momentDate2 = moment(date2);
@@ -13,6 +21,7 @@ const formattedDate2 = momentDate2.format('Do MMMM YYYY');
 const twitterDates = `${momentDate1.format('D')} & ${momentDate2.format(
   'D-MMM'
 )}`;
+const twitterOnSaleDate = moment(onSaleDate).format('D-MMMM ha');
 
 const FFHead = () => {
   const inlineScript = `(${script})(['${date1}', '${date2}']);`;
@@ -72,8 +81,7 @@ const FFHead = () => {
         name="twitter:label1"
         value="Tickets available - set your alarms!"
       />
-      <meta name="twitter:data1" value="20-July 10am" />
-      {/* // TODO: on sale date */}
+      <meta name="twitter:data1" value={twitterOnSaleDate} />
       <meta name="twitter:label2" value="When? Twice!" />
       <meta name="twitter:data2" value={`${twitterDates} @ £${ticketPrice}`} />
 
