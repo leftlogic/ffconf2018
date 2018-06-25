@@ -17,8 +17,8 @@ module.exports = [
       },
       {
         name: 'Google Chrome',
-        url: 'https://developers.google.com/live/chrome/',
-        img: 'google.svg'
+        url: 'https://developers.google.com/web/',
+        img: 'chrome.png'
       },
       {
         name: 'Financial Times',
