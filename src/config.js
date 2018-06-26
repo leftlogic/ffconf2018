@@ -3,7 +3,7 @@ module.exports = {
   version: require('../package.json').version,
   id: 'ffconf-2018',
   dates: ['2018-11-08', '2018-11-09'],
-  onSaleDate: '2018-07-20 10:00',
+  onSaleDate: '2018-07-20 10:00', // need the time as well
   startTime: '09:00',
   ticketPrice: '190',
   year: 2018,

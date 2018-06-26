@@ -2,7 +2,8 @@
 
 ## Todo
 
-- [ ] Date for on sale in `/src/config.js` param `onSaleDate`
+- [ ] Update sale date in `/src/config.js` param `onSaleDate`
+- [ ] Update API url in `/pages/index.js`
 - [ ] Update list of file in `/static/sw.js`
 - [ ] Activate service worker in `/pages/_document.js`
 - [ ] Image for video header button (whatch now & watch soon)?
