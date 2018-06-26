@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "config": {
-    "outputFolder": "out"
+    "outputFolder": "ffconf18-out"
   },
   "scripts": {
     "build": "next build",
