@@ -10,4 +10,4 @@ In the previous 3 years, ffconf's speaker distribution included over 50% women a
 
 This isn't something we should be proud of, because it should be the norm, but it is what we've got and we'd like to share that with you.
 
-**You can also apply for our [diversity scholarship](/scholarship), open until the _first Monday of September_.**
+**You can also apply for our [diversity scholarship](/scholarship), open until the _second Monday of September_.**

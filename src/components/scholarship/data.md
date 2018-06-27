@@ -10,6 +10,8 @@ Scholarships are available for anyone in an under-represented group in tech. Thi
 
 We have a limited number of scholarships available which includes a ticket to the day ffconf event, travel to Brighton (from your city) and hotel as required.
 
+To maximise our limited budget, we can only offer travel expense applications to those based the UK and Europe.
+
 <h3 role="heading" aria-level="3">How to apply</h3>
 
 We ask a few questions, but don't have to explain your personal situation to us (but you can of course, if you want to). We trust you in this point :)
@@ -20,7 +22,7 @@ We ask a few questions, but don't have to explain your personal situation to us 
 
 Please note that your application will be treated with the utmost privacy, and we will not publicly announce who the diversity scholarships go to (though you're welcome to say so yourself).
 
-**Deadline for applications: First Monday of September, 2018.**
+**Deadline for applications: Second Monday of September, 2018.**
 
 <div class="button-box">
 <a class="button" href="https://ffconf.org/scholarship-apply" target="_blank" rel="noopener">Apply now</a>
