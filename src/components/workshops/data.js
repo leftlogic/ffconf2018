@@ -5,7 +5,7 @@ module.exports = [
     ticket: {
       url:
         'https://www.tickettailor.com/checkout/view-event/id/102994/chk/31b0/',
-      price: '449',
+      price: '465',
     },
 
     details: {
@@ -60,7 +60,7 @@ module.exports = [
     ticket: {
       url:
         'https://www.tickettailor.com/checkout/view-event/id/102994/chk/31b0/',
-      price: '449',
+      price: '465',
     },
 
     details: {
