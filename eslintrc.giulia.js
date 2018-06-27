@@ -2,12 +2,12 @@ module.exports = {
   env: {
     browser: true,
     es6: true,
-    node: true
+    node: true,
   },
   parser: 'babel-eslint',
   rules: {
     curly: 'error',
-    'comma-dangle': ['error', 'never'],
+    'comma-dangle': 0, // RS
     'comma-spacing': 'error',
     'dot-location': ['error', 'property'],
     'eol-last': 'error',
@@ -28,8 +28,8 @@ module.exports = {
       {
         anonymous: 'never',
         named: 'never',
-        asyncArrow: 'always'
-      }
+        asyncArrow: 'always',
+      },
     ],
     'jsx-quotes': 'error',
     'react/jsx-uses-react': 'warn',
@@ -41,18 +41,18 @@ module.exports = {
       {
         printWidth: 80,
         singleQuote: true,
-        trailingComma: 'none',
+        trailingComma: 'es5', // RS change ¯\_(ツ)_/¯
         bracketSpacing: true,
         jsxBracketSameLine: false,
-        tabWidth: 2
-      }
-    ]
+        tabWidth: 2,
+      },
+    ],
   },
   parserOptions: {
     sourceType: 'module',
     ecmaFeatures: {
-      jsx: true
-    }
+      jsx: true,
+    },
   },
-  plugins: ['react', 'prettier']
+  plugins: ['react', 'prettier'],
 };

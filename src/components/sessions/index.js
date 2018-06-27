@@ -24,7 +24,7 @@ const Sessions = ({ schedule }) => {
 
   const wrapperClasses = classnames({
     sessions: true,
-    'sessions--schedule': phase === 3
+    'sessions--schedule': phase === 3,
   });
 
   return (

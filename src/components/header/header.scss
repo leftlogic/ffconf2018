@@ -7,7 +7,7 @@
   &::before {
     background: inherit;
     bottom: 0;
-    content: "";
+    content: '';
     display: block;
     position: absolute;
     top: 0;
@@ -53,7 +53,33 @@
 }
 
 .button-buy {
+  position: relative;
   display: none;
+
+  &.phase-0 {
+    &::before {
+      opacity: 0.3;
+    }
+
+    strong {
+      height: auto;
+      clip: unset;
+      width: 100%;
+      position: absolute;
+      top: 1.3em;
+      left: 0;
+      z-index: 1;
+      font-family: var(--f-title);
+      color: var(--c-white);
+      text-shadow: 5px 5px black;
+      font-size: 4rem;
+      overflow: initial;
+      height: auto;
+      text-align: center;
+      white-space: inherit;
+      line-height: 1em;
+    }
+  }
 }
 
 @media (min-width: 768px) {
@@ -91,11 +117,11 @@
     }
 
     &--enabled {
-      --bg-photo: url("/static/images/style/button-buy.png");
+      --bg-photo: url('/static/images/style/button-buy.png');
     }
 
     &--disabled {
-      --bg-photo: url("/static/images/style/button-buy-disabled.png");
+      --bg-photo: url('/static/images/style/button-buy-disabled.png');
     }
   }
 

@@ -7,13 +7,13 @@ import config from '../../config';
 
 const { phase } = config.config;
 
-const SpeakerImage = ({ name, photo, index }) => {
-  const title = phase >= 3 ? name : 'Speaker revealed soon!';
-  const url = phase >= 3 ? photo : `/static/images/speakers/mod/${index}.gif`;
+const SpeakerImage = ({ name, photo, slug = 'soon-0' }) => {
+  const title = phase >= 3 ? name : 'Speakers revealed soon!';
+  const url = phase >= 3 ? photo : `/static/images/speakers/mod/${slug}.gif`;
 
   return (
     <div
-      className="speaker__image dynamic-image dynamic-image--square special-image-border"
+      className="speaker__image dynamic-image dynamic-image--square special-image-border cursor-help"
       style={{ '--bg-photo': `url(${url})` }}
       title={title}
     />
@@ -25,9 +25,15 @@ const SpeakerBio = ({ bio }) => {
     return null;
   }
 
+  if (!bio) {
+    return null;
+  }
+
   return (
     <p className="speaker__bio">
-      <strong>Speaker origin story:</strong> {bio || 'Coming soon…'}
+      <em>
+        <strong>Speaker origin story:</strong> {bio || 'Coming soon…'}
+      </em>
     </p>
   );
 };
@@ -66,9 +72,7 @@ const TalkTime = ({ start, end }) => {
   );
 };
 
-const TalkDescription = ({
-  description = `We're still searching for that perfect talk!`,
-}) => {
+const TalkDescription = ({ description }) => {
   if (!description) {
     return null;
   }
@@ -117,13 +121,12 @@ const Talk = ({ talk, start, end, date1, date2 }) => {
     slides,
     audio,
     video,
-    order,
   } = talk;
   const { name, photo, twitter, bio } = speaker || {};
 
   return (
     <Session date1={date1} date2={date2} slug={slug} type="talk">
-      <SpeakerImage name={name} photo={photo} index={order} />
+      <SpeakerImage name={name} photo={photo} slug={slug} />
       <header className="talk__header">
         <h3 className="talk__title" role="heading" aria-level="3">
           {title}

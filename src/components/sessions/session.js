@@ -6,7 +6,7 @@ const Session = ({ date1, date2, slug, type, children }) => {
   const wrapperClasses = classnames({
     sessions__item: true,
     [`sessions__item--${type}`]: type,
-    'js-session': true
+    'js-session': true,
   });
 
   return (
@@ -15,6 +15,7 @@ const Session = ({ date1, date2, slug, type, children }) => {
       id={slug}
       data-date1={date1}
       data-date2={date2}
+      data-slug={slug}
     >
       {children}
       <Divider cssModifier="sessions" />

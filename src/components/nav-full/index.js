@@ -1,8 +1,21 @@
 import Nav from '../nav';
-
-import data from './data';
-
+import { sponsorUrl } from '../../config';
 import './nav-full.scss';
+
+const data = [
+  { title: 'sessions', url: '/#sessions' },
+  { title: 'workshops', url: '/#workshops' },
+  { title: 'locations', url: '/#locations' },
+  { title: 'scholarships', url: '/scholarships' },
+  {
+    title: 'sponsorship',
+    url: sponsorUrl,
+  },
+  { title: 'diversity initiative', url: '/#diversity' },
+  { title: 'code of conduct', url: '/code-of-conduct' },
+  { title: 'terms', url: '/terms' },
+  { title: 'privacy', url: '/privacy' },
+];
 
 const NavFull = () => {
   return (

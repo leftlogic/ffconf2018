@@ -2,6 +2,7 @@
   overflow: hidden;
   background: url(/static/images/style/tiny-stars-white-@2x.png) repeat-x;
   background-size: contain;
+  margin: 32px 0;
 
   svg {
     display: block;
@@ -13,16 +14,15 @@
 .divider--header {
   color: var(--c-white);
   padding: 4px 0 0 0;
-  margin: 32px 0;
 }
 
 /* === Sessions */
 .divider--sessions {
-  color: var(--c-pink);
-  padding: 24px 0;
+  padding: 8px 0 0 0;
+  background-image: url(/static/images/style/tiny-stars-pink-@2x.png);
 
   @media (min-width: 768px) {
-    padding: 48px 0 24px;
+    // padding: 48px 0 24px;
   }
 }
 
@@ -49,8 +49,8 @@
 
 /* === Workshops */
 .divider--workshops {
-  color: var(--c-pink);
-  padding: 48px 0;
+  background-image: url(/static/images/style/tiny-stars-pink-@2x.png);
+  padding: 8px 0 0 0;
 
   .workshops__item:last-child & {
     display: none;
@@ -59,8 +59,7 @@
 
 /* === Locations */
 .divider--locations {
-  color: var(--c-white);
-  padding: 24px 0 32px;
+  padding: 8px 0 0 0;
 
   .locations__category:last-child & {
     display: none;

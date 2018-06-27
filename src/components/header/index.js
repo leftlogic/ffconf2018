@@ -40,7 +40,7 @@ const Intro = () => {
       <p className="intro__text">Repeated Twice</p>
       <p className="intro__text">{when}</p>
       <p className="intro__text">
-        Duke of York’s Picturehouse, <br />Brighton,&nbsp;UK
+        Duke of York’s Picturehouse, Brighton,&nbsp;UK
       </p>
     </div>
   );
@@ -70,7 +70,7 @@ const Header = () => {
         <Intro />
         <Tickets
           namespace="button-buy"
-          className="dynamic-image dynamic-image--square"
+          className={`dynamic-image dynamic-image--square phase-${phase}`}
         />
         <VideoButton />
       </div>

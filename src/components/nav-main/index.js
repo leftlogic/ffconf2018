@@ -1,9 +1,14 @@
 import Nav from '../nav';
 import Tickets from '../tickets';
-
-import data from './data';
-
 import './nav-main.scss';
+
+const data = [
+  { title: 'sessions', url: '/#sessions' },
+  { title: 'workshops', url: '/#workshops' },
+  { title: 'locations', url: '/#locations' },
+  { title: 'scholarships', url: '/scholarships' },
+  { title: 'sponsors', url: '/#sponsors' },
+];
 
 const NavMain = () => {
   return (

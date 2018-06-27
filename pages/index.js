@@ -29,7 +29,8 @@ const PageIndex = ({ schedule }) => {
 
 PageIndex.getInitialProps = async () => {
   const res = await fetch(
-    `https://gist.githubusercontent.com/electricg/da1505d48e3aef90655f5536bae8399c/raw/fd7533dfaaefb8b758d9c832ad6dcf8ab286cdd1/${year}.json`
+    `https://ffconf.org/api/event/${year}`
+    // `https://gist.githubusercontent.com/electricg/da1505d48e3aef90655f5536bae8399c/raw/fd7533dfaaefb8b758d9c832ad6dcf8ab286cdd1/${year}.json`
   );
   const data = await res.json();
   return { schedule: data };

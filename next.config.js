@@ -4,9 +4,10 @@ const workshops = require('./src/components/workshops/data');
 
 const routes = {
   '/': { page: '/' },
-  '/scholarship': { page: '/scholarship' },
+  '/scholarships': { page: '/scholarships' },
+  '/privacy': { page: '/privacy' },
   '/terms': { page: '/terms' },
-  '/code-of-conduct': { page: '/code-of-conduct' }
+  '/code-of-conduct': { page: '/code-of-conduct' },
 };
 
 workshops.forEach(workshop => {
@@ -14,15 +15,15 @@ workshops.forEach(workshop => {
 
   routes[`/workshop/${slug}`] = {
     page: '/workshop',
-    query: { slug }
+    query: { slug },
   };
 });
 
 module.exports = withSass({
   sassLoaderOptions: {
-    outputStyle: 'expanded'
+    outputStyle: 'expanded',
   },
   exportPathMap: async () => {
     return routes;
-  }
+  },
 });

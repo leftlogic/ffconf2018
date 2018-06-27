@@ -1,6 +1,8 @@
 This post outlines our diversity scholarships programme. It's entirely possible that this does not apply to you, my dear reader, but you still have an important role to play: please pass on the message and this link to help seek those out who can make use of the scholarships.
 
+<div class="button-box">
 <a class="button" href="https://ffconf.org/scholarship-apply" target="_blank" rel="noopener">Apply now</a>
+</div>
 
 <h3 role="heading" aria-level="3">What are the scholarships?</h3>
 
@@ -12,15 +14,17 @@ We have a limited number of scholarships available which includes a ticket to th
 
 We ask a few questions, but don't have to explain your personal situation to us (but you can of course, if you want to). We trust you in this point :)
 
-1.  Who are you?
-2.  Where would you be travelling from (airport or city)?
-3.  Why should you get a scholarship?
+1. Who are you?
+2. Where would you be travelling from (airport and city)?
+3. Why should you get a scholarship?
 
 Please note that your application will be treated with the utmost privacy, and we will not publicly announce who the diversity scholarships go to (though you're welcome to say so yourself).
 
-**Deadline for applications: First Monday of September, 2017.**
+**Deadline for applications: First Monday of September, 2018.**
 
+<div class="button-box">
 <a class="button" href="https://ffconf.org/scholarship-apply" target="_blank" rel="noopener">Apply now</a>
+</div>
 
 <h3 role="heading" aria-level="3">How to Help</h3>
 
