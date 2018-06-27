@@ -30,13 +30,9 @@ const formatSessions = ({ data, api }) => {
 
   if (api.length < 8) {
     // push in the missing talks and randomise
-    api.push(Array.from({ length: 8 - api.length }).map(() => ({})));
-    // api.forEach((_, i) => (_.order = _.order || i + 1));
-    api.sort(() => Math.random() < 0.5);
-
-    if (!api[0].title) {
-      api.push(api.pop());
-    }
+    // FIXME this is actually hard coded
+    api.splice(2, 0, {});
+    api.splice(5, 0, {});
   }
 
   const talksById = formatTalksById(api);

@@ -1,5 +1,7 @@
-module.exports = Object.assign(
+const lint = Object.assign(
   {},
-  require("@remy/eslint/next"),
-  require("./eslintrc.giulia")
+  require('@remy/eslint/next'),
+  require('./eslintrc.giulia')
 );
+
+module.exports = lint;
