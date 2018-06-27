@@ -4,13 +4,13 @@
   "description": "",
   "main": "index.js",
   "config": {
-    "outputFolder": "out"
+    "outputFolder": "ffconf18-out"
   },
   "scripts": {
     "build": "next build",
     "export": "rm -rf $npm_package_config_outputFolder && NODE_ENV=production next build && next export -o $npm_package_config_outputFolder && cp static/js/sw.js $npm_package_config_outputFolder/ && sed -i -e 's/@VERSION@/'$npm_package_version'/g' $npm_package_config_outputFolder/sw.js && rm -rf $npm_package_config_outputFolder/sw.js-e && cp $npm_package_config_outputFolder/_next/static/style.css $npm_package_config_outputFolder/static/  && rm -rf $npm_package_config_outputFolder/_next",
     "server-static": "node server-static.js",
-    "deploy-now": "npm run export && cd $npm_package_config_outputFolder && now --regions bru",
+    "deploy-now": "npm run export && cd $npm_package_config_outputFolder && now --public --regions bru",
     "deploy-heroku": "npm run export && npm run server-static",
     "start": "echo $npm_package_config_outputFolder",
     "dev": "node server-dev.js"

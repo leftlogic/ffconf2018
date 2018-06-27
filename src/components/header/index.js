@@ -22,8 +22,10 @@ const Logo = () => {
         <a className="logo__link" aria-label="f f conf">
           <img
             className="logo__image"
-            src="/static/images/logo.png"
+            src="/static/images/logo-small.png"
             alt={`ffconf ${year}`}
+            srcSet="/static/images/logo-small.png 160w, /static/images/logo-big.png 300w"
+            sizes="(min-width: 1024px) 300px, 100px"
           />
         </a>
       </Link>

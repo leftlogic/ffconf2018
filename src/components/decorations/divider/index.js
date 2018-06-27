@@ -2,8 +2,7 @@ import classnames from 'classnames';
 
 import './divider.scss';
 
-const svg =
-  '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1106 2"><defs><path id="a" d="M0 0h1112v2H0V0z"/><mask id="b" width="1112" height="2" x="0" y="0" fill="#fff"><use xlink:href="#a"/></mask></defs><use fill="none" fill-rule="evenodd" stroke="currentColor" stroke-dasharray="2 22" stroke-width="4" mask="url(#b)" transform="matrix(1 0 0 -1 0 2)" xlink:href="#a"/></svg>';
+import svg from 'raw-loader!./divider.svg';
 
 const Divider = ({ className, cssModifier }) => {
   const wrapperClasses = classnames({
@@ -11,7 +10,17 @@ const Divider = ({ className, cssModifier }) => {
     [`divider--${cssModifier}`]: cssModifier,
     [className]: className,
   });
+<<<<<<< HEAD
   return <div className={wrapperClasses} aria-hidden="true" />;
+=======
+  return (
+    <div
+      className={wrapperClasses}
+      aria-hidden="true"
+      dangerouslySetInnerHTML={{ __html: `${svg}` }}
+    />
+  );
+>>>>>>> 4fb922a2d726325c3480d93c28b75b4048668d26
 };
 
 export default Divider;

@@ -3,6 +3,7 @@ module.exports = {
   version: require('../package.json').version,
   id: 'ffconf-2018',
   dates: ['2018-11-08', '2018-11-09'],
+  onSaleDate: '2018-07-20 10:00', // need the time as well
   startTime: '09:00',
   ticketPrice: '190',
   year: 2018,
@@ -21,7 +22,7 @@ module.exports = {
       day2: true,
       workshops: true,
       'angular-2': true,
-      next: false,
+      next: false
     },
     comments: {
       'phase-options': {
@@ -30,8 +31,8 @@ module.exports = {
         '1': 'first batch of tickets',
         '2': 'second batch of tickets',
         '3': 'release of the full sessions',
-        '4': 'after the conference',
-      },
-    },
-  },
+        '4': 'after the conference'
+      }
+    }
+  }
 };

@@ -9,6 +9,7 @@ import data from './data';
 
 import './workshop.scss';
 
+const { onSaleDate } = config;
 const { phase } = config.config;
 
 const WorkshopTopic = ({ title, description }) => {
@@ -83,16 +84,16 @@ const WorkshopDescription = ({ description, extendedDescription }) => {
 
 const WorkshopBuy = ({ slug, url, children }) => {
   const soldout = config.config.soldout[slug];
+  const formattedDate = moment(onSaleDate).format('D MMMM');
 
   if (phase > 3) {
     return null;
   }
 
   if (phase < 1) {
-    // TODO: on sale text
     return (
       <div className="workshop__buy-wrapper">
-        <span className="button">On sale 20 July</span>
+        <span className="button">On sale {formattedDate}</span>
       </div>
     );
   }

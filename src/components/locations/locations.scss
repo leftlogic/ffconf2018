@@ -48,58 +48,6 @@
   display: block;
 }
 
-.locations-category__button {
-  display: none;
-}
-
-.🦄 {
-  .locations__category {
-    position: relative;
-  }
-
-  .locations-category__button {
-    background: transparent;
-    border: 0 none;
-    cursor: pointer;
-    display: block;
-    height: 16px;
-    padding: 0;
-    position: absolute;
-    right: 0;
-    top: 4px;
-    width: 16px;
-
-    &::before {
-      background: url("/static/images/style/triangle.svg") no-repeat 50% 50%;
-      bottom: 0;
-      content: "";
-      left: 0;
-      position: absolute;
-      right: 0;
-      top: 0;
-    }
-
-    & span {
-      position: absolute;
-      clip: rect(1px, 1px, 1px, 1px);
-      padding: 0;
-      border: 0;
-      height: 1px;
-      width: 1px;
-      overflow: hidden;
-    }
-
-    &[aria-expanded="true"]::before {
-      transform: rotate(180deg);
-    }
-  }
-
-  .locations-category__button[aria-expanded="false"]
-    + .locations-category__list {
-    display: none;
-  }
-}
-
 @media (min-width: 768px) {
   .locations {
     align-items: flex-start;
@@ -128,16 +76,6 @@
 
   .locations-category__item {
     margin-bottom: 32px;
-  }
-
-  .🦄 {
-    .locations-category__button {
-      display: none;
-    }
-
-    .locations-category__list.locations-category__list.locations-category__list {
-      display: block;
-    }
   }
 }
 
