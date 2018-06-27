@@ -21,13 +21,15 @@ Use this repo https://github.com/electricg/localstorage-font, locally in a diffe
   "google": [
     {
       "name": "Lato",
-      "formats": ["400"]
+      "formats": ["400"],
+      "display": "swap"
     }
   ],
   "local": [
     {
       "name": "Lollipop",
-      "file": "hipopotam_studio_-_mrslollipop-regular-webfont.woff"
+      "file": "hipopotam_studio_-_mrslollipop-regular-webfont.woff",
+      "display": "fallback"
     }
   ]
 }
