@@ -45,9 +45,9 @@ const WorkshopDetails = ({ twitter, name, date, time }) => {
 const WorkshopImage = ({ photo }) => {
   return (
     <div
-      className="workshop__image dynamic-image dynamic-image--square special-image-border"
+      className="workshop__image dynamic-image dynamic-image--square"
       style={{
-        '--bg-photo': `url(/static/images/workshops/2x-${photo})`
+        '--bg-photo': `url(/static/images/workshops/2x-${photo})`,
       }}
     />
   );
@@ -136,7 +136,7 @@ const Workshop = ({ selectedSlug }) => {
     ticket,
     topics,
     description,
-    extendedDescription
+    extendedDescription,
   } = item;
   const { name, twitter, photo } = speaker;
   const { date, time } = details;

@@ -157,7 +157,7 @@ a {
   &::after {
     width: calc(100% - var(--sb-border-width) - var(--sb-padding));
 
-    border-radius: 100px;
+    border-radius: 100%;
     border: 10px solid rgb(255, 255, 255);
     // box-shadow: 1px 1px 1px 0px #00000069;
   }
