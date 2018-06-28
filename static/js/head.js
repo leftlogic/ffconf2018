@@ -2,7 +2,7 @@
 function fx(dates) {
   window.confDays = [
     new Date(`${dates[0]}T12:00Z`),
-    new Date(`${dates[1]}T12:00Z`)
+    new Date(`${dates[1]}T12:00Z`),
   ];
   document.documentElement.className += ' 🦄';
   //=== Safari 8
@@ -13,7 +13,7 @@ function fx(dates) {
     document.documentElement.className += ' i-hate-safari (╯°□°)╯︵ ┻━┻';
   }
   //=== Fonts
-  var md5 = 'fa1ebe5e6b92238afab1551cc4616287';
+  var md5 = 'fa1ebe5e6b92238afab1551cc4616287'; // IMPORTANT: this is also used in `_meta.js` for prefetch
   var fontUrl = `/static/js/ff-fonts.${md5}.json`;
   var fontMd5 = md5;
   var fontKey = 'fonts';

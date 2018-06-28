@@ -11,7 +11,7 @@ const {
   dates,
   analytics,
   version,
-  onSaleDate
+  onSaleDate,
 } = config;
 const [date1, date2] = dates;
 const momentDate1 = moment(date1);
@@ -91,6 +91,13 @@ const FFHead = () => {
       {process.env.NODE_ENV === 'production' && (
         <link rel="stylesheet" href={`/static/style.css?${version}`} />
       )}
+
+      <link
+        rel="preload"
+        as="script"
+        href="/static/js/ff-fonts.fa1ebe5e6b92238afab1551cc4616287.json"
+      />
+
       <link
         rel="all-the-source"
         href={`https://github.com/leftlogic/ffconf${year}`}
@@ -133,11 +140,12 @@ const FFHead = () => {
           e=o.createElement(i);r=o.getElementsByTagName(i)[0];
           e.src='https://www.google-analytics.com/analytics.js';
           r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-          ga('create','${analytics}','auto');ga('send','pageview');`
+          ga('create','${analytics}','auto');ga('send','pageview');`,
         }}
       />
 
       <script dangerouslySetInnerHTML={{ __html: `${inlineScript}` }} />
+      <script src="/static/js/script.js" />
     </Fragment>
   );
 };
