@@ -91,6 +91,11 @@ module.exports = [
         description: 'Going beyond the code: dynamic data and securing pages.',
       },
       {
+        title: 'Authentication: strategies & techniques',
+        description:
+          'Using the latest Next architectures, common, reusable auth logic.',
+      },
+      {
         title: 'Testing, building & deploying',
         description:
           'Tests & fixtures with Jest, gotchas, and deploy strategies.',
