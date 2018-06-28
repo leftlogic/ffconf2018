@@ -1,12 +1,12 @@
 import Layout from '../src/components/layout';
-import Content from '../src/components/privacy';
+import Privacy from '../src/components/privacy';
 
-const Page = () => {
+const PagePrivacy = () => {
   return (
     <Layout>
-      <Content />
+      <Privacy />
     </Layout>
   );
 };
 
-export default Page;
+export default PagePrivacy;

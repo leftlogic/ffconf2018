@@ -3,16 +3,11 @@
   background: url(/static/images/style/tiny-stars-white-@2x.png) repeat-x;
   background-size: contain;
   margin: 32px 0;
-
-  svg {
-    display: block;
-    height: 2px;
-  }
+  width: 100%;
 }
 
 /* === Header */
 .divider--header {
-  color: var(--c-white);
   padding: 4px 0 0 0;
 }
 

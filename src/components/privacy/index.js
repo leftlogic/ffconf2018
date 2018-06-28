@@ -3,12 +3,12 @@ import Section from '../section';
 
 import data from 'raw-loader!./data.md';
 
-const Terms = () => {
+const Privacy = () => {
   return (
-    <Section id="terms" title="Privacy Policy">
+    <Section id="privacy" title="Privacy Policy">
       <Markdown>{data}</Markdown>
     </Section>
   );
 };
 
-export default Terms;
+export default Privacy;

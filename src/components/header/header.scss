@@ -66,13 +66,13 @@
       clip: unset;
       width: 100%;
       position: absolute;
-      top: 1.3em;
+      top: 1.2em;
       left: 0;
       z-index: 1;
       font-family: var(--f-title);
       color: var(--c-white);
       text-shadow: 5px 5px black;
-      font-size: 4rem;
+      font-size: 3rem;
       overflow: initial;
       height: auto;
       text-align: center;
@@ -152,5 +152,12 @@
 
   .button-buy {
     width: 181px;
+
+    &.phase-0 {
+      strong {
+        font-size: 4rem;
+        top: 1.3em;
+      }
+    }
   }
 }
