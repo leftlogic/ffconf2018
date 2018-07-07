@@ -3,7 +3,7 @@ module.exports = [
     slug: '1st',
     title: 'platinum',
     total: 2,
-    list: []
+    list: [],
   },
   {
     slug: '2nd',
@@ -13,19 +13,19 @@ module.exports = [
       {
         name: 'American Express',
         url: 'https://jobs.americanexpress.com/technology',
-        img: 'american-express.svg'
+        img: 'american-express.svg',
       },
       {
         name: 'Google Chrome',
         url: 'https://developers.google.com/web/',
-        img: 'chrome.png'
+        img: 'chrome.png',
       },
       {
         name: 'Financial Times',
         url: 'https://github.com/Financial-Times/careers',
-        img: 'financial-times.jpg'
-      }
-    ]
+        img: 'financial-times.jpg',
+      },
+    ],
   },
   {
     slug: '3rd',
@@ -35,20 +35,32 @@ module.exports = [
       {
         name: 'Brandwatch',
         url: 'https://www.brandwatch.com/careers',
-        img: 'brandwatch.png'
-      }
-    ]
+        img: 'brandwatch.png',
+      },
+    ],
   },
   {
     slug: '4th',
+    title: 'diversity',
+    total: 2,
+    list: [
+      {
+        name: 'Zalando',
+        url: 'https://zln.do/2tEtLfo',
+        img: 'zalando.svg',
+      },
+    ],
+  },
+  {
+    slug: '5th',
     title: 'micro',
     total: 2,
     list: [
       {
         name: 'JS Bin',
         url: 'http://jsbin.com/',
-        img: 'jsbin.png'
-      }
-    ]
-  }
+        img: 'jsbin.png',
+      },
+    ],
+  },
 ];

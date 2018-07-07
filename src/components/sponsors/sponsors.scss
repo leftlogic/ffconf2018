@@ -34,7 +34,8 @@
 
 .sponsor--2nd,
 .sponsor--3rd,
-.sponsor--4th {
+.sponsor--4th,
+.sponsor--5th {
   height: 96px;
   width: calc(50% - 4px);
 }
@@ -98,7 +99,8 @@
 
   .sponsors-category--2nd,
   .sponsors-category--3rd,
-  .sponsors-category--4th {
+  .sponsors-category--4th,
+  .sponsors-category--5th {
     margin-bottom: 48px;
   }
 
@@ -108,7 +110,8 @@
   }
 
   .sponsors-category--3rd,
-  .sponsors-category--4th {
+  .sponsors-category--4th,
+  .sponsors-category--5th {
     width: calc(50% - 20px);
   }
 
@@ -136,7 +139,8 @@
   }
 
   .sponsor--3rd,
-  .sponsor--4th {
+  .sponsor--4th,
+  .sponsor--5th {
     --sponsor-height: 96px;
     --sponsor-padding: 16px;
   }
