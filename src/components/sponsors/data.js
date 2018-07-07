@@ -41,7 +41,7 @@ module.exports = [
   },
   {
     slug: '4th',
-    title: 'diversity',
+    title: 'scholarship',
     total: 2,
     list: [
       {

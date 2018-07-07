@@ -24,6 +24,7 @@ class FFDocument extends Document {
         <body>
           <FFMain />
           <FFNextScript />
+          <script src="/static/js/script.js" />
           <script
             dangerouslySetInnerHTML={{
               __html: `

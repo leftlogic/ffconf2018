@@ -145,7 +145,6 @@ const FFHead = () => {
       />
 
       <script dangerouslySetInnerHTML={{ __html: `${inlineScript}` }} />
-      <script src="/static/js/script.js" />
     </Fragment>
   );
 };
