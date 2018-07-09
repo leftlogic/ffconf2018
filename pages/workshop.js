@@ -13,7 +13,7 @@ PageWorkshop.getInitialProps = ({ query }) => {
   const { slug } = query;
 
   return {
-    slug
+    slug,
   };
 };
 

@@ -1,11 +1,13 @@
 import Nav from '../nav';
 import { sponsorUrl } from '../../config';
+import config from '../../config';
 import './nav-full.scss';
 
 const data = [
+  { title: 'tickets', url: config.ticketUrl },
   { title: 'sessions', url: '/#sessions' },
   { title: 'workshops', url: '/#workshops' },
-  { title: 'locations', url: '/#locations' },
+  // { title: 'locations', url: '/#locations' },
   { title: 'scholarships', url: '/scholarships' },
   {
     title: 'sponsorship',

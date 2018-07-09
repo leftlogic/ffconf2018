@@ -42,6 +42,9 @@ const Intro = () => {
       <p className="intro__text">
         Duke of York’s Picturehouse, Brighton,&nbsp;UK
       </p>
+      <p style={{ marginTop: '10px' }} className="intro__text">
+        Tickets @ £{config.ticketPrice}+VAT
+      </p>
     </div>
   );
 };

@@ -3,9 +3,10 @@ module.exports = {
   version: require('../package.json').version,
   id: 'ffconf-2018',
   dates: ['2018-11-08', '2018-11-09'],
-  onSaleDate: '2018-07-10 10:00', // need the time as well
+  onSaleDate: '2018-07-10 10:00:00', // need the time as well
   startTime: '09:00',
   ticketPrice: '190',
+  workshopPrice: '465',
   year: 2018,
   analytics: 'UA-1656750-55',
   ticketUrl:
@@ -15,13 +16,13 @@ module.exports = {
   sponsorUrl: 'https://media.ffconf.org/2018/sponsor-pack.pdf',
   sponsorAvailable: true,
   config: {
-    phase: 0,
+    phase: 1,
     soldout: {
       conference: false,
-      day1: true,
-      day2: true,
-      workshops: true,
-      'angular-2': true,
+      day1: false,
+      day2: false,
+      workshops: false,
+      vue: false,
       next: false,
     },
     comments: {

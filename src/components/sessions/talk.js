@@ -131,6 +131,15 @@ const Talk = ({ talk, start, end, date1, date2 }) => {
         <h3 className="talk__title" role="heading" aria-level="3">
           {title}
         </h3>
+        <p>
+          <a
+            style={{ fontSize: '0.6em' }}
+            href={config.ticketUrl}
+            className="button"
+          >
+            Get your ticket now @ £{config.ticketPrice}+VAT
+          </a>
+        </p>
         <TalkTime start={start} end={end} />
         <SpeakerName name={name} twitter={twitter} />
       </header>
