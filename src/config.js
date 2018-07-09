@@ -9,8 +9,7 @@ module.exports = {
   workshopPrice: '465',
   year: 2018,
   analytics: 'UA-1656750-55',
-  ticketUrl:
-    'https://www.tickettailor.com/checkout/view-event/id/102994/chk/31b0/',
+  ticketUrl: 'https://www.tickettailor.com/buy-tickets/177188/7469/modal/',
   videos:
     'https://www.youtube.com/playlist?list=PLXmT1r4krsTo5KtThq4dATD_ctsV8mdJQ',
   sponsorUrl: 'https://media.ffconf.org/2018/sponsor-pack.pdf',
