@@ -9,7 +9,7 @@ module.exports = {
   year: 2018,
   analytics: 'UA-1656750-55',
   ticketUrl:
-    'https://www.tickettailor.com/checkout/view-event/id/102994/chk/31b0/',
+    'https://www.tickettailor.com/checkout/view-event/id/102994/chk/31b0/', // TODO update
   videos: '',
   sponsorUrl: 'https://media.ffconf.org/2018/sponsor-pack.pdf',
   sponsorAvailable: true,
