@@ -9,19 +9,18 @@ module.exports = {
   year: 2018,
   analytics: 'UA-1656750-55',
   ticketUrl:
-    'https://www.tickettailor.com/checkout/view-event/id/102994/chk/31b0/',
-  videos:
-    'https://www.youtube.com/playlist?list=PLXmT1r4krsTo5KtThq4dATD_ctsV8mdJQ',
+    'https://www.tickettailor.com/checkout/view-event/id/102994/chk/31b0/', // TODO update
+  videos: '',
   sponsorUrl: 'https://media.ffconf.org/2018/sponsor-pack.pdf',
   sponsorAvailable: true,
   config: {
-    phase: 0,
+    phase: 1,
     soldout: {
       conference: false,
-      day1: true,
-      day2: true,
-      workshops: true,
-      'angular-2': true,
+      day1: false,
+      day2: false,
+      workshops: false,
+      vue: false,
       next: false,
     },
     comments: {

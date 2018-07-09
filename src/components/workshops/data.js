@@ -4,7 +4,7 @@ module.exports = [
     slug: 'vue',
     ticket: {
       url:
-        'https://www.tickettailor.com/checkout/view-event/id/102994/chk/31b0/',
+        'https://www.tickettailor.com/checkout/view-event/id/102994/chk/31b0/', // TODO update
       price: '465',
     },
 
@@ -59,7 +59,7 @@ module.exports = [
     slug: 'next',
     ticket: {
       url:
-        'https://www.tickettailor.com/checkout/view-event/id/102994/chk/31b0/',
+        'https://www.tickettailor.com/checkout/view-event/id/102994/chk/31b0/', // TODO update
       price: '465',
     },
 
