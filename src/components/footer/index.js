@@ -17,20 +17,7 @@ const when = `${momentDate1.format('D')} & ${momentDate2.format('D-MMM')}`;
 const Footer = () => {
   return (
     <footer className="footer">
-      <h4 className="footer__title">
-        ffconf {year}
-        {/* <br />
-        <a
-          style={{
-            marginTop: '20px',
-            display: 'inline-block',
-            fontSize: '0.6em',
-          }}
-          href={config.ticketUrl}
-        >
-          Get your ticket today @ £{config.ticketPrice}+VAT
-        </a> */}
-      </h4>
+      <h4 className="footer__title">ffconf {year}</h4>
 
       <NavFull />
 
