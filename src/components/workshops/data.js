@@ -3,8 +3,7 @@ module.exports = [
     title: 'Building Web Applications with Vue.js',
     slug: 'vue',
     ticket: {
-      url:
-        'https://www.tickettailor.com/checkout/view-event/id/102994/chk/31b0/',
+      url: 'https://www.tickettailor.com/buy-tickets/177188/7469/modal/',
       price: '465',
     },
 
@@ -58,8 +57,7 @@ module.exports = [
     title: 'Modern Universal React dev with Next.js',
     slug: 'next',
     ticket: {
-      url:
-        'https://www.tickettailor.com/checkout/view-event/id/102994/chk/31b0/',
+      url: 'https://www.tickettailor.com/buy-tickets/177188/7469/modal/',
       price: '465',
     },
 
