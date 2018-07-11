@@ -5,7 +5,8 @@ import Markdown from '../markdown';
 
 import config from '../../config';
 
-const { phase } = config.config;
+const { ticketUrl, ticketPrice } = config;
+const { phase, soldout } = config.config;
 
 const SpeakerImage = ({ name, photo, slug = 'soon-0' }) => {
   const title = phase >= 3 ? name : 'Speakers revealed soon!';
@@ -132,15 +133,20 @@ const Talk = ({ talk, start, end, date1, date2 }) => {
           {title}
         </h3>
 
-        <p>
-          <a
-            style={{ fontSize: '0.6em' }}
-            href={config.ticketUrl}
-            className="button"
-          >
-            Get your ticket now @ £{config.ticketPrice}+VAT
-          </a>
-        </p>
+        {phase >= 1 &&
+          phase <= 3 &&
+          !soldout.conference && (
+            <p>
+              <a
+                href={ticketUrl}
+                className="button talk__buy"
+                target="_blank"
+                rel="noopener"
+              >
+                Get your ticket now @ £{ticketPrice}+VAT
+              </a>
+            </p>
+          )}
 
         <TalkTime start={start} end={end} />
         <SpeakerName name={name} twitter={twitter} />
