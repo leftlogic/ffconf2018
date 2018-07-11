@@ -29,6 +29,10 @@
     font-size: 10vw;
   }
 
+  @media (min-width: 1400px) {
+    font-size: 14rem;
+  }
+
   // @media (min-width: 768px) {
   //   text-shadow: unset;
   //   display: inline-block;
