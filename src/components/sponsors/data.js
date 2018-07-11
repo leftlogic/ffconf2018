@@ -37,6 +37,11 @@ module.exports = [
         url: 'https://www.brandwatch.com/careers',
         img: 'brandwatch.png',
       },
+      {
+        name: 'Nexmo',
+        url: 'https://www.nexmo.com/',
+        img: 'nexmo.png',
+      },
     ],
   },
   {
