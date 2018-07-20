@@ -62,6 +62,11 @@ module.exports = [
     total: 2,
     list: [
       {
+        name: 'ProdPad',
+        url: 'https://www.prodpad.com/',
+        img: 'prodpad.png',
+      },
+      {
         name: 'JS Bin',
         url: 'http://jsbin.com/',
         img: 'jsbin.png',
