@@ -58,7 +58,7 @@ const FFHead = () => {
       />
       <meta
         property="og:image"
-        content={`https://${year}.ffconf.org/images/twitter-card.png`}
+        content={`https://${year}.ffconf.org/static/images/twitter-card.png`}
       />
 
       {/* twitter card tags additive with the og: tags */}
@@ -74,7 +74,7 @@ const FFHead = () => {
       />
       <meta
         name="twitter:image"
-        content={`https://${year}.ffconf.org/images/twitter-card.png`}
+        content={`https://${year}.ffconf.org/static/images/twitter-card.png`}
       />
       <meta name="twitter:url" value={`https://${year}.ffconf.org`} />
       <meta
