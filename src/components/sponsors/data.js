@@ -25,6 +25,11 @@ module.exports = [
         url: 'https://github.com/Financial-Times/careers',
         img: 'financial-times.jpg',
       },
+      {
+        name: 'Mozilla',
+        url: 'http://mozilla.com/',
+        img: 'mozilla.svg',
+      },
     ],
   },
   {
