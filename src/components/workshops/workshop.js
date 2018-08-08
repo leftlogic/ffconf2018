@@ -157,14 +157,13 @@ const Workshop = ({ selectedSlug }) => {
             time={time}
           />
 
-          <p style={{ marginTop: 0, fontSize: '1.8rem', }}>
-            <em>All workshop tickets also include a Thursday ffconf pass.</em>
+          <p style={{ marginTop: 0, fontSize: '1.8rem' }}>
+            <em>All workshop tickets also include a Friday ffconf pass.</em>
           </p>
 
           <WorkshopBuy slug={slug} url={url}>
             Buy tickets @ £{config.workshopPrice}+VAT
           </WorkshopBuy>
-
         </div>
 
         <WorkshopImage photo={photo} />
