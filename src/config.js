@@ -13,12 +13,12 @@ module.exports = {
   videos:
     'https://www.youtube.com/playlist?list=PLXmT1r4krsTo5KtThq4dATD_ctsV8mdJQ',
   sponsorUrl: 'https://media.ffconf.org/2018/sponsor-pack.pdf',
-  sponsorAvailable: true,
+  sponsorAvailable: false,
   config: {
     phase: 1,
     soldout: {
       conference: false,
-      day1: false,
+      day1: true,
       day2: false,
       workshops: false,
       vue: false,
