@@ -18,10 +18,10 @@ module.exports = {
     phase: 1,
     soldout: {
       conference: false,
-      day1: true,
+      day1: false,
       day2: false,
       workshops: false,
-      vue: false,
+      vue: true,
       next: false,
     },
     comments: {

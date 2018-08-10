@@ -8,7 +8,7 @@ module.exports = [
     },
 
     details: {
-      date: '2017-11-08',
+      date: '2017-11-07',
       time: '09:00 — 17:00',
       venue: 'Lighthouse, Brighton',
     },

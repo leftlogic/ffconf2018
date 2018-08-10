@@ -9,7 +9,7 @@ import data from './data';
 
 import './workshops.scss';
 
-const [, date1] = config.dates;
+const [date1] = config.dates;
 const [generalWorkshop] = data;
 const { price } = generalWorkshop.ticket;
 const { date } = generalWorkshop.details;
