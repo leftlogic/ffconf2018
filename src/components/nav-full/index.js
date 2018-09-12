@@ -8,7 +8,7 @@ const data = [
   { title: 'sessions', url: '/#sessions' },
   { title: 'workshops', url: '/#workshops' },
   // { title: 'locations', url: '/#locations' },
-  { title: 'scholarships', url: '/scholarships' },
+  { title: 'scholarships', url: '/scholarships#scholarship' },
   {
     title: 'sponsorship',
     url: sponsorUrl,
