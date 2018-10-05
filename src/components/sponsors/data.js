@@ -3,7 +3,13 @@ module.exports = [
     slug: '1st',
     title: 'platinum',
     total: 2,
-    list: [],
+    list: [
+      {
+        name: 'Beamly',
+        url: 'https://www.beamly.com/',
+        img: 'beamly.png',
+      },
+    ],
   },
   {
     slug: '2nd',
