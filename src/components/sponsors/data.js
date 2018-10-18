@@ -65,6 +65,11 @@ module.exports = [
         url: 'https://zln.do/2tEtLfo',
         img: 'zalando.svg',
       },
+      {
+        name: 'Samsung Internet',
+        url: 'https://samsunginter.net/',
+        img: 'samsung.svg',
+      },
     ],
   },
   {
